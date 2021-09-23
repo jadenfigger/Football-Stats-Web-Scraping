@@ -47,7 +47,6 @@ class GuiController:
 			self.dis_empty_main()
 			
 
-
 		self.top_frame.grid(column=0, row=0, padx=self.UNIV_PADDING, pady=self.UNIV_PADDING)
 		self.start_frame.grid(column=0, row=0, padx=self.UNIV_PADDING, pady=self.UNIV_PADDING)
 		self.main_frame.grid(column=1, row=0, padx=self.UNIV_PADDING, pady=self.UNIV_PADDING)
@@ -58,17 +57,26 @@ class GuiController:
 		self.main_frame.configure(bg=self.BACKGROUND_COLOR)
 		self.bottom_frame.configure(bg=self.BACKGROUND_COLOR)
 
-
 		self.window.mainloop()
 	
 	def dis_empty_main(self):
-		tab1 = ttk.Frame(self.tab_control)
-		tk.Button(tab1, text="Choose League").grid(column=0, row=0)
-
-		self.tab_control.add(tab1, text="Tab 1")
-		self.tab_control.grid(column=0, row=0)
+		inner_frame = tk.Frame(self.main_frame)
+		self.main_frame_contents.append(inner_frame)
 
 
+		notebook = ttk.Notebook(self.main_frame)
+		self.main_frame_contents.append(notebook)
+  
+		self.main_frame_contents.append(tk.Button(notebook))
+		self.main_frame_contents[-1].grid(column=0, row=0)
+
+		notebook.add(self.main_frame_contents[-1], text='Create League')
+		
+		notebook.grid(column=0, row=0)
+  
+		inner_frame.grid(column=0, row=1)
+  
+		inner_frame.configure(bg=self.FRAME_COLOR)
 
 
 	def clear_contents(list):
