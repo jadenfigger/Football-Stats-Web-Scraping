@@ -10,4 +10,3 @@ if __name__ == '__main__':
     controller = GuiController(window, sqlCon)
 
     controller.dis_start_window()
-
