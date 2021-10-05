@@ -8,5 +8,6 @@ if __name__ == '__main__':
     sqlCon = sqlController()
 
     controller = GuiController(window, sqlCon)
+                                                                                                                           
+    controller.dis_start_window()                                
 
-    controller.dis_start_window()
