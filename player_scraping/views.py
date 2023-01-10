@@ -8,13 +8,13 @@ logger = logging.getLogger(__name__)
 def home(request):
     # Get all players from the database
 	
-	p1 = Player(name="tom brady", position="QB")
-	p1.save()
+    p1 = Player(name="tom brady", position="QB")
+    p1.save()
 	
-	players = Player.objects.all()
+    players = Player.objects.all()
     
     # Render the home template with the players context variable
-	return render(request, 'home.html', {'players': players})
+    return render(request, 'home.html', {'players': players})
 	
 
 def add_player(request):
