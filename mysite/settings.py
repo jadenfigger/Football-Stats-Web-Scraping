@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django_extensions',
     'player_scraping',
+    'bootstrap5',
 ]
 
 MIDDLEWARE = [

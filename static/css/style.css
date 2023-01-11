@@ -4,8 +4,10 @@
   border-radius: 0;
 }
 
-html, body {
-  height: 100vh;
+.navbar-toggle:focus {
+  border: none;
+  outline: none;
+  box-shadow: none;
 }
 
 /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
