@@ -1,3 +1,14 @@
+.text-titles {
+  font-size: 20px;
+  letter-spacing: 2px;
+  word-spacing: 2px;
+  font-weight: bold;
+  text-decoration: none solid rgb(68, 68, 68);
+  font-style: normal;
+  font-variant: small-caps;
+  text-transform: none;
+}
+
 /* Remove the navbar's default margin-bottom and rounded borders */
 .navbar {
   margin-bottom: 0;
@@ -48,6 +59,27 @@ main {
   margin-top: 66px;
 }
 
+.body {
+  margin-bottom: 500px;
+}
+
+.pos {
+  width: 10%;
+  vertical-align: middle;
+}
+
+.player .card-footer button {
+  display: inline;
+  float: left;
+  width: 50%;
+}
+
+.player .card-header button {
+  outline: 0;
+  border: 0;
+  background-color: transparent;
+}
+
 .teamInfoLinks p,
 .teamInfoLinks a {
   padding-left: 5px;
@@ -68,6 +100,11 @@ footer {
   }
   .row.content {
     height: auto;
+  }
+  .sidebar {
+    width: 100%;
+    height: fit-content;
+    padding-bottom: 15px;
   }
 }
 

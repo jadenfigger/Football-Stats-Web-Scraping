@@ -1,5 +1,5 @@
 {% extends 'base.html' %} {% load static %} {% block title %}Home{% endblock %}
-{% block content %} {% if user.is_authenticated %}
+{% block content %} {% if user.is_authenticated %}{% load bootstrap_icons %}
 
 <header>
   <nav class="navbar navbar-expand-lg bg-light navbar-light fixed-top">
@@ -150,8 +150,8 @@
 <main>
   <div class="container pt-5">
     <div class="row d-flex justify-content-between">
-      <div class="body col-sm-7 flex-fill text-left">
-        <div class="card text-center w-50 mx-auto">
+      <div class="container body col-sm-7 flex-fill text-left">
+        <div class="row card text-center w-50 mx-auto">
           <div class="card-body">
             <h1 style="font-size: 3em">Team Name</h1>
             <div class="teamInfoLinks d-flex justify-content-center">
@@ -160,6 +160,84 @@
               <p>Total Points:</p>
               <a href="#" style="text-decoration: none">234.2</a>
             </div>
+          </div>
+        </div>
+        <div class="row matchup">
+          <div class="container p-5">
+            <table class="table text-center">
+              <thread>
+                <tr class="text-titles">
+                  <th class="text-titles" scope="col">Positions</th>
+                  <th class="text-titles" scope="col">Players</th>
+                </tr>
+              </thread>
+              <tbody>
+                <tr>
+                  <th class="pos" scope="row">QB</th>
+                  <th>
+                    <div class="card player">
+                      <div class="card-header d-flex justify-content-evenly">
+                        <div class="flex-fill d-flex align-items-center pe-0">
+                          <img
+                            src="{% static 'img/profile-img.jpg' %}"
+                            alt="Profile"
+                            class="rounded-circle m-2"
+                            width="35"
+                            height="35"
+                          />
+                          <h3>Josh Allen</h3>
+                        </div>
+                        <div class="ml-auto flex-fill">
+                          <p class="card-text">Tampa Bay Buccaneers</p>
+                          <p class="card-text">Tot Pts: 256</p>
+                          <p class="card-text">Avg Pts: 256</p>
+                        </div>
+                        <button
+                          class="card-toggler justify-self-end"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#collapseBody"
+                          aria-controls="collapseBody"
+                          aria-expanded="false"
+                          aria-label="Toggle navigation"
+                        >
+                          {% bs_icon 'caret-down-fill' %}
+                        </button>
+                      </div>
+                      <div class="collapse" id="collapseBody">
+                        <div class="card-body">
+                          <p class="card-text">Passing yards: 3910</p>
+                          <p class="card-text">Touchdowns: 40</p>
+                          <p class="card-text">Interceptions: 10</p>
+                        </div>
+                      </div>
+                      <div class="card-footer">
+                        <button
+                          class="btn btn-outline-danger"
+                          style="border-radius: 0.25rem 0 0 0.25rem"
+                        >
+                          Drop Player
+                        </button>
+                        <button
+                          class="btn btn-outline-secondary"
+                          style="border-radius: 0 0.25rem 0.25rem 0"
+                        >
+                          Move to Bench
+                        </button>
+                      </div>
+                    </div>
+                  </th>
+                </tr>
+                <tr>
+                  <th class="pos" scope="row">RB</th>
+                  <th>Saquon Barkley</th>
+                </tr>
+                <tr>
+                  <th class="pos" scope="row">WR</th>
+                  <th>Steffon Diggs</th>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </div>
