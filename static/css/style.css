@@ -68,6 +68,16 @@ main {
   vertical-align: middle;
 }
 
+.player .player-info-preview {
+  font-size: 15px;
+  font-weight: normal;
+}
+
+.player .player-info-preview p {
+  width: fit-content;
+  float: left;
+}
+
 .player .card-footer button {
   display: inline;
   float: left;
