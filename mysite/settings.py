@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django_extensions',
     'player_scraping',
-    'bootstrap5',
+    'compressor',
     'django_bootstrap_icons'
 ]
 
@@ -127,10 +127,21 @@ USE_TZ = True
 STATIC_ROOT = ''
 STATIC_URL = '/static/'
 
+STATICFILES_FINDERS = [
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'compressor.finders.CompressorFinder',
+]
+
 
 STATICFILES_DIRS  = [
     os.path.join(BASE_DIR, 'static'),
 ]
+
+COMPRESS_PRECOMPILERS = (
+    ('text/x-scss', 'django_libsass.SassCompiler'),
+)
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
