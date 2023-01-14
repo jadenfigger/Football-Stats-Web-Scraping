@@ -14,7 +14,7 @@ def home(request):
     players = Player.objects.all()
     
     # Render the home template with the players context variable
-    return render(request, 'home.html', {'players': players})
+    return render(request, 'home.html')
 	
 
 def add_player(request):
