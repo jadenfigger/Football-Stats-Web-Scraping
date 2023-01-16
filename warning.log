@@ -4954,3 +4954,4 @@ Traceback (most recent call last):
   File "C:\Users\jaden\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader_tags.py", line 226, in do_block
     raise TemplateSyntaxError(
 django.template.exceptions.TemplateSyntaxError: 'block' tag with name 'content' appears more than once
+Not Found: /favicon.ico

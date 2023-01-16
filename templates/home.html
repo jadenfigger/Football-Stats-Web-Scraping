@@ -160,9 +160,11 @@ load bootstrap_icons %} {% if user.is_authenticated %}
                         <div class="row align-items-center justify-content-center" style="height: 70%">
                           <div class="col">
                             <img
-                              class="rounded-circle profile-image"
+                              class="rounded-circle"
                               src="{% static 'img/profile-img.jpg' %}"
                               alt="Profile Image"
+                              width="45"
+                              height="45"
                             />
                           </div>
                           <div class="col player-names flex-fit">

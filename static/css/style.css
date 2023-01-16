@@ -73,10 +73,6 @@ main {
   font-weight: normal;
 }
 
-/* .player .player-info p{
-  width: 
-} */
-
 .player #playerButtons button {
   display: inline;
   float: left;
@@ -88,6 +84,7 @@ main {
   padding-left: 5px;
   padding-right: 5px;
 }
+/*  */
 
 /* Set black background color, white text and some padding */
 footer {
