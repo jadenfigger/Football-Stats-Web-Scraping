@@ -143,77 +143,153 @@ load bootstrap_icons %} {% if user.is_authenticated %}
           </div>
         </div>
         <div class="row matchup">
-          <div class="container p-5">
-            <table class="table text-center">
+          <div class="d-flex p-1">
+            <table class="table text-center mx-3">
               <thread>
-                <tr class="text-titles">
-                  <th class="text-titles" scope="col">Positions</th>
-                  <th class="text-titles" scope="col">Players</th>
+                <tr>
+                  <th id="text-titles" scope="col" style="width: 10%">Pos</th>
+                  <th id="text-titles" scope="col" style="width: auto">Players</th>
+                  <th id="text-titles" scope="col" style="width: 10%">Actions</th>
                 </tr>
               </thread>
               <tbody>
                 <tr>
                   <th class="pos" scope="row">QB</th>
-                  <th>
-                    <div class="d-flex text-center">
-                      <div class="d-flex flex-column player-info">
-                        <div class="row align-items-center justify-content-center" style="height: 70%">
-                          <div class="col">
-                            <img
-                              class="rounded-circle"
-                              src="{% static 'img/profile-img.jpg' %}"
-                              alt="Profile Image"
-                              width="45"
-                              height="45"
-                            />
-                          </div>
-                          <div class="col player-names flex-fit">
-                            <p>Josh Allen</p>
-                            <p>Buffalo</p>
-                            <p>Bills</p>
-                          </div>
-                        </div>
-                        <div class="container player-stats">
-                          <div class="row">
-                            <div class="col d-flex border">
-                              <p class="form-text">BYE</p>
-                              <p>2</p>
-                            </div>
-                            <div class="col d-flex border">
-                              <p class="form-text">TOT</p>
-                              <p>243.52</p>
-                            </div>
-                            <div class="col d-flex border">
-                              <p class="form-text">AVG</p>
-                              <p>24.82</p>
-                            </div>
-                          </div>
+                  <th class="player">
+                    <div class="d-flex flex-column player-info text-center">
+                      <div class="d-flex justify-content-center align-items-center">
+                        <img
+                          class="rounded-circle m-1"
+                          src="{% static 'img/profile-img.jpg' %}"
+                          alt="Profile Image"
+                          width="45"
+                          height="45"
+                        />
+                        <div class="ms-1 m-1">Josh <br />Allen</div>
+                        <div class="m-1">
+                          Buffalo <br />
+                          Bills
                         </div>
                       </div>
-                      <div>
-                        <button
-                          class="btn btn-outline-danger"
-                          style="border-radius: 0.25rem 0 0 0.25rem"
-                        >
-                          Drop Player
+                      <div class="d-flex justify-content-center align-items-start player-stats">
+                        <div class="d-flex p-1 border">
+                          <span class="fw-lighter fs-6">BYE:2</span>
+                        </div>
+                        <div class="d-flex p-1 border">
+                          <span class="fw-lighter fs-6">AVG:24.5</span>
+                        </div>
+                        <div class="d-flex p-1 border">
+                          <span class="fw-lighter fs-6">TOT:357.2</span>
+                        </div>
+                      </div>
+                    </div>
+                  </th>
+                  <th>
+                    <div class="player-btns container">
+                      <div class="row">
+                        <button class="btn btn-outline-dark" style="border-radius: 0.2rem 0.2rem 0 0">
+                          <div id="btn-text">Swap</div>
                         </button>
-                        <button
-                          class="btn btn-outline-secondary"
-                          style="border-radius: 0 0.25rem 0.25rem 0"
-                        >
-                          Move to Bench
+                      </div>
+                      <div class="row">
+                        <button class="btn btn-outline-dark" style="border-radius: 0 0 0.2rem 0.2rem">
+                          <div id="btn-text">Drop</div>
                         </button>
                       </div>
                     </div>
                   </th>
                 </tr>
                 <tr>
-                  <th class="pos" scope="row">RB</th>
-                  <th>Saquon Barkley</th>
+                  <th class="pos" scope="row">QB</th>
+                  <th class="player">
+                    <div class="d-flex flex-column player-info text-center">
+                      <div class="d-flex justify-content-center align-items-center">
+                        <img
+                          class="rounded-circle m-1"
+                          src="{% static 'img/profile-img.jpg' %}"
+                          alt="Profile Image"
+                          width="45"
+                          height="45"
+                        />
+                        <div class="ms-1 m-1">Saquon <br />Barkley</div>
+                        <div class="m-1">
+                          New York <br />
+                          Giants
+                        </div>
+                      </div>
+                      <div class="d-flex justify-content-center align-items-start player-stats">
+                        <div class="d-flex p-1 border">
+                          <span class="fw-lighter fs-6">BYE:2</span>
+                        </div>
+                        <div class="d-flex p-1 border">
+                          <span class="fw-lighter fs-6">AVG:24.5</span>
+                        </div>
+                        <div class="d-flex p-1 border">
+                          <span class="fw-lighter fs-6">TOT:357.2</span>
+                        </div>
+                      </div>
+                    </div>
+                  </th>
+                  <th>
+                    <div class="container">
+                      <div class="row">
+                        <button class="btn btn-outline-dark" style="border-radius: 0.2rem 0.2rem 0 0">
+                          <div id="btn-text">Swap</div>
+                        </button>
+                      </div>
+                      <div class="row">
+                        <button class="btn btn-outline-dark" style="border-radius: 0 0 0.2rem 0.2rem">
+                          <div id="btn-text">Drop</div>
+                        </button>
+                      </div>
+                    </div>
+                  </th>
                 </tr>
                 <tr>
-                  <th class="pos" scope="row">WR</th>
-                  <th>Steffon Diggs</th>
+                  <th class="pos" scope="row">QB</th>
+                  <th class="player">
+                    <div class="d-flex flex-column player-info text-center">
+                      <div class="d-flex justify-content-center align-items-center">
+                        <img
+                          class="rounded-circle m-1"
+                          src="{% static 'img/profile-img.jpg' %}"
+                          alt="Profile Image"
+                          width="45"
+                          height="45"
+                        />
+                        <div class="ms-1 m-1">Steffon <br />Diggs</div>
+                        <div class="m-1">
+                          Buffalo <br />
+                          Bills
+                        </div>
+                      </div>
+                      <div class="d-flex justify-content-center align-items-start player-stats">
+                        <div class="d-flex p-1 border">
+                          <span class="fw-lighter fs-6">BYE:2</span>
+                        </div>
+                        <div class="d-flex p-1 border">
+                          <span class="fw-lighter fs-6">AVG:24.5</span>
+                        </div>
+                        <div class="d-flex p-1 border">
+                          <span class="fw-lighter fs-6">TOT:357.2</span>
+                        </div>
+                      </div>
+                    </div>
+                  </th>
+                  <th>
+                    <div class="container">
+                      <div class="row">
+                        <button class="btn btn-outline-dark" style="border-radius: 0.2rem 0.2rem 0 0">
+                          <div id="btn-text">Swap</div>
+                        </button>
+                      </div>
+                      <div class="row">
+                        <button class="btn btn-outline-dark" style="border-radius: 0 0 0.2rem 0.2rem">
+                          <div id="btn-text">Drop</div>
+                        </button>
+                      </div>
+                    </div>
+                  </th>
                 </tr>
               </tbody>
             </table>

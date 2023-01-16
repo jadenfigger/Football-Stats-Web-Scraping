@@ -1,5 +1,5 @@
-.text-titles {
-  font-size: 20px;
+#text-titles {
+  font-size: 1rem;
   letter-spacing: 2px;
   word-spacing: 2px;
   font-weight: bold;
@@ -7,6 +7,10 @@
   font-style: normal;
   font-variant: small-caps;
   text-transform: none;
+}
+
+#btn-text {
+  font-size: 1rem;
 }
 
 /* Remove the navbar's default margin-bottom and rounded borders */
@@ -69,14 +73,12 @@ main {
 }
 
 .player .player-info {
-  font-size: 10px;
-  font-weight: normal;
+  font-size: 0.9rem;
 }
 
-.player #playerButtons button {
-  display: inline;
-  float: left;
-  width: 50%;
+.player-btns button {
+  width: 100%;
+  height: 50%;
 }
 
 .teamInfoLinks p,
