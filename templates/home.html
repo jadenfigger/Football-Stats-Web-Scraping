@@ -147,43 +147,38 @@ load bootstrap_icons %} {% if user.is_authenticated %}
             <table class="table text-center mx-3">
               <thread>
                 <tr>
-                  <th id="text-titles" scope="col" style="width: 10%">Pos</th>
-                  <th id="text-titles" scope="col" style="width: auto">Players</th>
-                  <th id="text-titles" scope="col" style="width: 10%">Actions</th>
+                  <th class="align-middle" id="text-titles" scope="col" style="width: 10%">Pos</th>
+                  <th class="align-middle" id="text-titles" scope="col" style="width: auto">Players</th>
+                  <th class="align-middle" id="text-titles" scope="col" style="width: auto">
+                    <div id="text-titles">This Week</div>
+                    <div id="text-titles" style="font-size: 0.7rem">Week: 5</div>
+                  </th>
                 </tr>
               </thread>
               <tbody>
-                <tr>
+                <tr class="my-2">
                   <th class="pos" scope="row">QB</th>
                   <th class="player">
-                    <div class="d-flex flex-column player-info text-center">
-                      <div class="d-flex justify-content-center align-items-center">
-                        <img
-                          class="rounded-circle m-1"
-                          src="{% static 'img/profile-img.jpg' %}"
-                          alt="Profile Image"
-                          width="45"
-                          height="45"
-                        />
-                        <div class="ms-1 m-1">Josh <br />Allen</div>
-                        <div class="m-1">
-                          Buffalo <br />
-                          Bills
-                        </div>
-                      </div>
-                      <div class="d-flex justify-content-center align-items-start player-stats">
-                        <div class="d-flex p-1 border">
-                          <span class="fw-lighter fs-6">BYE:2</span>
-                        </div>
-                        <div class="d-flex p-1 border">
-                          <span class="fw-lighter fs-6">AVG:24.5</span>
-                        </div>
-                        <div class="d-flex p-1 border">
-                          <span class="fw-lighter fs-6">TOT:357.2</span>
-                        </div>
+                    <div class="d-flex justify-content-center align-items-center player-info">
+                      <img
+                        class="rounded-circle mx-3"
+                        src="{% static 'img/profile-img.jpg' %}"
+                        alt="Profile Image"
+                        width="55"
+                        height="55"
+                      />
+                      <div class="align-middle">
+                        <p>Josh Allen</p>
+                        <p style="font-size: 0.6rem">Buffalo Bills</p>
                       </div>
                     </div>
                   </th>
+                  <th>
+                    <div class="d-flex justify-content-center align-items-start player-stats">
+                      <div style="font-size: 0.6rem">Buffalo Bills Vs. Atlanta Falcons @ Atlanta</div>
+                    </div>
+                  </th>
+                  {% comment %}
                   <th>
                     <div class="player-btns container">
                       <div class="row">
@@ -198,6 +193,7 @@ load bootstrap_icons %} {% if user.is_authenticated %}
                       </div>
                     </div>
                   </th>
+                  {% endcomment %}
                 </tr>
                 <tr>
                   <th class="pos" scope="row">QB</th>
@@ -230,6 +226,7 @@ load bootstrap_icons %} {% if user.is_authenticated %}
                       </div>
                     </div>
                   </th>
+                  {% comment %}
                   <th>
                     <div class="container">
                       <div class="row">
@@ -244,6 +241,7 @@ load bootstrap_icons %} {% if user.is_authenticated %}
                       </div>
                     </div>
                   </th>
+                  {% endcomment %}
                 </tr>
                 <tr>
                   <th class="pos" scope="row">QB</th>
@@ -276,6 +274,7 @@ load bootstrap_icons %} {% if user.is_authenticated %}
                       </div>
                     </div>
                   </th>
+                  {% comment %}
                   <th>
                     <div class="container">
                       <div class="row">
@@ -290,6 +289,7 @@ load bootstrap_icons %} {% if user.is_authenticated %}
                       </div>
                     </div>
                   </th>
+                  {% endcomment %}
                 </tr>
               </tbody>
             </table>
