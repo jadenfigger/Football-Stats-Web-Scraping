@@ -11,8 +11,8 @@
 
 main p {
   font-size: 1rem;
-  letter-spacing: 2px;
-  font-weight: normal;
+  letter-spacing: normal;
+  font-weight: 500;
   text-decoration: none solid rgb(68, 68, 68);
   font-style: normal;
   /* font-variant: small-caps; */
