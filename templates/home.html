@@ -99,44 +99,55 @@
               <thread>
                 <tr>
                   <th class="align-middle" id="text-titles" scope="col" style="width: 10%">Pos</th>
-                  <th class="align-middle" id="text-titles" scope="col" style="width: auto">Players</th>
+                  <th class="align-middle" id="text-titles" scope="col" style="width: auto"></th>
                 </tr>
               </thread>
               <tbody>
                 <tr class="my-2">
                   <th class="pos" scope="row">QB</th>
                   <th class="player">
-                    <d class="container">
-                      <d class="row">
-                        <d class="col">
-                          <div class="d-flex justify-content-center align-items-center player-info">
+                    <div class="container">
+                      <div class="row">
+                        <div class="col">
+                          <div class="d-flex border justify-content-center align-items-center player-info">
                             <img class="rounded-circle mx-3" src="{% static 'img/profile-img.jpg' %}" alt="Profile Image" width="55" height="55" />
                             <div class="align-middle">
                               <p style="font-size: 1.2rem">Josh Allen</p>
                               <p style="font-size: 0.75rem">Buffalo Bills</p>
                             </div>
-                          </div>
-                        </d>
-                        <d class="col">
-                          <div class="player-stats">
                             <div>
-                              <div id="text-titles">This Week</div>
-                              <div id="text-titles" style="font-size: 0.7rem; position: relative; top: -5px">Week: 5</div>
+                              <div class="container text-center">
+                                <div class="row row-cols-2">
+                                  <div class="col stat-card">
+                                    <p>Avg Pts: 34.2</p>
+                                  </div>
+                                  <div class="col stat-card">
+                                    <p>Avg Pts: 34.2</p>
+                                  </div>
+                                  <div class="col stat-card">
+                                    <p>Avg Pts: 34.2</p>
+                                  </div>
+                                  <div class="col stat-card">
+                                    <p>Avg Pts: 34.2</p>
+                                  </div>
+                                </div>
+                              </div>
                             </div>
-                            <div>
-                              <p style="font-size: 0.7rem">Buffalo Bills Vs. Atlanta Falcons</p>
-                              <p style="font-size: 0.6rem">@Atlanta</p>
-                            </div>
-                            {% comment %}
-                            <div class="border border-dark p-1" style="display: inline-block">
-                              <p style="float: left">Toints Points:</p>
-                              <p style="float: left; padding-left: 5px">173.54</p>
-                            </div>
-                            {% endcomment %}
                           </div>
-                        </d>
-                      </d>
-                    </d>
+                        </div>
+                        <div class="col">
+                          <div class="border px-1">
+                            <p>This Week</p>
+                            <p style="font-size: 0.7rem; position: relative; top: -5px">Week: 5</p>
+                            <p style="font-size: 0.5rem">Buffalo Bills Vs. Atlanta Falcons</p>
+                            <p style="font-size: 0.5rem">@Atlanta</p>
+                          </div>
+                          <div class="border p-1" style="border-color: #525252">
+                            <p>TOTAL POINTS: 102.4</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </th>
                   {% comment %}
                   <th>
