@@ -8050,3 +8050,217 @@ WARNING 2023-05-06 21:37:27,364 log Not Found: /favicon.ico
 WARNING 2023-05-06 21:37:27,365 basehttp "GET /favicon.ico HTTP/1.1" 404 2438
 WARNING 2023-05-06 21:57:08,900 log Not Found: /favicon.ico
 WARNING 2023-05-06 21:57:08,901 basehttp "GET /favicon.ico HTTP/1.1" 404 2438
+ERROR 2023-05-06 22:20:16,285 log Internal Server Error: /home/my_team/
+Traceback (most recent call last):
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\OneDrive\Documents\GitHub\Football-Stats-Web-Scraping\player_scraping\views.py", line 26, in my_team
+    user_team = Team.objects.get(owner=request.user)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 640, in get
+    raise self.model.MultipleObjectsReturned(
+player_scraping.models.Team.MultipleObjectsReturned: get() returned more than one Team -- it returned 8!
+ERROR 2023-05-06 22:20:16,287 basehttp "GET /home/my_team/ HTTP/1.1" 500 87803
+ERROR 2023-05-06 22:20:32,858 log Internal Server Error: /home/my_team/
+Traceback (most recent call last):
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\OneDrive\Documents\GitHub\Football-Stats-Web-Scraping\player_scraping\views.py", line 26, in my_team
+    user_team = Team.objects.get(owner=request.user)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 637, in get
+    raise self.model.DoesNotExist(
+player_scraping.models.Team.DoesNotExist: Team matching query does not exist.
+ERROR 2023-05-06 22:20:32,859 basehttp "GET /home/my_team/ HTTP/1.1" 500 87394
+WARNING 2023-05-07 15:30:42,030 log Not Found: /favicon.ico
+WARNING 2023-05-07 15:30:42,030 basehttp "GET /favicon.ico HTTP/1.1" 404 2438
+ERROR 2023-05-07 15:38:54,236 log Internal Server Error: /home/my_team/
+Traceback (most recent call last):
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\OneDrive\Documents\GitHub\Football-Stats-Web-Scraping\player_scraping\views.py", line 26, in my_team
+    user_team = Team.objects.get(owner=request.user)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 640, in get
+    raise self.model.MultipleObjectsReturned(
+player_scraping.models.Team.MultipleObjectsReturned: get() returned more than one Team -- it returned 16!
+ERROR 2023-05-07 15:38:54,238 basehttp "GET /home/my_team/ HTTP/1.1" 500 88318
+WARNING 2023-05-07 15:39:55,963 log Forbidden (CSRF token from POST incorrect.): /admin/logout/
+WARNING 2023-05-07 15:39:55,963 basehttp "POST /admin/logout/ HTTP/1.1" 403 2518
+ERROR 2023-05-07 15:40:27,297 log Internal Server Error: /home/my_team/
+Traceback (most recent call last):
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\OneDrive\Documents\GitHub\Football-Stats-Web-Scraping\player_scraping\views.py", line 26, in my_team
+    user_team = Team.objects.get(owner=request.user)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 640, in get
+    raise self.model.MultipleObjectsReturned(
+player_scraping.models.Team.MultipleObjectsReturned: get() returned more than one Team -- it returned 16!
+ERROR 2023-05-07 15:40:27,299 basehttp "GET /home/my_team/ HTTP/1.1" 500 88455
+ERROR 2023-05-07 15:41:20,726 log Internal Server Error: /home/my_team/
+Traceback (most recent call last):
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\OneDrive\Documents\GitHub\Football-Stats-Web-Scraping\player_scraping\views.py", line 29, in my_team
+    print(Team.objects.get(owner=request.user))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 640, in get
+    raise self.model.MultipleObjectsReturned(
+player_scraping.models.Team.MultipleObjectsReturned: get() returned more than one Team -- it returned 16!
+ERROR 2023-05-07 15:41:20,728 basehttp "GET /home/my_team/ HTTP/1.1" 500 88415
+ERROR 2023-05-07 15:41:21,533 log Internal Server Error: /home/my_team/
+Traceback (most recent call last):
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\OneDrive\Documents\GitHub\Football-Stats-Web-Scraping\player_scraping\views.py", line 29, in my_team
+    print(Team.objects.get(owner=request.user))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 640, in get
+    raise self.model.MultipleObjectsReturned(
+player_scraping.models.Team.MultipleObjectsReturned: get() returned more than one Team -- it returned 16!
+ERROR 2023-05-07 15:41:21,534 basehttp "GET /home/my_team/ HTTP/1.1" 500 88415
+ERROR 2023-05-07 15:41:25,212 log Internal Server Error: /home/my_team/
+Traceback (most recent call last):
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\OneDrive\Documents\GitHub\Football-Stats-Web-Scraping\player_scraping\views.py", line 29, in my_team
+    print(Team.objects.get(owner=request.user))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 640, in get
+    raise self.model.MultipleObjectsReturned(
+player_scraping.models.Team.MultipleObjectsReturned: get() returned more than one Team -- it returned 16!
+ERROR 2023-05-07 15:41:25,213 basehttp "GET /home/my_team/ HTTP/1.1" 500 88278
+ERROR 2023-05-07 15:41:59,481 log Internal Server Error: /home/my_team/
+Traceback (most recent call last):
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\OneDrive\Documents\GitHub\Football-Stats-Web-Scraping\player_scraping\views.py", line 29, in my_team
+    logger.debug(Team.objects.get(owner=request.user))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 640, in get
+    raise self.model.MultipleObjectsReturned(
+player_scraping.models.Team.MultipleObjectsReturned: get() returned more than one Team -- it returned 16!
+ERROR 2023-05-07 15:41:59,483 basehttp "GET /home/my_team/ HTTP/1.1" 500 88443
+ERROR 2023-05-07 15:42:27,758 log Internal Server Error: /home/my_team/
+Traceback (most recent call last):
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\OneDrive\Documents\GitHub\Football-Stats-Web-Scraping\player_scraping\views.py", line 29, in my_team
+    logger.warning(Team.objects.get(owner=request.user))
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 640, in get
+    raise self.model.MultipleObjectsReturned(
+player_scraping.models.Team.MultipleObjectsReturned: get() returned more than one Team -- it returned 16!
+ERROR 2023-05-07 15:42:27,759 basehttp "GET /home/my_team/ HTTP/1.1" 500 88451
+ERROR 2023-05-07 15:42:29,735 log Internal Server Error: /home/my_team/
+Traceback (most recent call last):
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\OneDrive\Documents\GitHub\Football-Stats-Web-Scraping\player_scraping\views.py", line 29, in my_team
+    logger.warning(Team.objects.get(owner=request.user))
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 640, in get
+    raise self.model.MultipleObjectsReturned(
+player_scraping.models.Team.MultipleObjectsReturned: get() returned more than one Team -- it returned 16!
+ERROR 2023-05-07 15:42:29,737 basehttp "GET /home/my_team/ HTTP/1.1" 500 88314

@@ -3,38 +3,54 @@ from player_scraping.models import League, Team, Player
 from django.contrib.auth.models import User
 import random
 
+
 class Command(BaseCommand):
-    help = 'Create a mock league with 8 teams and randomly filled rosters'
+    help = "Create a mock league with 8 teams and randomly filled rosters"
 
     def handle(self, *args, **options):
-        # 1. Create a League object with 8 teams
-        league_name = 'Mock League'
-        league = League(name=league_name, number_of_teams=8, current_week=1)
+        league_name = "Mock League"
+        league = League.objects.create(
+            name=league_name, number_of_teams=8, current_week=1
+        )
         league.save()
 
-        # 2. Create 8 Team objects with the owner field set to a user
-        team_names = ['Team 1', 'Team 2', 'Team 3', 'Team 4', 'Team 5', 'Team 6', 'Team 7', 'Team 8']
-        user = User.objects.first()  # Change this to the user you want to be the owner of the teams
+        positions = ["QB", "RB", "WR"]
+        num_teams = 8
 
-        teams = [Team(name=name, owner=user) for name in team_names]
-        Team.objects.bulk_create(teams)
+        # Query all players for each position
+        players_by_position = {
+            pos: list(Player.objects.filter(position=pos)) for pos in positions
+        }
 
-        # 3. Query the Player model to get a list of players grouped by their positions
-        qbs = list(Player.objects.filter(position='QB'))
-        rbs = list(Player.objects.filter(position='RB'))
-        wrs = list(Player.objects.filter(position='WR'))
+        for i in range(num_teams):
+            # Create a new user
+            username = f"team_{i+1}"
+            password = "password"
+            user = User.objects.create_user(username=username, password=password)
+            user.save()
 
-        # 4. Randomly assign players to the teams
-        for team in teams:
-            random_qb = random.choice(qbs)
-            random_rb = random.choice(rbs)
-            random_wr = random.choice(wrs)
+            # Print the username and password
+            print(f"User {i+1}:")
+            print(f"Username: {username}")
+            print(f"Password: {password}")
 
-            backup_qb = random.choice([qb for qb in qbs if qb != random_qb])
-            backup_rb = random.choice([rb for rb in rbs if rb != random_rb])
-            backup_wr = random.choice([wr for wr in wrs if wr != random_wr])
-
-            # 5. Save the teams and their rosters in the database
-            team.roster.set([random_qb, random_rb, random_wr, backup_qb, backup_rb, backup_wr])
+            # Create a new team for the user
+            team_name = f"Mock Team {i+1}"
+            team = Team.objects.create(name=team_name, owner=user)
             team.save()
 
+            # Print the team name
+            print(f"Team Name: {team_name}\n")
+
+            # Assign players to the team
+            for pos in positions:
+                starter = random.choice(players_by_position[pos])
+                team.starting_roster.add(starter)
+                players_by_position[pos].remove(starter)
+
+                backup = random.choice(players_by_position[pos])
+                team.backup_roster.add(backup)
+                players_by_position[pos].remove(backup)
+
+        # Save the league
+        league.save()
