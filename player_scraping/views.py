@@ -3,6 +3,7 @@ from django.shortcuts import redirect, render
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.contrib.auth.decorators import login_required
+from .models import Team
 import logging
 
 logger = logging.getLogger(__name__)
@@ -19,10 +20,13 @@ def home(request):
     return render(request, 'index.html', {'players': players})  # Pass the players variable to the template
 
 
+@login_required
 def my_team(request):
-    # Retrieve relevant data for the My Team page (e.g., user's team roster)
-    # For now, this example just passes an empty roster
-    roster = []
+    # Retrieve the user's team based on the owner
+    user_team = Team.objects.get(owner=request.user)
+
+    # Get the roster for the user's team
+    roster = user_team.roster.all()
 
     return render(request, 'my_team.html', {'roster': roster})
 

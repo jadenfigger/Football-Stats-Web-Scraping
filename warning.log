@@ -8046,3 +8046,7 @@ Not Found: /home/add_player_to_team/3728336/
 Not Found: /home/add_player_to_team/3728336/
 Received player_id: 3728336
 Request user: jaden
+WARNING 2023-05-06 21:37:27,364 log Not Found: /favicon.ico
+WARNING 2023-05-06 21:37:27,365 basehttp "GET /favicon.ico HTTP/1.1" 404 2438
+WARNING 2023-05-06 21:57:08,900 log Not Found: /favicon.ico
+WARNING 2023-05-06 21:57:08,901 basehttp "GET /favicon.ico HTTP/1.1" 404 2438
