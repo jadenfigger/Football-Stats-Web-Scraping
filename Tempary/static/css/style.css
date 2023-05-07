@@ -1,0 +1,141 @@
+#text-titles {
+  font-size: 1rem;
+  letter-spacing: 2px;
+  word-spacing: normal;
+  font-weight: bold;
+  text-decoration: none solid rgb(68, 68, 68);
+  font-style: normal;
+  font-variant: small-caps;
+  text-transform: none;
+}
+
+main p,
+#text-normal {
+  font-size: 0.9rem;
+  letter-spacing: normal;
+  font-weight: normal;
+  text-decoration: none solid rgb(68, 68, 68);
+  font-style: normal;
+  /* font-variant: small-caps; */
+  text-transform: none;
+  margin-bottom: 0 !important;
+}
+
+#btn-text {
+  font-size: 1rem;
+}
+
+/* Remove the navbar's default margin-bottom and rounded borders */
+.navbar {
+  margin-bottom: 0;
+  border-radius: 0;
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 5%), 0 2px 10px 0 rgb(0 0 0 / 5%);
+}
+
+.sidebarbutton {
+  outline: 0 !important;
+  border: 0 !important;
+  color: rgba(255, 0, 0, 0) !important;
+}
+
+/* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+.row.content {
+  height: 100%;
+}
+
+/* Set gray background color and 100% height */
+.sidebar {
+  background-color: #f1f1f1;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  padding: 58px 0 0; /* Height of navbar */
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 5%), 0 2px 10px 0 rgb(0 0 0 / 5%);
+  width: 240px;
+  z-index: 600;
+}
+
+.sidebar .active {
+  border-radius: 5px;
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+}
+
+.sidebar-sticky {
+  position: relative;
+  top: 0;
+  height: calc(100vh - 48px);
+  padding-top: 0.5rem;
+  overflow-x: hidden;
+  overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+}
+
+main {
+  margin-top: 66px;
+}
+
+.body {
+  margin-bottom: 500px;
+}
+
+.pos {
+  width: 10%;
+  vertical-align: middle;
+}
+
+.player .player-info {
+  font-size: 0.9rem;
+}
+
+.player .stat-card {
+  border: 0 solid #d1d1d1;
+  min-width: 5px;
+}
+
+.player-btns button {
+  width: 100%;
+  height: 50%;
+}
+
+.teamInfoLinks p,
+.teamInfoLinks a {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+/*  */
+
+/* Set black background color, white text and some padding */
+footer {
+  background-color: #555;
+  color: white;
+  padding: 15px;
+}
+
+/* On small screens, set height to 'auto' for sidenav and grid */
+@media screen and (max-width: 992px) {
+  .sidenav {
+    width: 100%;
+  }
+  .row.content {
+    height: auto;
+  }
+  .sidebar {
+    width: 100%;
+    height: fit-content;
+    padding-bottom: 15px;
+  }
+}
+
+@media (min-width: 992px) {
+  main {
+    padding-left: 240px;
+  }
+}
+
+@media (min-width: 576px) {
+  .sidebarbutton {
+    position: relative;
+    left: -20px;
+  }
+}

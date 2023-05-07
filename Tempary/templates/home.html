@@ -1,0 +1,280 @@
+{% extends 'base.html' %} {% load static %} {% block title %}Home{% endblock %} {% block content %}{% load bootstrap_icons %} {% if user.is_authenticated %}
+
+<header>
+  <nav class="navbar navbar-expand-lg bg-light navbar-light fixed-top">
+    <div class="container-fluid px-sm-5">
+      <button
+        class="navbar-toggler sidebarbutton"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#sidebarMenu"
+        aria-controls="sidebarMenu"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <img src="{% static 'img/menu-icon.png' %}" class="img-fluid" alt="Logo" width="30" height="24" />
+      </button>
+
+      <a class="navbar-brand flex-grow-1" href="#">Fantasy Football</a>
+      <div class="d-flex justify-content-end">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown pe-3">
+            <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="{% static 'img/profile-img.jpg' %}" alt="Profile" class="rounded-circle" width="35" height="35" />
+              <span class="d-none d-md-block dropdown-toggle ps-2">J. Figger</span>
+            </a>
+            <ul
+              class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile"
+              data-popper-placement="bottom-end"
+              style="position: absolute; inset: 0px 0px auto auto; margin: 0px; transform: translate(-16px, 38px)"
+            >
+              <li class="dropdown-header">
+                <h6>Jaden Figger</h6>
+                <span>Web Designer</span>
+              </li>
+              <li><hr class="dropdown-divider" /></li>
+              <li>
+                <a class="dropdown-item d-flex align-items-center" href="users-profile.html"> <i class="bi bi-person"></i> <span>My Profile</span> </a>
+              </li>
+              <li><hr class="dropdown-divider" /></li>
+              <li>
+                <a class="dropdown-item d-flex align-items-center" href="users-profile.html"> <i class="bi bi-gear"></i> <span>Account Settings</span> </a>
+              </li>
+              <li><hr class="dropdown-divider" /></li>
+              <li>
+                <a class="dropdown-item d-flex align-items-center" href="pages-faq.html"> <i class="bi bi-question-circle"></i> <span>Need Help?</span> </a>
+              </li>
+              <li><hr class="dropdown-divider" /></li>
+              <li>
+                <a class="dropdown-item d-flex align-items-center" href="#"> <i class="bi bi-box-arrow-right"></i> <span>Sign Out</span> </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse bg-light">
+    <div class="position-sticky">
+      <div class="list-group list-group-flush mx-3 mt-4">
+        <a href="#" class="list-group-item list-group-item-action py-2 ripple" aria-current="true">
+          <i class="fas fa-tachometer-alt fa-fw me-3"></i><span>Main dashboard</span>
+        </a>
+        <a href="#" class="list-group-item list-group-item-action py-2 ripple active">
+          <i class="fas fa-chart-area fa-fw me-3"></i><span>Webiste traffic</span>
+        </a>
+        <a href="#" class="list-group-item list-group-item-action py-2 ripple"><i class="fas fa-lock fa-fw me-3"></i><span>Password</span></a>
+        <a href="#" class="list-group-item list-group-item-action py-2 ripple"><i class="fas fa-chart-line fa-fw me-3"></i><span>Analytics</span></a>
+        <a href="#" class="list-group-item list-group-item-action py-2 ripple"><i class="fas fa-chart-pie fa-fw me-3"></i><span>SEO</span> </a>
+        <a href="#" class="list-group-item list-group-item-action py-2 ripple"><i class="fas fa-chart-bar fa-fw me-3"></i><span>Orders</span></a>
+        <a href="#" class="list-group-item list-group-item-action py-2 ripple"><i class="fas fa-globe fa-fw me-3"></i><span>International</span></a>
+        <a href="#" class="list-group-item list-group-item-action py-2 ripple"><i class="fas fa-building fa-fw me-3"></i><span>Partners</span></a>
+        <a href="#" class="list-group-item list-group-item-action py-2 ripple"><i class="fas fa-calendar fa-fw me-3"></i><span>Calendar</span></a>
+        <a href="#" class="list-group-item list-group-item-action py-2 ripple"><i class="fas fa-users fa-fw me-3"></i><span>Users</span></a>
+        <a href="#" class="list-group-item list-group-item-action py-2 ripple"><i class="fas fa-money-bill fa-fw me-3"></i><span>Sales</span></a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <div class="container pt-5">
+    <div class="row d-flex justify-content-between">
+      <div class="container body col-sm-7 flex-fill text-left">
+        <div class="row card text-center w-50 mx-auto">
+          <div class="card-body">
+            <h1 style="font-size: 3em">Team Name</h1>
+            <div class="teamInfoLinks d-flex justify-content-center">
+              <p>Record:</p>
+              <a href="#" style="text-decoration: none">10-2</a>
+              <p>Total Points:</p>
+              <a href="#" style="text-decoration: none">234.2</a>
+            </div>
+          </div>
+        </div>
+        <div class="row matchup">
+          <div class="d-flex p-1">
+            <table class="table text-center mx-3">
+              <thread>
+                <tr>
+                  <th class="align-middle" id="text-titles" scope="col" style="width: 10%">Pos</th>
+                  <th class="align-middle" id="text-titles" scope="col" style="width: auto"></th>
+                </tr>
+              </thread>
+              <tbody>
+                <tr class="my-2">
+                  <th class="pos" scope="row">QB</th>
+                  <th class="player">
+                    <div class="container">
+                      <div class="row">
+                        <div class="col">
+                          <div class="d-flex border justify-content-center align-items-center player-info">
+                            <img class="rounded-circle mx-3" src="{% static 'img/profile-img.jpg' %}" alt="Profile Image" width="55" height="55" />
+                            <div class="align-middle">
+                              <p style="font-size: 1.2rem">Josh Allen</p>
+                              <p style="font-size: 0.75rem">Buffalo Bills</p>
+                            </div>
+                            <div>
+                              <div class="container text-center">
+                                <div class="row row-cols-2">
+                                  <div class="col stat-card">
+                                    <p>Avg Pts: 34.2</p>
+                                  </div>
+                                  <div class="col stat-card">
+                                    <p>Avg Pts: 34.2</p>
+                                  </div>
+                                  <div class="col stat-card">
+                                    <p>Avg Pts: 34.2</p>
+                                  </div>
+                                  <div class="col stat-card">
+                                    <p>Avg Pts: 34.2</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div class="border px-1">
+                            <p>This Week</p>
+                            <p style="font-size: 0.7rem; position: relative; top: -5px">Week: 5</p>
+                            <p style="font-size: 0.5rem">Buffalo Bills Vs. Atlanta Falcons</p>
+                            <p style="font-size: 0.5rem">@Atlanta</p>
+                          </div>
+                          <div class="border p-1" style="border-color: #525252">
+                            <p>TOTAL POINTS: 102.4</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </th>
+                  {% comment %}
+                  <th>
+                    <div class="player-btns container">
+                      <div class="row">
+                        <button class="btn btn-outline-dark" style="border-radius: 0.2rem 0.2rem 0 0">
+                          <div id="btn-text">Swap</div>
+                        </button>
+                      </div>
+                      <div class="row">
+                        <button class="btn btn-outline-dark" style="border-radius: 0 0 0.2rem 0.2rem">
+                          <div id="btn-text">Drop</div>
+                        </button>
+                      </div>
+                    </div>
+                  </th>
+                  {% endcomment %}
+                </tr>
+                <tr>
+                  <th class="pos" scope="row">QB</th>
+                  <th class="player">
+                    <div class="d-flex flex-column player-info text-center">
+                      <div class="d-flex justify-content-center align-items-center">
+                        <img class="rounded-circle m-1" src="{% static 'img/profile-img.jpg' %}" alt="Profile Image" width="45" height="45" />
+                        <div class="ms-1 m-1">Saquon <br />Barkley</div>
+                        <div class="m-1">
+                          New York <br />
+                          Giants
+                        </div>
+                      </div>
+                      <div class="d-flex justify-content-center align-items-start player-stats">
+                        <div class="d-flex p-1 border">
+                          <span class="fw-lighter fs-6">BYE:2</span>
+                        </div>
+                        <div class="d-flex p-1 border">
+                          <span class="fw-lighter fs-6">AVG:24.5</span>
+                        </div>
+                        <div class="d-flex p-1 border">
+                          <span class="fw-lighter fs-6">TOT:357.2</span>
+                        </div>
+                      </div>
+                    </div>
+                  </th>
+                  {% comment %}
+                  <th>
+                    <div class="container">
+                      <div class="row">
+                        <button class="btn btn-outline-dark" style="border-radius: 0.2rem 0.2rem 0 0">
+                          <div id="btn-text">Swap</div>
+                        </button>
+                      </div>
+                      <div class="row">
+                        <button class="btn btn-outline-dark" style="border-radius: 0 0 0.2rem 0.2rem">
+                          <div id="btn-text">Drop</div>
+                        </button>
+                      </div>
+                    </div>
+                  </th>
+                  {% endcomment %}
+                </tr>
+                <tr>
+                  <th class="pos" scope="row">QB</th>
+                  <th class="player">
+                    <div class="d-flex flex-column player-info text-center">
+                      <div class="d-flex justify-content-center align-items-center">
+                        <img class="rounded-circle m-1" src="{% static 'img/profile-img.jpg' %}" alt="Profile Image" width="45" height="45" />
+                        <div class="ms-1 m-1">Steffon <br />Diggs</div>
+                        <div class="m-1">
+                          Buffalo <br />
+                          Bills
+                        </div>
+                      </div>
+                      <div class="d-flex justify-content-center align-items-start player-stats">
+                        <div class="d-flex p-1 border">
+                          <span class="fw-lighter fs-6">BYE:2</span>
+                        </div>
+                        <div class="d-flex p-1 border">
+                          <span class="fw-lighter fs-6">AVG:24.5</span>
+                        </div>
+                        <div class="d-flex p-1 border">
+                          <span class="fw-lighter fs-6">TOT:357.2</span>
+                        </div>
+                      </div>
+                    </div>
+                  </th>
+                  {% comment %}
+                  <th>
+                    <div class="container">
+                      <div class="row">
+                        <button class="btn btn-outline-dark" style="border-radius: 0.2rem 0.2rem 0 0">
+                          <div id="btn-text">Swap</div>
+                        </button>
+                      </div>
+                      <div class="row">
+                        <button class="btn btn-outline-dark" style="border-radius: 0 0 0.2rem 0.2rem">
+                          <div id="btn-text">Drop</div>
+                        </button>
+                      </div>
+                    </div>
+                  </th>
+                  {% endcomment %}
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2 rsidenav">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Latest News</h5>
+            <p>Some text first entry</p>
+            <p>Some text second entry</p>
+            <p>Some text third entry</p>
+            <p>Some text fourth entry</p>
+            <p>Some text fifth entry</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="container-fluid text-center">
+    <p>Footer Text</p>
+  </footer>
+</main>
+
+{% else %}
+<p>You are not logged in</p>
+<a href="{% url 'accounts:login' %}">Log In</a>
+{% endif %} {% endblock %}

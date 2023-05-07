@@ -1,0 +1,105 @@
+
+
+{% extends 'base.html' %} {% block content %}
+<h1 class="my-4">Welcome to Your Fantasy Football League</h1>
+
+{% if user.is_authenticated %}
+<a href="{% url 'my_team' %}" class="btn btn-success">Go to My Team</a>
+
+<!-- User's team name -->
+<h2 class="my-3">{{ user_team.name }}</h2>
+
+<!-- Starting roster and substitution -->
+<div class="starting-roster my-4">
+  <h3>Starting Roster</h3>
+  <form method="post" action="{% url 'change_roster' %}">
+    {% csrf_token %}
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Player Name</th>
+          <th>Position</th>
+          <th>Team</th>
+          <th>Points</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for player in starting_roster %}
+        <tr>
+          <td>{{ player.name }}</td>
+          <td>{{ player.position }}</td>
+          <td>{{ player.team }}</td>
+          <td>{{ player.points }}</td>
+          <td>
+            <select name="substitute_player_{{ player.id }}" class="form-control">
+              <option value="">-- Select Substitute --</option>
+              {% for sub in available_subs %}
+              <option value="{{ sub.id }}">{{ sub.name }} ({{ sub.position }})</option>
+              {% endfor %}
+            </select>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    <button type="submit" class="btn btn-primary">Submit Changes</button>
+  </form>
+</div>
+
+<!-- League standings -->
+<div class="league-standings my-4">
+  <h3>League Standings</h3>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Team Name</th>
+        <th>Wins</th>
+        <th>Losses</th>
+        <th>Points</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for team in league_standings %}
+      <tr>
+        <td>{{ team.name }}</td>
+        <td>{{ team.wins }}</td>
+        <td>{{ team.losses }}</td>
+        <td>{{ team.points }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+<!-- Schedule -->
+<div class="schedule my-4">
+  <h3>Schedule</h3>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Week</th>
+        <th>Home Team</th>
+        <th>Away Team</th>
+        <th>Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for game in schedule %}
+      <tr>
+        <td>{{ game.week }}</td>
+        <td>{{ game.home_team }}</td>
+        <td>{{ game.away_team }}</td>
+        <td>{{ game.date }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+</div>
+{% else %}
+<a href="{% url 'accounts:login' %}">Log In</a>
+{% endif %} 
+
+{% endblock %}
