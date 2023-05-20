@@ -10,29 +10,57 @@ class League(models.Model):
 class Team(models.Model):
     name = models.CharField(max_length=100)
     owner = models.ForeignKey("auth.User", on_delete=models.CASCADE)
-    schedule = models.ManyToManyField("Game")
-    starting_roster = models.ManyToManyField("Player", related_name="starting_teams")
-    backup_roster = models.ManyToManyField("Player", related_name="backup_teams")
+    roster = models.ManyToManyField("Player", related_name="starting_teams")
 
 
 class Player(models.Model):
     id = models.CharField(max_length=20, primary_key=True)
     name = models.CharField(max_length=100)
     position = models.CharField(max_length=20)
-    team = models.ForeignKey("Team", on_delete=models.CASCADE, null=True)
+    full_team = models.CharField(max_length=20, null=True)
+    abr_team = models.CharField(max_length=5, null=True)
     transaction_history = models.ManyToManyField("Transaction", related_name="players")
 
 
-class Game(models.Model):
-    home_team = models.ForeignKey(
-        "Team", related_name="home_team", on_delete=models.CASCADE
+# A real-time reference of the player stats for a player in a particular week/season
+class PlayerStat(models.Model):
+    player = models.ForeignKey(Player, on_delete=models.CASCADE, related_name="stats")
+    season = models.IntegerField()
+    week = models.IntegerField()
+    points = models.IntegerField(
+        null=True
+    )  # Store the points calculated based on real-life performances
+    # You can add more stats if you want
+
+
+# A final reference for each player on a team for each week in a season.
+class TeamRoster(models.Model):
+    team = models.ForeignKey(Team, on_delete=models.CASCADE)
+    player = models.ForeignKey(Player, on_delete=models.CASCADE)
+    week = models.IntegerField()
+    season = models.IntegerField()
+    points = (
+        models.IntegerField()
+    )  # Store the points that will be added to the team's score
+    is_starting = models.BooleanField(
+        default=True
+    )  # True for starting players, False for backups
+
+
+class Match(models.Model):
+    team1 = models.ForeignKey(Team, related_name="team1", on_delete=models.CASCADE)
+    team2 = models.ForeignKey(Team, related_name="team2", on_delete=models.CASCADE)
+    league = models.ForeignKey(
+        "League", related_name="league", on_delete=models.CASCADE
     )
-    away_team = models.ForeignKey(
-        "Team", related_name="away_team", on_delete=models.CASCADE
-    )
-    week = models.PositiveSmallIntegerField()
-    winner = models.ForeignKey("Team", related_name="winner", on_delete=models.CASCADE)
-    date = models.DateField()
+    week = models.IntegerField()
+    season = models.IntegerField()
+    team1_points = (
+        models.IntegerField()
+    )  # Store the total points of team1 in this match
+    team2_points = (
+        models.IntegerField()
+    )  # Store the total points of team2 in this match
 
 
 class Transaction(models.Model):
@@ -40,13 +68,3 @@ class Transaction(models.Model):
     team = models.ForeignKey("Team", on_delete=models.CASCADE)
     transaction_type = models.CharField(max_length=10)
     date = models.DateField()
-
-
-class PlayerStat(models.Model):
-    player = models.ForeignKey("Player", on_delete=models.CASCADE)
-    game = models.ForeignKey("Game", on_delete=models.CASCADE)
-    position = models.CharField(max_length=20)
-    points = models.PositiveSmallIntegerField()
-    qb_points = models.PositiveSmallIntegerField()
-    rb_points = models.PositiveSmallIntegerField()
-    wr_points = models.PositiveSmallIntegerField()

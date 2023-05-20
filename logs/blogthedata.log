@@ -1,0 +1,701 @@
+WARNING 2023-05-17 19:36:16,450 log log.py 241 log_response Not Found: /favicon.ico
+ERROR 2023-05-17 19:37:24,938 log log.py 241 log_response Internal Server Error: /home/my_team/
+Traceback (most recent call last):
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\OneDrive\Documents\GitHub\Football-Stats-Web-Scraping\player_scraping\views.py", line 36, in my_team
+    PlayerDataService.fetch_data(player.id, current_season)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'PlayerDataService' has no attribute 'fetch_data'
+ERROR 2023-05-17 19:39:25,299 log log.py 241 log_response Internal Server Error: /admin/player_scraping/playerstat/
+Traceback (most recent call last):
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: player_scraping_playerstat.eventId
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\admin\options.py", line 2065, in changelist_view
+    "selection_note": _("0 of %(cnt)s selected") % {"cnt": len(cl.result_list)},
+                                                           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 380, in __len__
+    self._fetch_all()
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\sql\compiler.py", line 1560, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such column: player_scraping_playerstat.eventId
+WARNING 2023-05-18 12:53:57,116 log log.py 241 log_response Not Found: /favicon.ico
+ERROR 2023-05-18 13:20:29,518 log log.py 241 log_response Internal Server Error: /home/
+Traceback (most recent call last):
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\OneDrive\Documents\GitHub\Football-Stats-Web-Scraping\player_scraping\views.py", line 15, in home
+    startingRoster = user_team.starting_roster.filter() if user_team else []
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Team' object has no attribute 'starting_roster'
+ERROR 2023-05-18 13:20:52,998 log log.py 241 log_response Internal Server Error: /home/my_team/
+Traceback (most recent call last):
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\OneDrive\Documents\GitHub\Football-Stats-Web-Scraping\player_scraping\views.py", line 32, in my_team
+    logger.warning(len(team.roster))
+                   ^^^^^^^^^^^^^^^^
+TypeError: object of type 'ManyRelatedManager' has no len()
+ERROR 2023-05-18 13:21:09,022 log log.py 241 log_response Internal Server Error: /home/my_team/
+Traceback (most recent call last):
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\OneDrive\Documents\GitHub\Football-Stats-Web-Scraping\player_scraping\views.py", line 36, in my_team
+    PlayerDataService.fetch_and_save_player_stats(player.id, current_season)
+  File "C:\Users\jaden\OneDrive\Documents\GitHub\Football-Stats-Web-Scraping\player_scraping\services.py", line 60, in fetch_and_save_player_stats
+    PlayerDataService.save_player_stats(player_id, season, data)
+  File "C:\Users\jaden\OneDrive\Documents\GitHub\Football-Stats-Web-Scraping\player_scraping\services.py", line 41, in save_player_stats
+    if data["seasonTypes"][1]["displayName"] == f"{season} Regular Season":
+       ~~~~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range
+ERROR 2023-05-18 13:23:10,667 log log.py 241 log_response Internal Server Error: /home/my_team/
+Traceback (most recent call last):
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\OneDrive\Documents\GitHub\Football-Stats-Web-Scraping\player_scraping\views.py", line 36, in my_team
+    PlayerDataService.fetch_and_save_player_stats(player.id, current_season)
+  File "C:\Users\jaden\OneDrive\Documents\GitHub\Football-Stats-Web-Scraping\player_scraping\services.py", line 62, in fetch_and_save_player_stats
+    PlayerDataService.save_player_stats(player_id, season, data)
+  File "C:\Users\jaden\OneDrive\Documents\GitHub\Football-Stats-Web-Scraping\player_scraping\services.py", line 43, in save_player_stats
+    if data["seasonTypes"][1]["displayName"] == f"{season} Regular Season":
+       ~~~~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range
+ERROR 2023-05-18 13:24:12,633 log log.py 241 log_response Internal Server Error: /home/my_team/
+Traceback (most recent call last):
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\OneDrive\Documents\GitHub\Football-Stats-Web-Scraping\player_scraping\views.py", line 36, in my_team
+    PlayerDataService.fetch_and_save_player_stats(player.id, current_season)
+  File "C:\Users\jaden\OneDrive\Documents\GitHub\Football-Stats-Web-Scraping\player_scraping\services.py", line 63, in fetch_and_save_player_stats
+    PlayerDataService.save_player_stats(player_id, season, data)
+  File "C:\Users\jaden\OneDrive\Documents\GitHub\Football-Stats-Web-Scraping\player_scraping\services.py", line 44, in save_player_stats
+    if data["seasonTypes"][1]["displayName"] == f"{season} Regular Season":
+       ~~~~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range
+ERROR 2023-05-18 13:26:34,494 log log.py 241 log_response Internal Server Error: /home/my_team/
+Traceback (most recent call last):
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\OneDrive\Documents\GitHub\Football-Stats-Web-Scraping\player_scraping\views.py", line 36, in my_team
+    PlayerDataService.fetch_and_save_player_stats(player.id, current_season)
+  File "C:\Users\jaden\OneDrive\Documents\GitHub\Football-Stats-Web-Scraping\player_scraping\services.py", line 64, in fetch_and_save_player_stats
+    PlayerDataService.save_player_stats(player_id, season, data)
+  File "C:\Users\jaden\OneDrive\Documents\GitHub\Football-Stats-Web-Scraping\player_scraping\services.py", line 46, in save_player_stats
+    for game in seasonTypes["categories"]["events"]:
+                ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+TypeError: list indices must be integers or slices, not str
+ERROR 2023-05-18 13:31:51,077 log log.py 241 log_response Internal Server Error: /home/my_team/
+Traceback (most recent call last):
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\OneDrive\Documents\GitHub\Football-Stats-Web-Scraping\player_scraping\views.py", line 36, in my_team
+    PlayerDataService.fetch_and_save_player_stats(player.id, current_season)
+  File "C:\Users\jaden\OneDrive\Documents\GitHub\Football-Stats-Web-Scraping\player_scraping\services.py", line 67, in fetch_and_save_player_stats
+    PlayerDataService.save_player_stats(player_id, season, data)
+  File "C:\Users\jaden\OneDrive\Documents\GitHub\Football-Stats-Web-Scraping\player_scraping\services.py", line 49, in save_player_stats
+    PlayerStat.objects.update_or_create(
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 949, in update_or_create
+    obj, created = self.select_for_update().get_or_create(defaults, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 916, in get_or_create
+    return self.get(**kwargs), False
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 623, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 1436, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 1454, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 1461, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\sql\query.py", line 1498, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\sql\query.py", line 1529, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\sql\query.py", line 1379, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\sql\query.py", line 1189, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\sql\query.py", line 1677, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'eventId' into field. Choices are: id, player, player_id, points, season, week
+ERROR 2023-05-18 13:32:34,256 log log.py 241 log_response Internal Server Error: /home/my_team/
+Traceback (most recent call last):
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\OneDrive\Documents\GitHub\Football-Stats-Web-Scraping\player_scraping\views.py", line 36, in my_team
+    PlayerDataService.fetch_and_save_player_stats(player.id, current_season)
+  File "C:\Users\jaden\OneDrive\Documents\GitHub\Football-Stats-Web-Scraping\player_scraping\services.py", line 68, in fetch_and_save_player_stats
+    PlayerDataService.save_player_stats(player_id, season, data)
+  File "C:\Users\jaden\OneDrive\Documents\GitHub\Football-Stats-Web-Scraping\player_scraping\services.py", line 50, in save_player_stats
+    PlayerStat.objects.update_or_create(
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 949, in update_or_create
+    obj, created = self.select_for_update().get_or_create(defaults, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 916, in get_or_create
+    return self.get(**kwargs), False
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 623, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 1436, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 1454, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 1461, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\sql\query.py", line 1498, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\sql\query.py", line 1529, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\sql\query.py", line 1379, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\sql\query.py", line 1189, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\sql\query.py", line 1677, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'eventId' into field. Choices are: id, player, player_id, points, season, week
+ERROR 2023-05-18 13:33:20,302 log log.py 241 log_response Internal Server Error: /home/my_team/
+Traceback (most recent call last):
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 916, in get_or_create
+    return self.get(**kwargs), False
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 637, in get
+    raise self.model.DoesNotExist(
+player_scraping.models.PlayerStat.DoesNotExist: PlayerStat matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\OneDrive\Documents\GitHub\Football-Stats-Web-Scraping\player_scraping\views.py", line 36, in my_team
+    PlayerDataService.fetch_and_save_player_stats(player.id, current_season)
+  File "C:\Users\jaden\OneDrive\Documents\GitHub\Football-Stats-Web-Scraping\player_scraping\services.py", line 67, in fetch_and_save_player_stats
+    PlayerDataService.save_player_stats(player_id, season, data)
+  File "C:\Users\jaden\OneDrive\Documents\GitHub\Football-Stats-Web-Scraping\player_scraping\services.py", line 50, in save_player_stats
+    PlayerStat.objects.update_or_create(
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 949, in update_or_create
+    obj, created = self.select_for_update().get_or_create(defaults, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 918, in get_or_create
+    params = self._extract_model_params(defaults, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 999, in _extract_model_params
+    raise exceptions.FieldError(
+django.core.exceptions.FieldError: Invalid field name(s) for model PlayerStat: 'fumbles', 'fumblesForced', 'fumblesLost', 'kicksBlocked', 'longReception', 'longRushing', 'receivingTargets', 'receivingTouchdowns', 'receivingYards', 'receptions', 'rushingAttempts', 'rushingTouchdowns', 'rushingYards', 'yardsPerReception', 'yardsPerRushAttempt'.
+ERROR 2023-05-18 13:34:17,778 log log.py 241 log_response Internal Server Error: /home/my_team/
+Traceback (most recent call last):
+  File "C:\Users\jaden\OneDrive\Documents\GitHub\Football-Stats-Web-Scraping\player_scraping\services.py", line 157, in calculate_points
+    stats = PlayerStat.objects.get(
+            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 637, in get
+    raise self.model.DoesNotExist(
+player_scraping.models.PlayerStat.DoesNotExist: PlayerStat matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\OneDrive\Documents\GitHub\Football-Stats-Web-Scraping\player_scraping\views.py", line 37, in my_team
+    player_points = PlayerPointsService.calculate_points(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\OneDrive\Documents\GitHub\Football-Stats-Web-Scraping\player_scraping\services.py", line 173, in calculate_points
+    PlayerDataService.fetch_data(player_id, season)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'PlayerDataService' has no attribute 'fetch_data'
+ERROR 2023-05-18 13:35:11,020 log log.py 241 log_response Internal Server Error: /home/my_team/
+Traceback (most recent call last):
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\OneDrive\Documents\GitHub\Football-Stats-Web-Scraping\player_scraping\views.py", line 32, in my_team
+    logger.warning(len(team.roster.all()))
+                       ^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'roster'
+ERROR 2023-05-18 13:36:07,454 log log.py 241 log_response Internal Server Error: /home/my_team/
+Traceback (most recent call last):
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\OneDrive\Documents\GitHub\Football-Stats-Web-Scraping\player_scraping\views.py", line 32, in my_team
+    logger.warning(len(team.roster.all()))
+                       ^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'roster'
+ERROR 2023-05-18 13:37:45,096 log log.py 241 log_response Internal Server Error: /home/my_team/
+Traceback (most recent call last):
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\OneDrive\Documents\GitHub\Football-Stats-Web-Scraping\player_scraping\views.py", line 34, in my_team
+    PlayerDataService.fetch_and_save_player_stats(player.id, current_season)
+  File "C:\Users\jaden\OneDrive\Documents\GitHub\Football-Stats-Web-Scraping\player_scraping\services.py", line 62, in fetch_and_save_player_stats
+    data = PlayerDataService.fetch_player_stats(player_id, season)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\OneDrive\Documents\GitHub\Football-Stats-Web-Scraping\player_scraping\services.py", line 25, in fetch_player_stats
+    if not data["categories"]:
+           ~~~~^^^^^^^^^^^^^^
+KeyError: 'categories'
+ERROR 2023-05-18 13:40:22,496 log log.py 241 log_response Internal Server Error: /home/my_team/
+Traceback (most recent call last):
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\OneDrive\Documents\GitHub\Football-Stats-Web-Scraping\player_scraping\views.py", line 34, in my_team
+    PlayerDataService.fetch_and_save_player_stats(player.id, current_season)
+  File "C:\Users\jaden\OneDrive\Documents\GitHub\Football-Stats-Web-Scraping\player_scraping\services.py", line 63, in fetch_and_save_player_stats
+    data = PlayerDataService.fetch_player_stats(player_id, season)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\OneDrive\Documents\GitHub\Football-Stats-Web-Scraping\player_scraping\services.py", line 25, in fetch_player_stats
+    logger.warning(data["categories"])
+                   ~~~~^^^^^^^^^^^^^^
+KeyError: 'categories'
+ERROR 2023-05-18 13:44:18,609 log log.py 241 log_response Internal Server Error: /home/my_team/
+Traceback (most recent call last):
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\OneDrive\Documents\GitHub\Football-Stats-Web-Scraping\player_scraping\views.py", line 34, in my_team
+    PlayerDataService.fetch_and_save_player_stats(player.id, current_season)
+  File "C:\Users\jaden\OneDrive\Documents\GitHub\Football-Stats-Web-Scraping\player_scraping\services.py", line 62, in fetch_and_save_player_stats
+    data = PlayerDataService.fetch_player_stats(player_id, season)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\OneDrive\Documents\GitHub\Football-Stats-Web-Scraping\player_scraping\services.py", line 26, in fetch_player_stats
+    raise ValueError("The webpage does not exist for the specified year")
+ValueError: The webpage does not exist for the specified year
+ERROR 2023-05-18 13:45:43,943 log log.py 241 log_response Internal Server Error: /home/my_team/
+Traceback (most recent call last):
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\OneDrive\Documents\GitHub\Football-Stats-Web-Scraping\player_scraping\views.py", line 34, in my_team
+    PlayerDataService.fetch_and_save_player_stats(player.id, current_season)
+  File "C:\Users\jaden\OneDrive\Documents\GitHub\Football-Stats-Web-Scraping\player_scraping\services.py", line 66, in fetch_and_save_player_stats
+    PlayerDataService.save_player_stats(player_id, season, data)
+  File "C:\Users\jaden\OneDrive\Documents\GitHub\Football-Stats-Web-Scraping\player_scraping\services.py", line 46, in save_player_stats
+    for season_type in data["seasonTypes"]:
+                       ~~~~^^^^^^^^^^^^^^^
+KeyError: 'seasonTypes'
+ERROR 2023-05-20 13:48:01,590 log log.py 241 log_response Internal Server Error: /home/my_team/
+Traceback (most recent call last):
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\OneDrive\Documents\GitHub\Football-Stats-Web-Scraping\player_scraping\views.py", line 34, in my_team
+    PlayerDataService.fetch_and_save_player_stats(player.id, current_season)
+  File "C:\Users\jaden\OneDrive\Documents\GitHub\Football-Stats-Web-Scraping\player_scraping\services.py", line 66, in fetch_and_save_player_stats
+    PlayerDataService.save_player_stats(player_id, season, data)
+  File "C:\Users\jaden\OneDrive\Documents\GitHub\Football-Stats-Web-Scraping\player_scraping\services.py", line 51, in save_player_stats
+    points = PlayerPointsService.calculate_points(game)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: PlayerPointsService.calculate_points() missing 5 required positional arguments: 'rush_atms', 'rush_yds', 'tot_rec', 'rec_yds', and 'touchdowns'
+WARNING 2023-05-20 13:48:01,738 log log.py 241 log_response Not Found: /favicon.ico
+ERROR 2023-05-20 13:49:03,374 log log.py 241 log_response Internal Server Error: /home/my_team/
+Traceback (most recent call last):
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\OneDrive\Documents\GitHub\Football-Stats-Web-Scraping\player_scraping\views.py", line 34, in my_team
+    PlayerDataService.fetch_and_save_player_stats(player.id, current_season)
+  File "C:\Users\jaden\OneDrive\Documents\GitHub\Football-Stats-Web-Scraping\player_scraping\services.py", line 69, in fetch_and_save_player_stats
+    PlayerDataService.save_player_stats(player_id, season, data)
+  File "C:\Users\jaden\OneDrive\Documents\GitHub\Football-Stats-Web-Scraping\player_scraping\services.py", line 54, in save_player_stats
+    points = PlayerPointsService.calculate_points(game)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: PlayerPointsService.calculate_points() missing 5 required positional arguments: 'rush_atms', 'rush_yds', 'tot_rec', 'rec_yds', and 'touchdowns'
+ERROR 2023-05-20 14:02:19,960 log log.py 241 log_response Internal Server Error: /home/my_team/
+Traceback (most recent call last):
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\OneDrive\Documents\GitHub\Football-Stats-Web-Scraping\player_scraping\views.py", line 34, in my_team
+    PlayerDataService.fetch_and_save_player_stats(player.id, current_season)
+  File "C:\Users\jaden\OneDrive\Documents\GitHub\Football-Stats-Web-Scraping\player_scraping\services.py", line 74, in fetch_and_save_player_stats
+    PlayerDataService.save_player_stats(player_id, season, data)
+  File "C:\Users\jaden\OneDrive\Documents\GitHub\Football-Stats-Web-Scraping\player_scraping\services.py", line 55, in save_player_stats
+    points = PlayerPointsService.calculate_points(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\OneDrive\Documents\GitHub\Football-Stats-Web-Scraping\player_scraping\services.py", line 169, in calculate_points
+    stats[0] * 0.2
+    ~~~~~~~~~^~~~~
+TypeError: can't multiply sequence by non-int of type 'float'
+ERROR 2023-05-20 14:02:53,600 log log.py 241 log_response Internal Server Error: /home/my_team/
+Traceback (most recent call last):
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\OneDrive\Documents\GitHub\Football-Stats-Web-Scraping\player_scraping\views.py", line 34, in my_team
+    PlayerDataService.fetch_and_save_player_stats(player.id, current_season)
+  File "C:\Users\jaden\OneDrive\Documents\GitHub\Football-Stats-Web-Scraping\player_scraping\services.py", line 74, in fetch_and_save_player_stats
+    PlayerDataService.save_player_stats(player_id, season, data)
+  File "C:\Users\jaden\OneDrive\Documents\GitHub\Football-Stats-Web-Scraping\player_scraping\services.py", line 55, in save_player_stats
+    points = PlayerPointsService.calculate_points(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\OneDrive\Documents\GitHub\Football-Stats-Web-Scraping\player_scraping\services.py", line 169, in calculate_points
+    stats[0] * 0.2
+    ~~~~~~~~~^~~~~
+TypeError: can't multiply sequence by non-int of type 'float'
+ERROR 2023-05-20 14:05:08,166 log log.py 241 log_response Internal Server Error: /home/my_team/
+Traceback (most recent call last):
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\OneDrive\Documents\GitHub\Football-Stats-Web-Scraping\player_scraping\views.py", line 34, in my_team
+    PlayerDataService.fetch_and_save_player_stats(player.id, current_season)
+  File "C:\Users\jaden\OneDrive\Documents\GitHub\Football-Stats-Web-Scraping\player_scraping\services.py", line 75, in fetch_and_save_player_stats
+    PlayerDataService.save_player_stats(player_id, season, data)
+  File "C:\Users\jaden\OneDrive\Documents\GitHub\Football-Stats-Web-Scraping\player_scraping\services.py", line 56, in save_player_stats
+    points = PlayerPointsService.calculate_points(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\OneDrive\Documents\GitHub\Football-Stats-Web-Scraping\player_scraping\services.py", line 170, in calculate_points
+    stats[0] * 0.2
+    ~~~~~~~~~^~~~~
+TypeError: can't multiply sequence by non-int of type 'float'
+ERROR 2023-05-20 14:05:50,401 log log.py 241 log_response Internal Server Error: /home/my_team/
+Traceback (most recent call last):
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\OneDrive\Documents\GitHub\Football-Stats-Web-Scraping\player_scraping\views.py", line 34, in my_team
+    PlayerDataService.fetch_and_save_player_stats(player.id, current_season)
+  File "C:\Users\jaden\OneDrive\Documents\GitHub\Football-Stats-Web-Scraping\player_scraping\services.py", line 75, in fetch_and_save_player_stats
+    PlayerDataService.save_player_stats(player_id, season, data)
+  File "C:\Users\jaden\OneDrive\Documents\GitHub\Football-Stats-Web-Scraping\player_scraping\services.py", line 56, in save_player_stats
+    points = PlayerPointsService.calculate_points(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\OneDrive\Documents\GitHub\Football-Stats-Web-Scraping\player_scraping\services.py", line 171, in calculate_points
+    stats[0] * 0.2
+    ~~~~~~~~~^~~~~
+TypeError: can't multiply sequence by non-int of type 'float'
+ERROR 2023-05-20 14:07:09,814 log log.py 241 log_response Internal Server Error: /home/my_team/
+Traceback (most recent call last):
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\OneDrive\Documents\GitHub\Football-Stats-Web-Scraping\player_scraping\views.py", line 34, in my_team
+    PlayerDataService.fetch_and_save_player_stats(player.id, current_season)
+  File "C:\Users\jaden\OneDrive\Documents\GitHub\Football-Stats-Web-Scraping\player_scraping\services.py", line 75, in fetch_and_save_player_stats
+    PlayerDataService.save_player_stats(player_id, season, data)
+  File "C:\Users\jaden\OneDrive\Documents\GitHub\Football-Stats-Web-Scraping\player_scraping\services.py", line 56, in save_player_stats
+    points = PlayerPointsService.calculate_points(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\OneDrive\Documents\GitHub\Football-Stats-Web-Scraping\player_scraping\services.py", line 171, in calculate_points
+    stats[0] * 0.2
+TypeError: unsupported operand type(s) for +: 'float' and 'str'
+ERROR 2023-05-20 14:07:38,811 log log.py 241 log_response Internal Server Error: /home/my_team/
+Traceback (most recent call last):
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\OneDrive\Documents\GitHub\Football-Stats-Web-Scraping\player_scraping\views.py", line 35, in my_team
+    player_points = PlayerPointsService.calculate_points(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: PlayerPointsService.calculate_points() takes 1 positional argument but 3 were given
+ERROR 2023-05-20 14:09:29,560 log log.py 241 log_response Internal Server Error: /home/my_team/
+Traceback (most recent call last):
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\OneDrive\Documents\GitHub\Football-Stats-Web-Scraping\player_scraping\views.py", line 40, in my_team
+    return render(request, "my_team.html", {"roster_with_points": roster})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\defaulttags.py", line 226, in render
+    raise ValueError(
+ValueError: Need 2 values to unpack in for loop; got 1. 

@@ -1,6 +1,5 @@
 {% extends 'base.html' %} {% block content %} {% load static %}
 <h1 class="my-4">My Team</h1>
-
 <!-- Team roster -->
 <div class="team-roster">
   <h2>Roster</h2>
@@ -15,20 +14,21 @@
       </tr>
     </thead>
     <tbody>
-      {% for player in roster %}
+      {% for player, points in roster_with_points %}
       <tr>
         <td>{{ player.name }}</td>
         <td>{{ player.position }}</td>
         <td>{{ player.team }}</td>
-        <td>{{ player.points }}</td>
+        <td>{{ points }}</td>
         <td>
-          <a href="{% url 'drop_player' player.id %}" class="btn btn-danger">Drop</a>
+          <button type="button" class="btn btn-danger" onclick="dropPlayer({{ player.id }})">Drop</button>
         </td>
       </tr>
       {% endfor %}
     </tbody>
   </table>
 </div>
+
 
 <!-- Trade players -->
 <div class="trade-players my-4">
@@ -38,32 +38,26 @@
     <div class="form-group">
       <label for="my_player">Search a player to add:</label>
       <div>
-        {% csrf_token %}
-        <form id="searchForm" method="POST" onsubmit="return false;">
-          <input type="text" id="searchInput" name="search_input" onkeyup="searchPlayers()" placeholder="Search for players..." />
-          <div id="suggestions" class="suggestions"></div>
-        </form>
-        <div id="search-results" class="search-results" style="display: none">
-          <div class="search-results-inner" style="max-height: 200px; overflow-y: auto">
-            {% for player in players %}
-            <div class="search-result" data-player-id="{{ player.id }}" onclick="addPlayer('{{ player.id }}');">
-              {{ player.name }} - {{ player.position }}
-              <button type="button" class="add-player-btn">Add to Team</button>
-            </div>
-            {% endfor %}
-          </div>
+        <div>
+          {% csrf_token %}
+          <form id="searchForm" method="POST" onsubmit="return false;">
+            <input type="text" id="searchInput" name="search_input" onkeyup="searchPlayers()" placeholder="Search for players..." />
+            <div id="suggestions" class="suggestions"></div>
+          </form>
         </div>
-      </div>
+        <!-- Add this new div element to display the selected player's information -->
+      <div id="selected-player" style="display: none;"></div>
     </div>
     <div class="form-group">
-      <label for="other_team">Select a player from your roster to drop:</label>
-      <select class="form-control" id="other_team" name="other_team" required>
+      <label for="player_to_drop">Select a player from your roster to drop:</label>
+      <select class="form-control" id="player_to_drop" name="player_to_drop" required>
         {% for player in roster %}
         <option value="{{ player.id }}">{{ player.name }}</option>
         {% endfor %}
       </select>
     </div>
-    <button type="submit" class="btn btn-primary">Propose Trade</button>
+    <!-- Add a button to propose the transaction -->
+    <button type="button" class="btn btn-primary" id="propose-transaction" onclick="proposeTransaction()">Propose Transaction</button>
   </form>
 </div>
 

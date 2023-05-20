@@ -1,74 +1,98 @@
-from lib2to3.pytree import Base
-from urllib.error import HTTPError
-from django.core.management.base import BaseCommand, CommandError
-from bs4 import BeautifulSoup
-from urllib.request import urlopen
 import json
+import requests
+from urllib.request import urlopen
+from concurrent.futures import ThreadPoolExecutor
 from math import ceil
+from django.core.management.base import BaseCommand
+from player_scraping.models import Player
 import logging
+
 
 logger = logging.getLogger(__name__)
 
 
 from player_scraping.models import Player
 
+
 class Command(BaseCommand):
+    def handle(self, *args, **options):
+        # Find all active players, fill player database and calculate points
+        self.fetch_data_all(100)
 
-	def handle(self, *args, **options):
-		# count = fetch_data_all(100, self)
-		fill_positions(self)
+    def fetch_player_details(self, player_id):
+        # Fetch player details from the API
+        try:
+            url = f"https://site.web.api.espn.com/apis/common/v3/sports/football/nfl/athletes/{player_id}"
+            response = requests.get(url)
+            response.raise_for_status()  # If the response contains an HTTP error status code, raise an exception
+            player_json_data = response.json()
+            return player_json_data
+        except requests.exceptions.HTTPError as errh:
+            logger.error(f"HTTP Error: {errh}")
+        except requests.exceptions.ConnectionError as errc:
+            logger.error(f"Error Connecting: {errc}")
+        except requests.exceptions.Timeout as errt:
+            logger.error(f"Timeout Error: {errt}")
+        except requests.exceptions.RequestException as err:
+            logger.error(f"Something went wrong: {err}")
 
+    def fetch_data_limit(self, limit, page, update_existing=False):
+        url = f"https://sports.core.api.espn.com/v3/sports/football/nfl/athletes?limit={limit}&page={page}"
+        response = requests.get(url)
+        json_data = response.json()
 
+        player_ids = [player["id"] for player in json_data["items"] if player["active"]]
 
-def fill_positions(commandLink):
-	for player in Player.objects.all():
-		player_id = player.player_id
-		logger.warning(player_id)
-		player_json_data = json.loads(BeautifulSoup(urlopen(f"https://site.web.api.espn.com/apis/common/v3/sports/football/nfl/athletes/{player_id}"), "html.parser").text)
+        if update_existing:
+            existing_players = Player.objects.filter(id__in=player_ids).values_list(
+                "id", flat=True
+            )
+            to_update = [player for player in player_ids if player in existing_players]
+        else:
+            to_update = player_ids
 
+        with ThreadPoolExecutor(max_workers=20) as executor:
+            new_player_details = list(
+                executor.map(self.fetch_player_details, to_update)
+            )
 
-		player_position = player_json_data['athlete']['position']['abbreviation']
-		player.position = player_position
-		player.save()
-		commandLink.stdout.write(f"{player.name} update with position {player_position}")
+        players_to_create = []
+        for player_detail in new_player_details:
+            if player_detail is not None:
+                player_id = player_detail["athlete"]["id"]
+                if player_id:
+                    player_name = player_detail["athlete"]["fullName"]
+                    full_team = (
+                        player_detail["athlete"]["team"]["location"]
+                        + " "
+                        + player_detail["athlete"]["team"]["nickname"]
+                    )
+                    abr_team = player_detail["athlete"]["team"]["abbreviation"]
+                    player_position = player_detail["athlete"]["position"][
+                        "abbreviation"
+                    ]
 
+                    if player_position in ["QB", "RB", "WR"]:
+                        players_to_create.append(
+                            Player(
+                                id=player_id,
+                                name=player_name,
+                                position=player_position,
+                                full_team=full_team,
+                                abr_team=abr_team,
+                            )
+                        )
 
-def fetch_data_limit(limit, page, commandLink):
-	player_urls = {}
+        Player.objects.bulk_create(players_to_create, ignore_conflicts=True)
 
-	try:
-		html = urlopen(f"https://sports.core.api.espn.com/v3/sports/football/nfl/athletes?limit={limit}&page={page}&active=true")
-	except:
-		CommandError(f"Could not load url with limit: {limit} and page: {page}")
+        return json_data["count"]
 
+    def fetch_data_all(self, limit, update_existing_only=False):
+        count = self.fetch_data_limit(limit, 1, update_existing_only)
 
-	json_data = json.loads(html.read().decode("utf-8"))
+        total_pages = ceil(count / limit)
 
-	for player in json_data['items']:
-		if player['active']:
-			player_id = player['id']
-			player_name = player['fullName']
-			
-			try:
-				player_json_data = json.loads(urlopen(f"https://site.web.api.espn.com/apis/common/v3/sports/football/nfl/athletes/{player_id}").read().decode("utf-8"))
-			except HTTPError:
-				continue
-
-			player_position = player_json_data['athlete']['position']['abbreviation']
-			
-			if (player_position == "QB" or player_position == "RB" or player_position == "WR"):
-				obj, created = Player.objects.get_or_create(player_id=player_id, name=player_name)
-				if (created):
-					commandLink.stdout.write(commandLink.style.SUCCESS(f"{player_name} Saved"))
-					obj.save()
-			else:
-				commandLink.stdout.write(commandLink.style.WARNING(f"{player_name} not valid"))
-
-	return json_data['count']
-
-def fetch_data_all(limit, commandLink):
-	count = fetch_data_limit(limit, 30, commandLink)
-
-	for page in range(1, ceil(count/limit)):
-		commandLink.stdout.write(f"Page Count: {page}")
-		n_count = fetch_data_limit(limit, page, commandLink)
+        for page in range(
+            2, total_pages + 1
+        ):  # start from 2 because we already fetched the first page
+            self.fetch_data_limit(limit, page, update_existing_only)

@@ -146,26 +146,64 @@ COMPRESS_PRECOMPILERS = (("text/x-scss", "django_libsass.SassCompiler"),)
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-LOGGING_CONFIG = None
+FORMATTERS = (
+    {
+        "verbose": {
+            "format": "{levelname} {asctime:s} {threadName} {thread:d} {module} {filename} {lineno:d} {name} {funcName} {process:d} {message}",
+            "style": "{",
+        },
+        "simple": {
+            "format": "{levelname} {asctime:s} {module} {filename} {lineno:d} {funcName} {message}",
+            "style": "{",
+        },
+    },
+)
+
+
+HANDLERS = {
+    "console_handler": {
+        "class": "logging.StreamHandler",
+        "formatter": "simple",
+    },
+    "my_handler": {
+        "class": "logging.handlers.RotatingFileHandler",
+        "filename": f"{BASE_DIR}/logs/blogthedata.log",
+        "mode": "a",
+        "encoding": "utf-8",
+        "formatter": "simple",
+        "backupCount": 5,
+        "maxBytes": 1024 * 1024 * 5,  # 5 MB
+    },
+    "my_handler_detailed": {
+        "class": "logging.handlers.RotatingFileHandler",
+        "filename": f"{BASE_DIR}/logs/blogthedata_detailed.log",
+        "mode": "a",
+        "formatter": "verbose",
+        "backupCount": 5,
+        "maxBytes": 1024 * 1024 * 5,  # 5 MB
+    },
+}
+
+LOGGERS = (
+    {
+        "django": {
+            "handlers": ["console_handler", "my_handler_detailed"],
+            "level": "INFO",
+            "propagate": False,
+        },
+        "django.request": {
+            "handlers": ["my_handler"],
+            "level": "WARNING",
+            "propagate": False,
+        },
+    },
+)
+
 
 LOGGING = {
     "version": 1,
     "disable_existing_loggers": False,
-    "handlers": {
-        "console": {
-            "class": "loguru._handler.StreamHandler",
-            "level": "DEBUG",
-        },
-        "file": {
-            "class": "loguru._handler._AsyncFileHandler",
-            "filename": "/var/log/myapp.log",
-            "level": "DEBUG",
-        },
-    },
-    "loggers": {
-        "django": {
-            "handlers": ["console", "file"],
-            "level": "INFO",
-        },
-    },
+    "formatters": FORMATTERS[0],
+    "handlers": HANDLERS,
+    "loggers": LOGGERS[0],
 }

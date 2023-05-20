@@ -45,11 +45,10 @@ class Command(BaseCommand):
             # Assign players to the team
             for pos in positions:
                 starter = random.choice(players_by_position[pos])
-                team.starting_roster.add(starter)
+                team.roster.add(starter)
                 players_by_position[pos].remove(starter)
-
                 backup = random.choice(players_by_position[pos])
-                team.backup_roster.add(backup)
+                team.roster.add(backup)
                 players_by_position[pos].remove(backup)
 
         # Save the league
