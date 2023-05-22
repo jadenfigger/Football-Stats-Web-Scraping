@@ -27,17 +27,17 @@ def my_team(request):
 
     # Get the current week of the league
     current_week = League.objects.first().current_week
-    current_season = "2022"
+    current_season = 2022  # Assuming season is an integer
 
-    # roster_with_points = []
-    # for player in roster:
-    #     PlayerDataService.fetch_and_save_player_stats(player.id, current_season)
-    # player_points = PlayerPointsService.calculate_points(
-    #     player.id, current_season, current_week
-    # )
-    # roster_with_points.append((player, player_points))
+    roster_with_points = []
+    for player in roster:
+        player_stat = PlayerStat.objects.filter(
+            player=player, season=current_season, week=current_week
+        ).first()
+        player_points = player_stat.points if player_stat else 0
+        roster_with_points.append((player, player_points))
 
-    return render(request, "my_team.html", {"roster_with_points": roster})
+    return render(request, "my_team.html", {"roster_with_points": roster_with_points})
 
 
 def change_roster(request):

@@ -699,3 +699,4 @@ Traceback (most recent call last):
   File "C:\Users\jaden\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\defaulttags.py", line 226, in render
     raise ValueError(
 ValueError: Need 2 values to unpack in for loop; got 1. 
+WARNING 2023-05-22 15:57:25,088 log log.py 241 log_response Not Found: /favicon.ico
