@@ -3,7 +3,7 @@ import requests
 from concurrent.futures import ThreadPoolExecutor
 from math import ceil
 from .models import Player, PlayerStat
-from .utils import findIndex
+from .utils import get_value_at_index
 
 
 logger = logging.getLogger(__name__)
@@ -11,7 +11,7 @@ logger = logging.getLogger(__name__)
 
 class PlayerDataService:
     @staticmethod
-    def fetch_player_stats(player_id, season):
+    def fetch_player_stats(player_id, week, season):
         # Fetch player stats from the API
         try:
             response = requests.get(
@@ -24,12 +24,26 @@ class PlayerDataService:
             data = response.json()
 
             if data.get("categories") is None:
-                logging.warning(
+                logger.warning(
                     f"{player_id} does not exist for the season year: {season}"
                 )
                 return None
 
-            return data
+            # find if the week exists
+            eventId = None
+            for season_type in data["seasonTypes"]:
+                if season_type["displayName"] == f"{season} Regular Season":
+                    for category in season_type["categories"]:
+                        if category["type"] == "event":
+                            for game in category["events"]:
+                                if data["events"][game["eventId"]]["week"] == week:
+                                    return PlayerPointsService.extract_stats(
+                                        data["names"], game["stats"]
+                                    )
+
+            logger.warning(f"{player_id} does not exist for the week: {week}")
+            return None
+
         except requests.exceptions.HTTPError as errh:
             logger.error(f"HTTP Error: {errh}")
         except requests.exceptions.ConnectionError as errc:
@@ -40,39 +54,40 @@ class PlayerDataService:
             logger.error(f"Something went wrong: {err}")
 
     @staticmethod
-    def save_player_stats(player_id, season, data):
+    def save_player_stats(player_id, week, season, data):
         # Save player stats to the database
         if data:
             player = Player.objects.get(id=player_id)
-            labels = data["labels"]
-            logger.warning(labels)
 
-            for season_type in data["seasonTypes"]:
-                if season_type["displayName"] == f"{season} Regular Season":
-                    for category in season_type["categories"]:
-                        if category["type"] == "event":
-                            for game in category["events"]:
-                                logger.warning(game)
-                                points = PlayerPointsService.calculate_points(
-                                    PlayerPointsService.extract_stats(
-                                        labels, game["stats"]
-                                    )
-                                )
-                                PlayerStat.objects.update_or_create(
-                                    player=player,
-                                    season=season,
-                                    week=data["events"][game["eventId"]]["week"],
-                                    points=points,
-                                )
+            points = PlayerPointsService.calculate_points(data)
+            PlayerStat.objects.update_or_create(
+                player=player,
+                season=season,
+                week=week,
+                points=points,
+            )
 
         return True
 
     @staticmethod
-    def fetch_and_save_player_stats(player_id, season):
+    def fetch_and_save_player_stats(player_id, week, season):
         # Fetch player stats from the API and save them to the database
-        data = PlayerDataService.fetch_player_stats(player_id, season)
+        data = PlayerDataService.fetch_player_stats(player_id, week, season)
         if data is not None:
-            PlayerDataService.save_player_stats(player_id, season, data)
+            PlayerDataService.save_player_stats(player_id, week, season, data)
+
+    # Will get the player points based on player_id, week, and season. If the playerStat does not exist then will create one.
+    @staticmethod
+    def get_player_points(player, week, season):
+        player_stat = PlayerStat.objects.filter(
+            player=player, week=week, season=season
+        ).first()
+        if player_stat:
+            return player_stat.points
+        else:
+            return PlayerDataService.fetch_and_save_player_stats(
+                player.id, week, season
+            )
 
     @staticmethod
     def fetch_player_details(player_id):
@@ -100,13 +115,12 @@ class PlayerDataService:
 
         player_ids = [player["id"] for player in json_data["items"] if player["active"]]
 
+        to_update = set(player_ids)
         if update_existing:
-            existing_players = Player.objects.filter(id__in=player_ids).values_list(
-                "id", flat=True
+            existing_players = set(
+                Player.objects.filter(id__in=player_ids).values_list("id", flat=True)
             )
-            to_update = [player for player in player_ids if player in existing_players]
-        else:
-            to_update = player_ids
+            to_update.intersection_update(existing_players)
 
         with ThreadPoolExecutor(max_workers=20) as executor:
             new_player_details = list(
@@ -168,7 +182,7 @@ class PlayerPointsService:
         # stats = [pass_yds, rush_atms, rush_yds, tot_rec, rec_yds, touchdowns]
         logger.warning(stats)
         points = (
-            stats[0] * 0.2
+            stats[0] * 0.05
             + stats[1] * 0.1
             + stats[2] * 0.1
             + stats[4] * 0.1
@@ -177,26 +191,25 @@ class PlayerPointsService:
         )
         if stats[0] >= 300:
             points += 5
-        elif stats[2] >= 100:
+        if stats[2] >= 100:
             points += 5
-        elif stats[4] >= 150:
+        if stats[4] >= 150:
             points += 5
 
         logger.warning(points)
         return points
 
     def extract_stats(labels, gameStats):
-        stats = [
-            float(gameStats[findIndex(labels, "passingYards")]),
-            float(gameStats[findIndex(labels, "rushingAttempts")]),
-            float(gameStats[findIndex(labels, "rushingYards")]),
-            float(gameStats[findIndex(labels, "receptions")]),
-            float(gameStats[findIndex(labels, "receivingYards")]),
-        ]
+        stats = []
+        stats.append(get_value_at_index(labels, "passingYards", gameStats))
+        stats.append(get_value_at_index(labels, "rushingAttempts", gameStats))
+        stats.append(get_value_at_index(labels, "rushingYards", gameStats))
+        stats.append(get_value_at_index(labels, "receptions", gameStats))
+        stats.append(get_value_at_index(labels, "receivingYards", gameStats))
         stats.append(
-            float(gameStats[findIndex(labels, "rushingTouchdowns")])
-            + float(gameStats[findIndex(labels, "passingTouchdowns")])
-            + float(gameStats[findIndex(labels, "receivingTouchdowns")])
+            get_value_at_index(labels, "rushingTouchdowns", gameStats)
+            + get_value_at_index(labels, "passingTouchdowns", gameStats)
+            + get_value_at_index(labels, "receivingTouchdowns", gameStats)
         )
 
         return stats

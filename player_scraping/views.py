@@ -31,10 +31,9 @@ def my_team(request):
 
     roster_with_points = []
     for player in roster:
-        player_stat = PlayerStat.objects.filter(
-            player=player, season=current_season, week=current_week
-        ).first()
-        player_points = player_stat.points if player_stat else 0
+        player_points = PlayerDataService.get_player_points(
+            player, current_week, current_season
+        )
         roster_with_points.append((player, player_points))
 
     return render(request, "my_team.html", {"roster_with_points": roster_with_points})
@@ -76,10 +75,8 @@ def add_player_to_team(request, player_id, player_to_drop_id=None):
 
         if player_to_drop_id:
             player_to_drop = Player.objects.get(id=player_to_drop_id)
-            if player_to_drop in team.starting_roster.all():
-                team.starting_roster.remove(player_to_drop)
-            elif player_to_drop in team.backup_roster.all():
-                team.backup_roster.remove(player_to_drop)
+            if player_to_drop in team.roster.all():
+                team.roster.remove(player_to_drop)
             else:
                 return JsonResponse(
                     {"success": False, "error": "Player to drop not found in the team"}
@@ -87,7 +84,7 @@ def add_player_to_team(request, player_id, player_to_drop_id=None):
 
         # You can add a condition here to decide whether to add the player to the starting roster or backup roster.
         # For this example, I am adding the player to the starting roster.
-        team.starting_roster.add(player)
+        team.roster.add(player)
         team.save()
         player_dict = model_to_dict(player)
         return JsonResponse({"success": True, "player": player_dict})

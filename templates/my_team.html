@@ -51,7 +51,7 @@
     <div class="form-group">
       <label for="player_to_drop">Select a player from your roster to drop:</label>
       <select class="form-control" id="player_to_drop" name="player_to_drop" required>
-        {% for player in roster %}
+        {% for player, points in roster_with_points %}
         <option value="{{ player.id }}">{{ player.name }}</option>
         {% endfor %}
       </select>
