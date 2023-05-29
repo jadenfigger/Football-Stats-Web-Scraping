@@ -2,8 +2,9 @@ import logging
 import requests
 from concurrent.futures import ThreadPoolExecutor
 from math import ceil
-from .models import Player, PlayerStat
+from .models import Player, PlayerStat, Team, League
 from .utils import get_value_at_index
+from .forms import WeekSelectForm
 
 
 logger = logging.getLogger(__name__)
@@ -30,13 +31,14 @@ class PlayerDataService:
                 return None
 
             # find if the week exists
-            eventId = None
             for season_type in data["seasonTypes"]:
                 if season_type["displayName"] == f"{season} Regular Season":
                     for category in season_type["categories"]:
                         if category["type"] == "event":
                             for game in category["events"]:
                                 if data["events"][game["eventId"]]["week"] == week:
+                                    logger.warning(game["stats"])
+                                    logger.warning(data["names"])
                                     return PlayerPointsService.extract_stats(
                                         data["names"], game["stats"]
                                     )
@@ -67,14 +69,14 @@ class PlayerDataService:
                 points=points,
             )
 
-        return True
+        return round(float(points), 2)
 
     @staticmethod
     def fetch_and_save_player_stats(player_id, week, season):
         # Fetch player stats from the API and save them to the database
         data = PlayerDataService.fetch_player_stats(player_id, week, season)
         if data is not None:
-            PlayerDataService.save_player_stats(player_id, week, season, data)
+            return PlayerDataService.save_player_stats(player_id, week, season, data)
 
     # Will get the player points based on player_id, week, and season. If the playerStat does not exist then will create one.
     @staticmethod
@@ -173,6 +175,30 @@ class PlayerDataService:
             else:
                 # otherwise, we respect the update_existing parameter
                 PlayerDataService.fetch_data_limit(limit, page, update_existing)
+
+    @staticmethod
+    def get_player_roster(request):
+        team = Team.objects.filter(owner=request.user).first()
+        roster = team.roster.all() if team else []
+        current_season = 2022  # Assuming season is an integer
+
+        # Handle the form
+        if request.method == "POST":
+            form = WeekSelectForm(request.POST)
+            if form.is_valid():
+                current_week = int(form.cleaned_data["week"])
+            else:
+                current_week = League.objects.first().current_week
+        else:
+            form = WeekSelectForm()
+            current_week = League.objects.first().current_week
+
+        roster_with_points = []
+        for player in roster:
+            player_points = PlayerDataService.get_player_points(
+                player, current_week, current_season
+            )
+            roster_with_points.append((player, player_points))
 
 
 class PlayerPointsService:

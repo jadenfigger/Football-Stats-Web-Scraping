@@ -8,6 +8,11 @@
 
 <!-- User's team name -->
 <h2 class="my-3">{{ user_team.name }}</h2>
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Select Week</button>
+</form>
 
 <!-- Starting roster and substitution -->
 <div class="starting-roster my-4">
@@ -25,30 +30,21 @@
         </tr>
       </thead>
       <tbody>
-        {% for player in starting_roster %}
+        {% for player, points in roster_with_points %}
         <tr>
           <td>{{ player.name }}</td>
           <td>{{ player.position }}</td>
           <td>{{ player.team }}</td>
-          <td>{{ player.points }}</td>
-          <td>
-            <select name="substitute_player_{{ player.id }}" class="form-control">
-              <option value="">-- Select Substitute --</option>
-              {% for sub in available_subs %}
-              <option value="{{ sub.id }}">{{ sub.name }} ({{ sub.position }})</option>
-              {% endfor %}
-            </select>
-          </td>
+          <td>{{ points }}</td>
         </tr>
         {% endfor %}
       </tbody>
     </table>
-    <button type="submit" class="btn btn-primary">Submit Changes</button>
   </form>
 </div>
 
 <!-- League standings -->
-<div class="league-standings my-4">
+{% comment %} <div class="league-standings my-4">
   <h3>League Standings</h3>
   <table class="table table-striped">
     <thead>
@@ -70,7 +66,7 @@
       {% endfor %}
     </tbody>
   </table>
-</div>
+</div> {% endcomment %}
 
 <!-- Schedule -->
 <div class="schedule my-4">

@@ -5,36 +5,43 @@ from django.views.decorators.csrf import csrf_exempt
 from django.contrib.auth.decorators import login_required
 from django.forms.models import model_to_dict
 from .services import PlayerDataService, PlayerPointsService
+from .forms import WeekSelectForm
 import logging
 
 logger = logging.getLogger(__name__)
 
 
-def home(request):
-    user_team = Team.objects.filter(owner=request.user).first()
-    roster = user_team.roster.filter() if user_team else []
-
-    # Render the home template with the players context variable
-    return render(
-        request, "index.html", {"starting_roster": roster}
-    )  # Pass the players variable to the template
-
-
 @login_required
-def my_team(request):
+def home(request):
     team = Team.objects.filter(owner=request.user).first()
     roster = team.roster.all() if team else []
-
-    # Get the current week of the league
-    current_week = League.objects.first().current_week
     current_season = 2022  # Assuming season is an integer
+    form = WeekSelectForm(request.POST or None)
 
-    roster_with_points = []
+    context = {"form": form}
+    # Handle the form
+    if request.method == "POST":
+        if form.is_valid():
+            current_week = int(form.cleaned_data["week"])
+        else:
+            current_week = League.objects.first().current_week
+    else:
+        current_week = League.objects.first().current_week
+
+    context["roster_with_points"] = []
     for player in roster:
         player_points = PlayerDataService.get_player_points(
             player, current_week, current_season
         )
-        roster_with_points.append((player, player_points))
+        context["roster_with_points"].append((player, player_points))
+
+    logger.warning(context)
+    return render(request, "index.html", context)
+
+
+@login_required
+def my_team(request):
+    roster_with_points = PlayerDataService.get_player_roster(request)
 
     return render(request, "my_team.html", {"roster_with_points": roster_with_points})
 

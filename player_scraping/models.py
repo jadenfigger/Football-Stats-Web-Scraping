@@ -11,6 +11,7 @@ class Team(models.Model):
     name = models.CharField(max_length=100)
     owner = models.ForeignKey("auth.User", on_delete=models.CASCADE)
     roster = models.ManyToManyField("Player", related_name="starting_teams")
+    league = models.ForeignKey("League", null=True, on_delete=models.CASCADE)
 
 
 class Player(models.Model):
@@ -27,8 +28,8 @@ class PlayerStat(models.Model):
     player = models.ForeignKey(Player, on_delete=models.CASCADE, related_name="stats")
     season = models.IntegerField()
     week = models.IntegerField()
-    points = models.IntegerField(
-        null=True
+    points = models.DecimalField(
+        null=True, decimal_places=2, max_digits=6
     )  # Store the points calculated based on real-life performances
     # You can add more stats if you want
 
@@ -39,8 +40,8 @@ class TeamRoster(models.Model):
     player = models.ForeignKey(Player, on_delete=models.CASCADE)
     week = models.IntegerField()
     season = models.IntegerField()
-    points = (
-        models.IntegerField()
+    points = models.DecimalField(
+        null=True, decimal_places=2, max_digits=6
     )  # Store the points that will be added to the team's score
     is_starting = models.BooleanField(
         default=True
@@ -55,11 +56,11 @@ class Match(models.Model):
     )
     week = models.IntegerField()
     season = models.IntegerField()
-    team1_points = (
-        models.IntegerField()
+    team1_points = models.DecimalField(
+        null=True, decimal_places=2, max_digits=6
     )  # Store the total points of team1 in this match
-    team2_points = (
-        models.IntegerField()
+    team2_points = models.DecimalField(
+        null=True, decimal_places=2, max_digits=6
     )  # Store the total points of team2 in this match
 
 
