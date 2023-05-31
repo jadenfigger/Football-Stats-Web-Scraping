@@ -41,7 +41,7 @@ def home(request):
 
 @login_required
 def my_team(request):
-    roster_with_points = PlayerDataService.get_player_roster(request)
+    roster_with_points = PlayerDataService.get_player_roster_with_points(request)
 
     return render(request, "my_team.html", {"roster_with_points": roster_with_points})
 
