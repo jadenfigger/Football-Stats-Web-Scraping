@@ -1,5 +1,6 @@
 from django import forms
-from .models import League
+from .models import League, Player, Team
+
 
 import logging
 
@@ -11,9 +12,20 @@ class WeekSelectForm(forms.Form):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        # current_week = League.objects.first().current_week
-        current_week = 17
-        logger.warning(f"week inside form: {current_week}")
-        WEEK_CHOICES = [(i, f"Week {i}") for i in range(1, current_week + 1)]
-        self.initial["week"] = current_week
+        max_week = 14
+        WEEK_CHOICES = [(i, f"Week {i}") for i in range(1, max_week + 1)]
+        self.initial["week"] = League.objects.first().current_week
         self.fields["week"].choices = WEEK_CHOICES
+
+
+class TradePlayerForm(forms.ModelForm):
+    class Meta:
+        model = Team
+        fields = ["player_to_drop"]
+
+    def __init__(self, *args, user=None, **kwargs):
+        super().__init__(*args, **kwargs)
+        if user:
+            self.fields["player_to_drop"].queryset = (
+                Team.objects.filter(owner=user).first().roster
+            )

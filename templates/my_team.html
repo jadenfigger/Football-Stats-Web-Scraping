@@ -39,27 +39,23 @@
       <label for="my_player">Search a player to add:</label>
       <div>
         <div>
-          {% csrf_token %}
           <form id="searchForm" method="POST" onsubmit="return false;">
             <input type="text" id="searchInput" name="search_input" onkeyup="searchPlayers()" placeholder="Search for players..." />
             <div id="suggestions" class="suggestions"></div>
           </form>
         </div>
         <!-- Add this new div element to display the selected player's information -->
-      <div id="selected-player" style="display: none;"></div>
+        <div id="selected-player" style="display: none;"></div>
     </div>
     <div class="form-group">
-      <label for="player_to_drop">Select a player from your roster to drop:</label>
-      <select class="form-control" id="player_to_drop" name="player_to_drop" required>
-        {% for player, points in roster_with_points %}
-        <option value="{{ player.id }}">{{ player.name }}</option>
-        {% endfor %}
-      </select>
+      <label for="id_player_to_drop">Select a player from your roster to drop:</label>
+      {{ trade_form.player_to_drop }}
     </div>
     <!-- Add a button to propose the transaction -->
     <button type="button" class="btn btn-primary" id="propose-transaction" onclick="proposeTransaction()">Propose Transaction</button>
   </form>
 </div>
+
 
 <!-- Set lineup -->
 <div class="set-lineup my-4">
@@ -67,7 +63,7 @@
   <form method="post" action="{% url 'set_lineup' %}">
     {% csrf_token %}
     <!-- Add form fields to set the lineup based on your league rules and scoring system -->
-    <button <button type="submit" class="btn btn-primary">Set Lineup</button>
+    <button type="submit" class="btn btn-primary">Set Lineup</button>
   </form>
 </div>
 

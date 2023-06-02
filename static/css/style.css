@@ -1,3 +1,17 @@
+:root {
+  --color-primary: #333;
+  --color-secondary: #444;
+  --color-tertiary: #666;
+  --color-bg: #f5f7fa;
+  --color-card: #fff;
+  --font-family: Arial, sans-serif;
+  --line-height: 1.6;
+  --primary-font-size: 20px;
+  --secondary-font-size: 16px;
+  --container-width: 960px;
+  --border-radius: 5px;
+}
+
 .add-player-btn {
   background-color: #4caf50;
   border: none;
@@ -9,4 +23,80 @@
   margin: 4px 2px;
   cursor: pointer;
   border-radius: 4px;
+}
+
+body {
+  font-family: var(--font-family);
+  line-height: var(--line-height);
+  color: var(--color-primary);
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-bg);
+}
+
+.container {
+  max-width: 60rem;
+  margin: auto;
+  padding: 1rem 2rem;
+}
+
+h1 {
+  color: var(--color-secondary);
+  margin-bottom: 1.25rem;
+  font-weight: 500;
+}
+
+.match {
+  background: var(--color-card);
+  margin-bottom: 1.25rem;
+  padding: 1.25rem;
+  border-radius: 0.3125rem;
+  box-shadow: 0px 0.125rem 0.3125rem rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-around;
+  transition: all 0.3s ease;
+}
+
+.match:hover {
+  transform: scale(1.02);
+}
+
+.team-info {
+  width: 40%;
+  text-align: center;
+}
+
+.team-name {
+  margin: 0;
+  color: var(--color-primary);
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.team-owner,
+.team-points {
+  margin: 0.3125rem 0;
+  font-size: 1rem;
+  color: var(--color-tertiary);
+}
+
+.vs {
+  align-self: center;
+  font-size: 1.25rem;
+  color: var(--color-primary);
+  padding: 0.3125rem 1rem;
+  border-radius: 0.3125rem;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .match {
+    flex-direction: column;
+  }
+  .team-info {
+    width: 100%;
+  }
+  .vs {
+    margin: 1rem 0;
+  }
 }

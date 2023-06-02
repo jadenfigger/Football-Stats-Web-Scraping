@@ -5,6 +5,7 @@ class League(models.Model):
     name = models.CharField(max_length=100)
     number_of_teams = models.PositiveSmallIntegerField()
     current_week = models.PositiveSmallIntegerField()
+    season = models.IntegerField(null=True)
 
 
 class Team(models.Model):

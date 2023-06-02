@@ -44,7 +44,7 @@
 </div>
 
 <!-- League standings -->
-{% comment %} <div class="league-standings my-4">
+ {% comment %} <div class="league-standings my-4">
   <h3>League Standings</h3>
   <table class="table table-striped">
     <thead>
@@ -69,28 +69,23 @@
 </div> {% endcomment %}
 
 <!-- Schedule -->
-<div class="schedule my-4">
-  <h3>Schedule</h3>
-  <table class="table table-striped">
-    <thead>
-      <tr>
-        <th>Week</th>
-        <th>Home Team</th>
-        <th>Away Team</th>
-        <th>Date</th>
-      </tr>
-    </thead>
-    <tbody>
-      {% for game in schedule %}
-      <tr>
-        <td>{{ game.week }}</td>
-        <td>{{ game.home_team }}</td>
-        <td>{{ game.away_team }}</td>
-        <td>{{ game.date }}</td>
-      </tr>
-      {% endfor %}
-    </tbody>
-  </table>
+<div class="container">
+  <h1>League Schedule for Week {{ week }}</h1>
+  {% for game in games %}
+  <article class="match">
+    <div class="team-info">
+      <h3 class="team-name">{{ game.team1.name }}</h3>
+      <p class="team-owner">Owner: {{ game.team1.owner.username }}</p>
+      <p class="team-points">Points: {{ game.team1_points }}</p>
+    </div>
+    <p class="vs">vs</p>
+    <div class="team-info">
+      <h3 class="team-name">{{ game.team2.name }}</h3>
+      <p class="team-owner">Owner: {{ game.team2.owner.username }}</p>
+      <p class="team-points">Points: {{ game.team2_points }}</p>
+    </div>
+  </article>
+  {% endfor %}
 </div>
 
 </div>

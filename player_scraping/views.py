@@ -1,11 +1,11 @@
-from .models import Player, Team, League, PlayerStat, TeamRoster
+from .models import Player, Team, League
 from django.shortcuts import redirect, render
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.contrib.auth.decorators import login_required
 from django.forms.models import model_to_dict
-from .services import PlayerDataService, PlayerPointsService
 from .forms import WeekSelectForm
+from .db_service import DBService
 import logging
 
 logger = logging.getLogger(__name__)
@@ -13,35 +13,37 @@ logger = logging.getLogger(__name__)
 
 @login_required
 def home(request):
-    team = Team.objects.filter(owner=request.user).first()
-    roster = team.roster.all() if team else []
-    current_season = 2022  # Assuming season is an integer
-    form = WeekSelectForm(request.POST or None)
+    context = {}
+    context.update(DBService.get_player_roster_with_points(request))
+    context.update(DBService.get_weeks_schedule(context["current_week"]))
 
-    context = {"form": form}
-    # Handle the form
-    if request.method == "POST":
-        if form.is_valid():
-            current_week = int(form.cleaned_data["week"])
-        else:
-            current_week = League.objects.first().current_week
-    else:
-        current_week = League.objects.first().current_week
-
-    context["roster_with_points"] = []
-    for player in roster:
-        player_points = PlayerDataService.get_player_points(
-            player, current_week, current_season
-        )
-        context["roster_with_points"].append((player, player_points))
-
-    logger.warning(context)
     return render(request, "index.html", context)
 
 
 @login_required
 def my_team(request):
-    roster_with_points = PlayerDataService.get_player_roster_with_points(request)
+    context = {}
+    context.update(
+        DBService.propose_transaction()
+    )  # eventually move propose_transaction to separate file
+    if request.method == "POST":
+        form = TradePlayerForm(request.POST, user=request.user)
+        if form.is_valid():
+            player_to_add = request.POST.get("player_to_add")
+            player_to_drop = form.cleaned_data["player_to_drop"]
+
+            # Here you would add the logic to trade the players
+            trade_players(player_to_add, player_to_drop)
+
+            return JsonResponse({"success": True})
+        else:
+            return JsonResponse({"error": "Invalid form data"}, status=400)
+    else:
+        form = TradePlayerForm(user=request.user)
+
+    return render(request, "trade_player.html", {"form": form})
+
+    roster_with_points = DBService.get_player_roster_with_points(request)
 
     return render(request, "my_team.html", {"roster_with_points": roster_with_points})
 
@@ -73,14 +75,14 @@ def search(request):
 
 @csrf_exempt
 @login_required
-def add_player_to_team(request, player_id, player_to_drop_id=None):
+def trade_player(request, player_id, player_to_drop_id):
     logger.warning(f"Received player_id: {player_id}")
     logger.warning(f"Request user: {request.user}")
     try:
         player = Player.objects.get(id=player_id)
         team = Team.objects.get(owner=request.user)
 
-        if player_to_drop_id:
+        if player_to_drop_id and player_id:
             player_to_drop = Player.objects.get(id=player_to_drop_id)
             if player_to_drop in team.roster.all():
                 team.roster.remove(player_to_drop)
@@ -89,26 +91,13 @@ def add_player_to_team(request, player_id, player_to_drop_id=None):
                     {"success": False, "error": "Player to drop not found in the team"}
                 )
 
-        # You can add a condition here to decide whether to add the player to the starting roster or backup roster.
-        # For this example, I am adding the player to the starting roster.
+
         team.roster.add(player)
         team.save()
         player_dict = model_to_dict(player)
         return JsonResponse({"success": True, "player": player_dict})
     except (Player.DoesNotExist, Team.DoesNotExist):
         return JsonResponse({"success": False, "error": "Invalid request"})
-
-
-def trade_player(request):
-    if request.method == "POST":
-        # Process player addition based on submitted form data
-        # You will need to update your models and write the logic for adding a player here
-
-        # Redirect back to the my_team page after processing the player addition
-        return redirect("my_team")
-
-    # If request.method is not POST, redirect to the my_team page
-    return redirect("my_team")
 
 
 def set_lineup(request):
@@ -140,19 +129,3 @@ def drop_player(request, player_id):
         return JsonResponse({"success": True})
     except (Player.DoesNotExist, Team.DoesNotExist):
         return JsonResponse({"success": False, "error": "Invalid request"})
-
-
-def fetch_player_data(request, player_id):
-    result = PlayerDataService.fetch_data(player_id, "2022")
-    if isinstance(result, str):
-        return JsonResponse({"message": result}, status=500)
-    else:
-        return JsonResponse({"message": "Player data fetched successfully"})
-
-
-def calculate_player_points(request, player_id, season, week):
-    points = PlayerPointsService.calculate_points(player_id, season, week)
-    if isinstance(points, str):
-        return JsonResponse({"message": points}, status=404)
-    else:
-        return JsonResponse({"points": points})

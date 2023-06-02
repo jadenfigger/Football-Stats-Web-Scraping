@@ -43,73 +43,36 @@ function searchPlayers() {
     });
 }
 
-function addPlayer(playerId, playerToDrop) {
-  console.log("addPlayer function called with playerId:", playerId);
-  const url = `/home/add_player_to_team/${playerId}/${playerToDrop}/`;
-  fetch(url, {
-    method: "GET",
-    headers: {
-      "Content-Type": "application/json",
-      "X-Requested-With": "XMLHttpRequest",
-      "X-CSRFToken": document.getElementsByName("csrfmiddlewaretoken")[0].value,
-    },
-  })
-    .then((response) => {
-      console.log(response);
-      if (response.ok) {
-        return response.json();
-      } else {
-        throw new Error("Error fetching player information");
-      }
-    })
-    .then((data) => {
-      const selectedPlayerDiv = document.getElementById("selected-player");
-      selectedPlayerDiv.innerHTML = `Selected Player: ${data.player.name} (${data.player.position})`;
-      selectedPlayerDiv.style.display = "block";
-      location.reload();
-    })
-    .catch((error) => {
-      console.error("Error in addPlayer:", error);
-    });
-}
-
 function proposeTransaction() {
-  const playerToDropSelect = document.getElementById("player_to_drop");
+  const playerToDropSelect = document.getElementById("id_player_to_drop");
   const playerToDrop = playerToDropSelect.value;
 
   if (selectedPlayerId && playerToDrop) {
-    addPlayer(selectedPlayerId, playerToDrop);
-    alert("Transaction proposed");
+    const csrfToken = document.getElementsByName("csrfmiddlewaretoken")[0].value;
+    const url = `/home/trade_player/`;
+    const data = { player_to_add: selectedPlayerId, player_to_drop: playerToDrop };
+
+    fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "X-Requested-With": "XMLHttpRequest",
+        "X-CSRFToken": csrfToken,
+      },
+      body: JSON.stringify(data),
+    })
+      .then((response) => {
+        if (response.ok) {
+          alert("Transaction proposed");
+          location.reload();
+        } else {
+          throw new Error("Error proposing transaction");
+        }
+      })
+      .catch((error) => {
+        console.error("Error in proposeTransaction:", error);
+      });
   } else {
     alert("Please select a player to add and a player to drop");
   }
-}
-
-function dropPlayer(playerId) {
-  fetch(`/home/drop_player/${playerId}/`, {
-    method: "GET",
-    headers: {
-      "Content-Type": "application/json",
-      "X-Requested-With": "XMLHttpRequest",
-      "X-CSRFToken": document.getElementsByName("csrfmiddlewaretoken")[0].value,
-    },
-  })
-    .then((response) => {
-      if (response.ok) {
-        return response.json();
-      } else {
-        throw new Error("Error dropping player");
-      }
-    })
-    .then((data) => {
-      if (data.success) {
-        // Refresh the page after the player is dropped
-        location.reload();
-      } else {
-        console.error("Error dropping player:", data.error);
-      }
-    })
-    .catch((error) => {
-      console.error("Error in dropPlayer:", error);
-    });
 }

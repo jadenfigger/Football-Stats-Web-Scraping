@@ -5,18 +5,12 @@ urlpatterns = [
     path("", views.home, name="index"),
     path("my_team/", views.my_team, name="my_team"),
     path("change_roster/", views.change_roster, name="change_roster"),
-    path(
-        "add_player_to_team/<str:player_id>/<str:player_to_drop_id>/",
-        views.add_player_to_team,
-        name="add_player_to_team",
-    ),
     path("drop_player/<str:player_id>/", views.drop_player, name="drop_player"),
     path("set_lineup/", views.set_lineup, name="set_lineup"),
-    path("trade_player/", views.trade_player, name="trade_player"),
-    path("search/", views.search, name="search"),  # Add this line
-    path("fetch_player_data/<int:player_id>/", views.fetch_player_data),
     path(
-        "calculate_player_points/<int:player_id>/<int:season>/<int:week>/",
-        views.calculate_player_points,
+        "trade_player/<str:player_id>/<str:player_to_drop_id>/",
+        views.trade_player,
+        name="trade_player",
     ),
+    path("search/", views.search, name="search"),  # Add this line
 ]
