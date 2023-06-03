@@ -26,7 +26,10 @@ class DBService:
                     points=points,
                 )
 
-            return round(float(points), 2)
+                return round(float(points), 2)
+            else:
+                return 0.0
+            
         except Exception as err:
             raise DBException(f"Database error: {err}")
 
@@ -41,6 +44,7 @@ class DBService:
         player_stat = PlayerStat.objects.filter(
             player=player, week=week, season=season
         ).first()
+        logger.warning(f"Player: {player_stat}")
         if player_stat:
             return player_stat.points
         else:
@@ -50,13 +54,21 @@ class DBService:
     def fetch_and_save_player_stats(player_id, week, season):
         # Fetch player stats from the API and save them to the database
         data = APIService.fetch_player_stats(player_id, week, season)
+        logger.warning(f"data: {data}")
         if data is not None:
             return DBService.save_player_stats(player_id, week, season, data)
+        else:
+            return 0.0
 
     @staticmethod
     def get_player_roster_with_points(request):
         team = Team.objects.filter(owner=request.user).first()
+        for team in Team.objects.all():
+            logger.warning(f"team: {team.name}")
+            logger.warning(f"team: {team.roster}")
+            logger.warning(f"team: {team.owner}")
         roster = team.roster.all() if team else []
+        logger.warning(f"Roster: {roster}")
         current_season = League.objects.first().season
         context = {"roster_with_points": []}
 
@@ -80,6 +92,30 @@ class DBService:
             context["roster_with_points"].append((player, player_points))
 
         return context
+    
+    """
+    _summary: Get a matches team's points for a week/season.
+    fetches the data from the Match's, and if no
+    points exist, then will calculate points and fill team rosters
+    """
+    @staticmethod
+    def get_match_points(match):
+        match.team1_points = DBService.get_team_points(match.team1, match.week, match.season)
+        match.team2_points = DBService.get_team_points(match.team2, match.week, match.season)
+
+
+    @staticmethod
+    def get_team_points(team, week, season):
+        team_points = 0.0
+        for player in team.roster.all():
+            player_stat = PlayerStat.objects.filter(player=player, week=week, season=season).first()
+            logger.warning(player_stat)
+            if not player_stat:
+                pPoints = DBService.get_player_points(player, week, season)
+                team_points += pPoints
+            else:
+                team_points += float(player_stat.points)
+        return team_points
 
     @staticmethod
     def get_weeks_schedule(week):
@@ -96,11 +132,8 @@ class DBService:
         context = {"games": []}
 
         for match in matches:
-            # player_points = DBService.get_player_points(
-            #     player, current_week, current_season
-            # )
-            logger.warning(match.team1.name)
-            logger.warning(match.team2.name)
+            if not match.team1_points or match.team2_points:
+                DBService.get_match_points(match)
             context["games"].append(match)
 
         return context

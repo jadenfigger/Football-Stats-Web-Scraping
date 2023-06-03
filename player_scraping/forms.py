@@ -19,13 +19,15 @@ class WeekSelectForm(forms.Form):
 
 
 class TradePlayerForm(forms.ModelForm):
+    players_to_drop = forms.ModelChoiceField(queryset=None)
     class Meta:
         model = Team
-        fields = ["player_to_drop"]
+        fields = ["players_to_drop"]
 
     def __init__(self, *args, user=None, **kwargs):
         super().__init__(*args, **kwargs)
         if user:
-            self.fields["player_to_drop"].queryset = (
+            logger.warning(Team.objects.filter(owner=user).first().roster)
+            self.fields["players_to_drop"].queryset = (
                 Team.objects.filter(owner=user).first().roster
             )

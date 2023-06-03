@@ -19,21 +19,21 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         # Create a few users
-        self.users = [
-            User.objects.create_user(username=f"user{i}", password="password")
-            for i in range(4)
-        ]
+        # self.users = [
+        #     User.objects.create_user(username=f"user{i}", password="password")
+        #     for i in range(4)
+        # ]
 
-        # Create a league
-        self.league = League.objects.create(
-            name="Test League", number_of_teams=4, current_week=1
-        )
+        # # Create a league
+        # self.league = League.objects.create(
+        #     name="Test League", number_of_teams=4, current_week=1
+        # )
 
         # Create 8 teams
-        self.teams = [
-            Team.objects.create(name=f"Team{i}", owner=user, league=self.league)
-            for i, user in enumerate(self.users)
-        ]
+        self.teams = Team.objects.all()
+
+        for team in self.teams:
+            team.roster.all().delete()
 
         player_pos_ids = {
             "qb": [
@@ -57,7 +57,6 @@ class Command(BaseCommand):
                 2573079,
                 2565969,
                 3046779,
-                4040715,
                 14881,
                 4360310,
                 2573079,
@@ -81,7 +80,12 @@ class Command(BaseCommand):
                 3117256,
                 3128390,
                 3932905,
-                3916566,
+                3122976,
+                4361529,
+                4040761,
+                4035538,
+                2468609,
+                3125116,
             ],
             "wr": [
                 2977187,
@@ -110,36 +114,37 @@ class Command(BaseCommand):
             ],
         }
 
+        logger.warning(Player.objects.filter(position="QB"))
+
         # Fetch players by their IDs
         self.players = {}
         for pos, ids in player_pos_ids.items():
             players = Player.objects.filter(id__in=ids)
             if not players.exists():
-                raise Exception(
-                    f"No players found for the provided IDs in position {pos}"
-                )
+                logger.warning(f"No players found for the provided IDs in position {pos}")
+                continue  # Skip this iteration if no players found
             self.players[pos] = list(players)
 
         for i, team in enumerate(self.teams):
             for pos, players in self.players.items():
                 if len(players) < 2:
-                    raise Exception(
-                        f"Not enough players in position {pos} for team {i}"
-                    )
+                    logger.warning(f"Not enough players in position {pos} for team {i}")
+                    continue  # Skip this iteration if not enough players
                 selected_players = random.sample(players, 2)
                 for player in selected_players:
                     team.roster.add(player)
                     players.remove(player)
 
+
         # Create matches
-        for week in range(1, 11):  # 10 weeks per season
-            for i in range(0, 4, 2):  # 4 matches per week
-                Match.objects.create(
-                    team1=self.teams[i],
-                    team2=self.teams[i + 1],
-                    league=self.league,
-                    week=week,
-                    season=2022,
-                    team1_points=None,
-                    team2_points=None,
-                )
+        # for week in range(1, 11):  # 10 weeks per season
+        #     for i in range(0, 4, 2):  # 4 matches per week
+        #         Match.objects.create(
+        #             team1=self.teams[i],
+        #             team2=self.teams[i + 1],
+        #             league=self.league,
+        #             week=week,
+        #             season=2022,
+        #             team1_points=None,
+        #             team2_points=None,
+        #         )

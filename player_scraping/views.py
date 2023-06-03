@@ -4,7 +4,7 @@ from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.contrib.auth.decorators import login_required
 from django.forms.models import model_to_dict
-from .forms import WeekSelectForm
+from .forms import WeekSelectForm, TradePlayerForm
 from .db_service import DBService
 import logging
 
@@ -17,35 +17,38 @@ def home(request):
     context.update(DBService.get_player_roster_with_points(request))
     context.update(DBService.get_weeks_schedule(context["current_week"]))
 
+    logger.warning(f"context: {context}")
     return render(request, "index.html", context)
 
 
 @login_required
 def my_team(request):
     context = {}
-    context.update(
-        DBService.propose_transaction()
-    )  # eventually move propose_transaction to separate file
-    if request.method == "POST":
-        form = TradePlayerForm(request.POST, user=request.user)
-        if form.is_valid():
-            player_to_add = request.POST.get("player_to_add")
-            player_to_drop = form.cleaned_data["player_to_drop"]
+    # context.update(
+    #     DBService.propose_transaction()
+    # )  # eventually move propose_transaction to separate file
+    # if request.method == "POST":
+    #     form = TradePlayerForm(request.POST, user=request.user)
+    #     if form.is_valid():
+    #         player_to_add = request.POST.get("player_to_add")
+    #         player_to_drop = form.cleaned_data["player_to_drop"]
 
-            # Here you would add the logic to trade the players
-            trade_players(player_to_add, player_to_drop)
+    #         # Here you would add the logic to trade the players
+    #         trade_players(player_to_add, player_to_drop)
 
-            return JsonResponse({"success": True})
-        else:
-            return JsonResponse({"error": "Invalid form data"}, status=400)
-    else:
-        form = TradePlayerForm(user=request.user)
+    #         return JsonResponse({"success": True})
+    #     else:
+    #         return JsonResponse({"error": "Invalid form data"}, status=400)
+    # else:
+    #     form = TradePlayerForm(user=request.user)
 
-    return render(request, "trade_player.html", {"form": form})
+    # return render(request, "trade_player.html", {"form": form})
 
-    roster_with_points = DBService.get_player_roster_with_points(request)
+    form = TradePlayerForm(request.POST or None)
+    context = {"form": form}
+    context.update(DBService.get_player_roster_with_points(request))
 
-    return render(request, "my_team.html", {"roster_with_points": roster_with_points})
+    return render(request, "my_team.html", context=context)
 
 
 def change_roster(request):

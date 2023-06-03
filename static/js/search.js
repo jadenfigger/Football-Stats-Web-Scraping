@@ -1,4 +1,5 @@
 let selectedPlayerId = null;
+let playerToDrop = null;
 
 function selectPlayer(playerId, playerName, playerPosition) {
   selectedPlayerId = playerId;
@@ -45,13 +46,11 @@ function searchPlayers() {
 
 function proposeTransaction() {
   const playerToDropSelect = document.getElementById("id_player_to_drop");
-  const playerToDrop = playerToDropSelect.value;
+  // const playerToDrop = playerToDropSelect.value;
 
   if (selectedPlayerId && playerToDrop) {
     const csrfToken = document.getElementsByName("csrfmiddlewaretoken")[0].value;
-    const url = `/home/trade_player/`;
-    const data = { player_to_add: selectedPlayerId, player_to_drop: playerToDrop };
-
+    const url = `/home/trade_player/${selectedPlayerId}/${playerToDrop}/`;
     fetch(url, {
       method: "POST",
       headers: {
@@ -59,7 +58,6 @@ function proposeTransaction() {
         "X-Requested-With": "XMLHttpRequest",
         "X-CSRFToken": csrfToken,
       },
-      body: JSON.stringify(data),
     })
       .then((response) => {
         if (response.ok) {
@@ -75,4 +73,12 @@ function proposeTransaction() {
   } else {
     alert("Please select a player to add and a player to drop");
   }
+}
+
+
+function dropPlayer(playerId) {
+  const selectedPlayerDiv = document.getElementById("selected-player");
+  selectedPlayerDiv.innerHTML = `Selected Player: ${data.player.name} (${data.player.position})`;
+  selectedPlayerDiv.style.display = "block";
+  location.reload();
 }

@@ -1448,3 +1448,602 @@ INFO 2023-06-02 12:38:38,422 MainThread 8712 autoreload autoreload.py 266 django
 INFO 2023-06-02 12:38:38,960 MainThread 17996 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 13552 Watching for file changes with StatReloader
 INFO 2023-06-02 12:38:56,040 MainThread 17996 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 13552 C:\Users\jaden\OneDrive\Documents\GitHub\Football-Stats-Web-Scraping\player_scraping\forms.py changed, reloading.
 INFO 2023-06-02 12:38:56,526 MainThread 9060 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 13992 Watching for file changes with StatReloader
+INFO 2023-06-02 16:11:10,268 MainThread 19576 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 59364 Watching for file changes with StatReloader
+INFO 2023-06-02 16:17:59,949 MainThread 42376 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 44224 Watching for file changes with StatReloader
+INFO 2023-06-02 16:18:21,229 MainThread 42376 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 44224 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\forms.py changed, reloading.
+INFO 2023-06-02 16:18:22,584 MainThread 52164 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 35704 Watching for file changes with StatReloader
+INFO 2023-06-02 16:18:24,393 MainThread 52164 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 35704 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\forms.py changed, reloading.
+INFO 2023-06-02 16:18:25,904 MainThread 45460 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 43688 Watching for file changes with StatReloader
+INFO 2023-06-02 16:18:39,349 Thread-1 49640 basehttp basehttp.py 187 django.server log_message 43688 "GET / HTTP/1.1" 200 2142
+INFO 2023-06-02 16:18:39,471 Thread-2 37344 basehttp basehttp.py 187 django.server log_message 43688 "GET /static/css/search.css HTTP/1.1" 304 0
+INFO 2023-06-02 16:18:39,475 Thread-5 28760 basehttp basehttp.py 187 django.server log_message 43688 "GET /static/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO 2023-06-02 16:18:40,686 Thread-1 49640 basehttp basehttp.py 187 django.server log_message 43688 "GET /static/static/css/style.css HTTP/1.1" 200 1833
+INFO 2023-06-02 16:18:40,686 Thread-4 21952 basehttp basehttp.py 187 django.server log_message 43688 "GET /static/js/search.js HTTP/1.1" 200 2595
+INFO 2023-06-02 16:18:40,702 Thread-3 5092 basehttp basehttp.py 187 django.server log_message 43688 "GET /static/CACHE/css/bootstrap.9819a5072959.css HTTP/1.1" 200 369990
+WARNING 2023-06-02 16:18:41,237 Thread-3 5092 basehttp basehttp.py 187 django.server log_message 43688 "GET /favicon.ico HTTP/1.1" 404 2438
+INFO 2023-06-02 16:18:51,005 Thread-3 5092 basehttp basehttp.py 187 django.server log_message 43688 "GET /accounts/login/ HTTP/1.1" 200 2886
+INFO 2023-06-02 16:18:51,120 Thread-3 5092 basehttp basehttp.py 187 django.server log_message 43688 "GET /static/CACHE/css/bootstrap.9819a5072959.css HTTP/1.1" 200 369990
+INFO 2023-06-02 16:19:01,948 Thread-3 5092 basehttp basehttp.py 187 django.server log_message 43688 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2023-06-02 16:19:01,961 Thread-3 5092 basehttp basehttp.py 187 django.server log_message 43688 "GET /home HTTP/1.1" 301 0
+INFO 2023-06-02 16:19:09,396 Thread-3 5092 basehttp basehttp.py 187 django.server log_message 43688 "GET /home/ HTTP/1.1" 200 5227
+INFO 2023-06-02 16:19:09,496 Thread-3 5092 basehttp basehttp.py 187 django.server log_message 43688 "GET /static/CACHE/css/bootstrap.9819a5072959.css HTTP/1.1" 200 369990
+INFO 2023-06-02 16:19:45,070 Thread-3 5092 basehttp basehttp.py 187 django.server log_message 43688 "POST /home/ HTTP/1.1" 200 5227
+INFO 2023-06-02 16:19:45,155 Thread-3 5092 basehttp basehttp.py 187 django.server log_message 43688 "GET /static/static/css/style.css HTTP/1.1" 304 0
+INFO 2023-06-02 16:19:45,155 Thread-4 21952 basehttp basehttp.py 187 django.server log_message 43688 "GET /static/js/search.js HTTP/1.1" 304 0
+INFO 2023-06-02 16:19:45,177 Thread-1 49640 basehttp basehttp.py 187 django.server log_message 43688 "GET /static/CACHE/css/bootstrap.9819a5072959.css HTTP/1.1" 200 369990
+ERROR 2023-06-02 16:20:16,227 Thread-1 49640 basehttp basehttp.py 187 django.server log_message 43688 "GET /home/my_team/ HTTP/1.1" 500 83042
+ERROR 2023-06-02 16:20:50,470 Thread-1 49640 basehttp basehttp.py 187 django.server log_message 43688 "GET /home/my_team/ HTTP/1.1" 500 83042
+INFO 2023-06-02 16:22:24,780 MainThread 45460 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 43688 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\views.py changed, reloading.
+INFO 2023-06-02 16:22:26,219 MainThread 58348 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 2484 Watching for file changes with StatReloader
+INFO 2023-06-02 16:22:29,419 MainThread 58348 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 2484 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\views.py changed, reloading.
+INFO 2023-06-02 16:22:30,854 MainThread 19160 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 41084 Watching for file changes with StatReloader
+INFO 2023-06-02 16:22:33,020 MainThread 19160 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 41084 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\views.py changed, reloading.
+INFO 2023-06-02 16:22:34,443 MainThread 33440 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 12836 Watching for file changes with StatReloader
+INFO 2023-06-02 16:22:36,660 MainThread 33440 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 12836 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\views.py changed, reloading.
+INFO 2023-06-02 16:22:38,000 MainThread 59372 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 1560 Watching for file changes with StatReloader
+ERROR 2023-06-02 16:22:46,159 Thread-1 30132 basehttp basehttp.py 187 django.server log_message 1560 "GET /home/my_team/ HTTP/1.1" 500 183836
+INFO 2023-06-02 16:23:03,047 MainThread 59372 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 1560 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\views.py changed, reloading.
+INFO 2023-06-02 16:23:04,469 MainThread 19172 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 47480 Watching for file changes with StatReloader
+INFO 2023-06-02 16:23:08,907 MainThread 19172 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 47480 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\views.py changed, reloading.
+INFO 2023-06-02 16:23:10,284 MainThread 49196 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 58452 Watching for file changes with StatReloader
+INFO 2023-06-02 16:23:12,587 MainThread 49196 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 58452 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\views.py changed, reloading.
+INFO 2023-06-02 16:23:14,005 MainThread 55200 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 50064 Watching for file changes with StatReloader
+INFO 2023-06-02 16:23:16,135 MainThread 55200 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 50064 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\views.py changed, reloading.
+INFO 2023-06-02 16:23:17,400 MainThread 54404 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 30988 Watching for file changes with StatReloader
+INFO 2023-06-02 16:23:21,757 MainThread 54404 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 30988 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\views.py changed, reloading.
+INFO 2023-06-02 16:23:22,987 MainThread 40060 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 42972 Watching for file changes with StatReloader
+ERROR 2023-06-02 16:23:32,515 Thread-1 48568 basehttp basehttp.py 187 django.server log_message 42972 "GET /home/my_team/ HTTP/1.1" 500 194185
+ERROR 2023-06-02 16:25:32,893 Thread-1 48568 basehttp basehttp.py 187 django.server log_message 42972 "GET /home/my_team/ HTTP/1.1" 500 194185
+ERROR 2023-06-02 16:25:59,478 Thread-1 48568 basehttp basehttp.py 187 django.server log_message 42972 "GET /home/my_team/ HTTP/1.1" 500 193892
+INFO 2023-06-02 16:26:41,304 MainThread 40060 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 42972 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\views.py changed, reloading.
+INFO 2023-06-02 16:26:42,746 MainThread 12960 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 44984 Watching for file changes with StatReloader
+ERROR 2023-06-02 16:26:52,085 Thread-1 6820 basehttp basehttp.py 187 django.server log_message 44984 "GET /home/my_team/ HTTP/1.1" 500 194199
+ERROR 2023-06-02 16:28:15,117 Thread-1 6820 basehttp basehttp.py 187 django.server log_message 44984 "GET /home/my_team/ HTTP/1.1" 500 194199
+INFO 2023-06-02 16:33:03,468 Thread-1 6820 basehttp basehttp.py 187 django.server log_message 44984 "GET /home/my_team/ HTTP/1.1" 200 5573
+INFO 2023-06-02 16:33:05,241 Thread-1 6820 basehttp basehttp.py 187 django.server log_message 44984 "GET /static/static/css/style.css HTTP/1.1" 200 1833
+INFO 2023-06-02 16:33:05,241 Thread-5 57284 basehttp basehttp.py 187 django.server log_message 44984 "GET /static/js/search.js HTTP/1.1" 200 2637
+INFO 2023-06-02 16:33:05,248 Thread-2 46392 basehttp basehttp.py 187 django.server log_message 44984 "GET /static/css/search.css HTTP/1.1" 200 794
+INFO 2023-06-02 16:33:05,267 Thread-3 40700 basehttp basehttp.py 187 django.server log_message 44984 "GET /static/CACHE/css/bootstrap.9819a5072959.css HTTP/1.1" 200 369990
+INFO 2023-06-02 16:33:05,299 Thread-4 55080 basehttp basehttp.py 187 django.server log_message 44984 "GET /static/bootstrap/js/bootstrap.min.js HTTP/1.1" 200 60404
+INFO 2023-06-02 16:33:05,348 Thread-4 55080 basehttp basehttp.py 187 django.server log_message 44984 "GET /static/bootstrap/js/bootstrap.min.js.map HTTP/1.1" 200 216913
+WARNING 2023-06-02 16:33:05,712 Thread-4 55080 basehttp basehttp.py 187 django.server log_message 44984 "GET /favicon.ico HTTP/1.1" 404 2438
+INFO 2023-06-02 16:33:21,308 Thread-4 55080 basehttp basehttp.py 187 django.server log_message 44984 "GET /home/search/?q=jo HTTP/1.1" 200 311
+INFO 2023-06-02 16:33:21,377 Thread-4 55080 basehttp basehttp.py 187 django.server log_message 44984 "GET /home/search/?q=jos HTTP/1.1" 200 309
+INFO 2023-06-02 16:33:21,486 Thread-4 55080 basehttp basehttp.py 187 django.server log_message 44984 "GET /home/search/?q=josh HTTP/1.1" 200 309
+INFO 2023-06-02 16:33:21,560 Thread-4 55080 basehttp basehttp.py 187 django.server log_message 44984 "GET /home/search/?q=josh HTTP/1.1" 200 309
+INFO 2023-06-02 16:33:21,644 Thread-4 55080 basehttp basehttp.py 187 django.server log_message 44984 "GET /home/search/?q=josh HTTP/1.1" 200 309
+INFO 2023-06-02 16:33:21,768 Thread-4 55080 basehttp basehttp.py 187 django.server log_message 44984 "GET /home/search/?q=josh%20al HTTP/1.1" 200 129
+INFO 2023-06-02 16:33:21,807 Thread-4 55080 basehttp basehttp.py 187 django.server log_message 44984 "GET /home/search/?q=josh%20al HTTP/1.1" 200 129
+INFO 2023-06-02 16:33:21,985 Thread-4 55080 basehttp basehttp.py 187 django.server log_message 44984 "GET /home/search/?q=josh%20all HTTP/1.1" 200 72
+INFO 2023-06-02 16:33:22,084 Thread-4 55080 basehttp basehttp.py 187 django.server log_message 44984 "GET /home/search/?q=josh%20allen HTTP/1.1" 200 72
+INFO 2023-06-02 16:33:22,161 Thread-4 55080 basehttp basehttp.py 187 django.server log_message 44984 "GET /home/search/?q=josh%20allen HTTP/1.1" 200 72
+INFO 2023-06-02 16:35:31,024 Thread-4 55080 basehttp basehttp.py 187 django.server log_message 44984 "GET /home/my_team/ HTTP/1.1" 200 5579
+INFO 2023-06-02 16:35:31,108 Thread-4 55080 basehttp basehttp.py 187 django.server log_message 44984 "GET /static/static/css/style.css HTTP/1.1" 200 1833
+INFO 2023-06-02 16:35:31,109 Thread-3 40700 basehttp basehttp.py 187 django.server log_message 44984 "GET /static/css/search.css HTTP/1.1" 200 794
+INFO 2023-06-02 16:35:31,113 Thread-1 6820 basehttp basehttp.py 187 django.server log_message 44984 "GET /static/js/search.js HTTP/1.1" 200 2666
+INFO 2023-06-02 16:35:31,114 Thread-5 57284 basehttp basehttp.py 187 django.server log_message 44984 "GET /static/bootstrap/js/bootstrap.min.js HTTP/1.1" 200 60404
+INFO 2023-06-02 16:35:31,135 Thread-2 46392 basehttp basehttp.py 187 django.server log_message 44984 "GET /static/CACHE/css/bootstrap.9819a5072959.css HTTP/1.1" 200 369990
+WARNING 2023-06-02 16:35:31,440 Thread-2 46392 basehttp basehttp.py 187 django.server log_message 44984 "GET /favicon.ico HTTP/1.1" 404 2438
+INFO 2023-06-02 16:35:39,328 Thread-2 46392 basehttp basehttp.py 187 django.server log_message 44984 "GET /home/search/?q=jo HTTP/1.1" 200 311
+INFO 2023-06-02 16:35:39,378 Thread-2 46392 basehttp basehttp.py 187 django.server log_message 44984 "GET /home/search/?q=jo HTTP/1.1" 200 311
+INFO 2023-06-02 16:35:39,735 Thread-2 46392 basehttp basehttp.py 187 django.server log_message 44984 "GET /home/search/?q=josh HTTP/1.1" 200 309
+INFO 2023-06-02 16:35:39,781 Thread-2 46392 basehttp basehttp.py 187 django.server log_message 44984 "GET /home/search/?q=josh HTTP/1.1" 200 309
+INFO 2023-06-02 16:35:51,957 Thread-2 46392 basehttp basehttp.py 187 django.server log_message 44984 "GET /static/CACHE/css/bootstrap.9819a5072959.css HTTP/1.1" 304 0
+INFO 2023-06-02 16:36:33,421 Thread-2 46392 basehttp basehttp.py 187 django.server log_message 44984 "GET /home/my_team/ HTTP/1.1" 200 5579
+INFO 2023-06-02 16:36:33,499 Thread-5 57284 basehttp basehttp.py 187 django.server log_message 44984 "GET /static/css/search.css HTTP/1.1" 200 794
+INFO 2023-06-02 16:36:33,499 Thread-2 46392 basehttp basehttp.py 187 django.server log_message 44984 "GET /static/static/css/style.css HTTP/1.1" 200 1833
+INFO 2023-06-02 16:36:33,506 Thread-4 55080 basehttp basehttp.py 187 django.server log_message 44984 "GET /static/js/search.js HTTP/1.1" 200 2624
+INFO 2023-06-02 16:36:33,509 Thread-3 40700 basehttp basehttp.py 187 django.server log_message 44984 "GET /static/bootstrap/js/bootstrap.min.js HTTP/1.1" 200 60404
+INFO 2023-06-02 16:36:33,527 Thread-1 6820 basehttp basehttp.py 187 django.server log_message 44984 "GET /static/CACHE/css/bootstrap.9819a5072959.css HTTP/1.1" 200 369990
+WARNING 2023-06-02 16:36:33,910 Thread-1 6820 basehttp basehttp.py 187 django.server log_message 44984 "GET /favicon.ico HTTP/1.1" 404 2438
+INFO 2023-06-02 16:37:04,197 Thread-1 6820 basehttp basehttp.py 187 django.server log_message 44984 "GET /home/search/?q=jo HTTP/1.1" 200 311
+INFO 2023-06-02 16:37:04,285 Thread-1 6820 basehttp basehttp.py 187 django.server log_message 44984 "GET /home/search/?q=jos HTTP/1.1" 200 309
+INFO 2023-06-02 16:37:04,383 Thread-1 6820 basehttp basehttp.py 187 django.server log_message 44984 "GET /home/search/?q=josh HTTP/1.1" 200 309
+INFO 2023-06-02 16:37:04,423 Thread-1 6820 basehttp basehttp.py 187 django.server log_message 44984 "GET /home/search/?q=josh HTTP/1.1" 200 309
+INFO 2023-06-02 16:37:04,656 Thread-1 6820 basehttp basehttp.py 187 django.server log_message 44984 "GET /home/search/?q=josh HTTP/1.1" 200 309
+INFO 2023-06-02 16:37:05,161 Thread-1 6820 basehttp basehttp.py 187 django.server log_message 44984 "GET /home/search/?q=josh%20al HTTP/1.1" 200 129
+INFO 2023-06-02 16:37:05,189 Thread-1 6820 basehttp basehttp.py 187 django.server log_message 44984 "GET /home/search/?q=josh%20al HTTP/1.1" 200 129
+INFO 2023-06-02 16:37:05,366 Thread-1 6820 basehttp basehttp.py 187 django.server log_message 44984 "GET /home/search/?q=josh%20all HTTP/1.1" 200 72
+INFO 2023-06-02 16:37:05,491 Thread-1 6820 basehttp basehttp.py 187 django.server log_message 44984 "GET /home/search/?q=josh%20allen HTTP/1.1" 200 72
+INFO 2023-06-02 16:37:05,551 Thread-1 6820 basehttp basehttp.py 187 django.server log_message 44984 "GET /home/search/?q=josh%20allen HTTP/1.1" 200 72
+WARNING 2023-06-02 16:37:09,586 Thread-1 6820 basehttp basehttp.py 187 django.server log_message 44984 "POST /home/trade_player/ HTTP/1.1" 404 3685
+WARNING 2023-06-02 16:37:19,461 Thread-1 6820 basehttp basehttp.py 187 django.server log_message 44984 "POST /home/trade_player/ HTTP/1.1" 404 3685
+INFO 2023-06-02 16:38:28,465 Thread-1 6820 basehttp basehttp.py 187 django.server log_message 44984 "GET /home/my_team/ HTTP/1.1" 200 5579
+INFO 2023-06-02 16:38:28,552 Thread-3 40700 basehttp basehttp.py 187 django.server log_message 44984 "GET /static/js/search.js HTTP/1.1" 200 2646
+INFO 2023-06-02 16:38:28,581 Thread-1 6820 basehttp basehttp.py 187 django.server log_message 44984 "GET /static/CACHE/css/bootstrap.9819a5072959.css HTTP/1.1" 200 369990
+INFO 2023-06-02 16:38:35,868 Thread-1 6820 basehttp basehttp.py 187 django.server log_message 44984 "GET /home/search/?q=jo HTTP/1.1" 200 311
+INFO 2023-06-02 16:38:35,951 Thread-1 6820 basehttp basehttp.py 187 django.server log_message 44984 "GET /home/search/?q=jo HTTP/1.1" 200 311
+INFO 2023-06-02 16:38:36,064 Thread-1 6820 basehttp basehttp.py 187 django.server log_message 44984 "GET /home/search/?q=josh HTTP/1.1" 200 309
+INFO 2023-06-02 16:38:36,123 Thread-1 6820 basehttp basehttp.py 187 django.server log_message 44984 "GET /home/search/?q=josh HTTP/1.1" 200 309
+WARNING 2023-06-02 16:38:42,602 Thread-1 6820 basehttp basehttp.py 187 django.server log_message 44984 "POST /home/trade_player/ HTTP/1.1" 404 3685
+INFO 2023-06-02 16:40:21,274 Thread-1 6820 basehttp basehttp.py 187 django.server log_message 44984 "GET /home/my_team/ HTTP/1.1" 200 5579
+INFO 2023-06-02 16:40:21,357 Thread-1 6820 basehttp basehttp.py 187 django.server log_message 44984 "GET /static/static/css/style.css HTTP/1.1" 200 1833
+INFO 2023-06-02 16:40:21,357 Thread-3 40700 basehttp basehttp.py 187 django.server log_message 44984 "GET /static/css/search.css HTTP/1.1" 200 794
+INFO 2023-06-02 16:40:21,359 Thread-2 46392 basehttp basehttp.py 187 django.server log_message 44984 "GET /static/js/search.js HTTP/1.1" 200 2538
+INFO 2023-06-02 16:40:21,363 Thread-5 57284 basehttp basehttp.py 187 django.server log_message 44984 "GET /static/bootstrap/js/bootstrap.min.js HTTP/1.1" 200 60404
+INFO 2023-06-02 16:40:21,381 Thread-4 55080 basehttp basehttp.py 187 django.server log_message 44984 "GET /static/CACHE/css/bootstrap.9819a5072959.css HTTP/1.1" 200 369990
+WARNING 2023-06-02 16:40:21,773 Thread-4 55080 basehttp basehttp.py 187 django.server log_message 44984 "GET /favicon.ico HTTP/1.1" 404 2438
+INFO 2023-06-02 16:40:26,407 Thread-4 55080 basehttp basehttp.py 187 django.server log_message 44984 "GET /home/search/?q=jo HTTP/1.1" 200 311
+INFO 2023-06-02 16:40:26,524 Thread-4 55080 basehttp basehttp.py 187 django.server log_message 44984 "GET /home/search/?q=jo HTTP/1.1" 200 311
+INFO 2023-06-02 16:40:26,632 Thread-4 55080 basehttp basehttp.py 187 django.server log_message 44984 "GET /home/search/?q=josh HTTP/1.1" 200 309
+INFO 2023-06-02 16:40:26,719 Thread-4 55080 basehttp basehttp.py 187 django.server log_message 44984 "GET /home/search/?q=josh HTTP/1.1" 200 309
+INFO 2023-06-02 16:40:26,809 Thread-4 55080 basehttp basehttp.py 187 django.server log_message 44984 "GET /home/search/?q=josh HTTP/1.1" 200 309
+INFO 2023-06-02 16:40:26,978 Thread-4 55080 basehttp basehttp.py 187 django.server log_message 44984 "GET /home/search/?q=josh%20al HTTP/1.1" 200 129
+INFO 2023-06-02 16:40:27,010 Thread-4 55080 basehttp basehttp.py 187 django.server log_message 44984 "GET /home/search/?q=josh%20al HTTP/1.1" 200 129
+INFO 2023-06-02 16:40:27,193 Thread-4 55080 basehttp basehttp.py 187 django.server log_message 44984 "GET /home/search/?q=josh%20all HTTP/1.1" 200 72
+INFO 2023-06-02 16:40:27,333 Thread-4 55080 basehttp basehttp.py 187 django.server log_message 44984 "GET /home/search/?q=josh%20allen HTTP/1.1" 200 72
+INFO 2023-06-02 16:40:27,403 Thread-4 55080 basehttp basehttp.py 187 django.server log_message 44984 "GET /home/search/?q=josh%20allen HTTP/1.1" 200 72
+INFO 2023-06-02 16:40:29,647 Thread-4 55080 basehttp basehttp.py 187 django.server log_message 44984 "POST /home/trade_player/3918298/2565969/ HTTP/1.1" 200 162
+INFO 2023-06-02 16:40:42,065 Thread-4 55080 basehttp basehttp.py 187 django.server log_message 44984 "GET /home/my_team/ HTTP/1.1" 200 5575
+INFO 2023-06-02 16:40:42,143 Thread-5 57284 basehttp basehttp.py 187 django.server log_message 44984 "GET /static/js/search.js HTTP/1.1" 304 0
+INFO 2023-06-02 16:40:42,173 Thread-4 55080 basehttp basehttp.py 187 django.server log_message 44984 "GET /static/CACHE/css/bootstrap.9819a5072959.css HTTP/1.1" 200 369990
+INFO 2023-06-02 16:42:10,054 Thread-4 55080 basehttp basehttp.py 187 django.server log_message 44984 "GET /home/search/?q=jo HTTP/1.1" 200 311
+INFO 2023-06-02 16:42:10,134 Thread-4 55080 basehttp basehttp.py 187 django.server log_message 44984 "GET /home/search/?q=jos HTTP/1.1" 200 309
+INFO 2023-06-02 16:42:10,235 Thread-4 55080 basehttp basehttp.py 187 django.server log_message 44984 "GET /home/search/?q=josh HTTP/1.1" 200 309
+INFO 2023-06-02 16:42:10,296 Thread-4 55080 basehttp basehttp.py 187 django.server log_message 44984 "GET /home/search/?q=josh HTTP/1.1" 200 309
+INFO 2023-06-02 16:42:11,305 Thread-4 55080 basehttp basehttp.py 187 django.server log_message 44984 "GET /home/search/?q=josh HTTP/1.1" 200 309
+INFO 2023-06-02 16:42:12,025 Thread-4 55080 basehttp basehttp.py 187 django.server log_message 44984 "GET /home/search/?q=josh%20al HTTP/1.1" 200 129
+INFO 2023-06-02 16:42:12,055 Thread-4 55080 basehttp basehttp.py 187 django.server log_message 44984 "GET /home/search/?q=josh%20al HTTP/1.1" 200 129
+INFO 2023-06-02 16:42:12,226 Thread-4 55080 basehttp basehttp.py 187 django.server log_message 44984 "GET /home/search/?q=josh%20all HTTP/1.1" 200 72
+INFO 2023-06-02 16:42:12,366 Thread-4 55080 basehttp basehttp.py 187 django.server log_message 44984 "GET /home/search/?q=josh%20allen HTTP/1.1" 200 72
+INFO 2023-06-02 16:42:12,404 Thread-4 55080 basehttp basehttp.py 187 django.server log_message 44984 "GET /home/search/?q=josh%20allen HTTP/1.1" 200 72
+INFO 2023-06-02 16:42:39,393 MainThread 12960 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 44984 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\views.py changed, reloading.
+INFO 2023-06-02 16:42:40,879 MainThread 59152 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 38788 Watching for file changes with StatReloader
+INFO 2023-06-02 16:42:42,737 MainThread 59152 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 38788 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\views.py changed, reloading.
+INFO 2023-06-02 16:42:44,119 MainThread 11044 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 58020 Watching for file changes with StatReloader
+INFO 2023-06-02 16:42:46,247 MainThread 11044 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 58020 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\views.py changed, reloading.
+INFO 2023-06-02 16:42:47,625 MainThread 50196 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 31456 Watching for file changes with StatReloader
+INFO 2023-06-02 16:42:49,855 MainThread 50196 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 31456 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\views.py changed, reloading.
+INFO 2023-06-02 16:42:51,169 MainThread 58160 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 32228 Watching for file changes with StatReloader
+INFO 2023-06-02 16:42:55,556 MainThread 58160 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 32228 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\views.py changed, reloading.
+INFO 2023-06-02 16:42:56,931 MainThread 42964 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 51188 Watching for file changes with StatReloader
+INFO 2023-06-02 16:43:12,165 MainThread 42964 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 51188 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\views.py changed, reloading.
+INFO 2023-06-02 16:43:13,570 MainThread 18196 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 58196 Watching for file changes with StatReloader
+INFO 2023-06-02 16:43:15,639 MainThread 18196 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 58196 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\views.py changed, reloading.
+INFO 2023-06-02 16:43:16,984 MainThread 22428 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 6560 Watching for file changes with StatReloader
+INFO 2023-06-02 16:43:19,108 MainThread 22428 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 6560 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\views.py changed, reloading.
+INFO 2023-06-02 16:43:20,558 MainThread 1932 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 5136 Watching for file changes with StatReloader
+INFO 2023-06-02 16:43:22,643 MainThread 1932 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 5136 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\views.py changed, reloading.
+INFO 2023-06-02 16:43:23,901 MainThread 34428 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 25848 Watching for file changes with StatReloader
+INFO 2023-06-02 16:43:26,001 MainThread 34428 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 25848 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\views.py changed, reloading.
+INFO 2023-06-02 16:43:27,389 MainThread 50980 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 29724 Watching for file changes with StatReloader
+INFO 2023-06-02 16:43:29,553 MainThread 50980 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 29724 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\views.py changed, reloading.
+INFO 2023-06-02 16:43:30,931 MainThread 33712 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 15936 Watching for file changes with StatReloader
+INFO 2023-06-02 16:43:45,262 Thread-1 39716 basehttp basehttp.py 187 django.server log_message 15936 "GET /home/my_team/ HTTP/1.1" 200 5575
+INFO 2023-06-02 16:43:47,086 Thread-1 39716 basehttp basehttp.py 187 django.server log_message 15936 "GET /static/static/css/style.css HTTP/1.1" 200 1833
+INFO 2023-06-02 16:43:47,087 Thread-5 664 basehttp basehttp.py 187 django.server log_message 15936 "GET /static/js/search.js HTTP/1.1" 200 2816
+INFO 2023-06-02 16:43:47,097 Thread-2 30312 basehttp basehttp.py 187 django.server log_message 15936 "GET /static/css/search.css HTTP/1.1" 200 794
+INFO 2023-06-02 16:43:47,098 Thread-4 43288 basehttp basehttp.py 187 django.server log_message 15936 "GET /static/bootstrap/js/bootstrap.min.js HTTP/1.1" 200 60404
+INFO 2023-06-02 16:43:47,126 Thread-3 31804 basehttp basehttp.py 187 django.server log_message 15936 "GET /static/CACHE/css/bootstrap.9819a5072959.css HTTP/1.1" 200 369990
+WARNING 2023-06-02 16:43:47,556 Thread-3 31804 basehttp basehttp.py 187 django.server log_message 15936 "GET /favicon.ico HTTP/1.1" 404 2438
+INFO 2023-06-02 16:44:09,696 MainThread 33712 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 15936 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\forms.py changed, reloading.
+INFO 2023-06-02 16:44:11,097 MainThread 15652 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 28908 Watching for file changes with StatReloader
+INFO 2023-06-02 16:44:17,479 MainThread 15652 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 28908 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\forms.py changed, reloading.
+INFO 2023-06-02 16:44:18,855 MainThread 46268 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 13792 Watching for file changes with StatReloader
+INFO 2023-06-02 16:44:24,404 MainThread 46268 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 13792 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\forms.py changed, reloading.
+INFO 2023-06-02 16:44:25,719 MainThread 50664 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 7792 Watching for file changes with StatReloader
+INFO 2023-06-02 16:44:27,760 MainThread 50664 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 7792 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\forms.py changed, reloading.
+INFO 2023-06-02 16:44:29,119 MainThread 40152 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 18964 Watching for file changes with StatReloader
+INFO 2023-06-02 16:44:40,922 Thread-1 44392 basehttp basehttp.py 187 django.server log_message 18964 "GET /home/my_team/ HTTP/1.1" 200 5575
+INFO 2023-06-02 16:44:42,745 Thread-5 59076 basehttp basehttp.py 187 django.server log_message 18964 "GET /static/js/search.js HTTP/1.1" 200 2816
+INFO 2023-06-02 16:44:42,750 Thread-1 44392 basehttp basehttp.py 187 django.server log_message 18964 "GET /static/static/css/style.css HTTP/1.1" 200 1833
+INFO 2023-06-02 16:44:42,765 Thread-4 14036 basehttp basehttp.py 187 django.server log_message 18964 "GET /static/bootstrap/js/bootstrap.min.js HTTP/1.1" 200 60404
+INFO 2023-06-02 16:44:42,765 Thread-2 57936 basehttp basehttp.py 187 django.server log_message 18964 "GET /static/css/search.css HTTP/1.1" 200 794
+INFO 2023-06-02 16:44:42,794 Thread-3 58364 basehttp basehttp.py 187 django.server log_message 18964 "GET /static/CACHE/css/bootstrap.9819a5072959.css HTTP/1.1" 200 369990
+WARNING 2023-06-02 16:44:43,234 Thread-3 58364 basehttp basehttp.py 187 django.server log_message 18964 "GET /favicon.ico HTTP/1.1" 404 2438
+INFO 2023-06-02 17:27:56,678 MainThread 54120 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 57736 Watching for file changes with StatReloader
+INFO 2023-06-02 17:28:08,801 MainThread 54120 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 57736 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-02 17:28:10,297 MainThread 24596 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 52256 Watching for file changes with StatReloader
+INFO 2023-06-02 17:28:12,465 MainThread 24596 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 52256 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-02 17:28:13,782 MainThread 47968 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 22644 Watching for file changes with StatReloader
+INFO 2023-06-02 17:28:15,930 MainThread 47968 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 22644 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-02 17:28:17,106 MainThread 50908 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 59276 Watching for file changes with StatReloader
+INFO 2023-06-02 17:28:23,581 MainThread 50908 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 59276 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-02 17:28:25,178 MainThread 7016 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 47724 Watching for file changes with StatReloader
+INFO 2023-06-02 17:28:28,464 MainThread 7016 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 47724 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-02 17:28:29,886 MainThread 32628 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 40128 Watching for file changes with StatReloader
+INFO 2023-06-02 17:28:32,006 MainThread 32628 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 40128 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-02 17:28:33,405 MainThread 59060 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 41372 Watching for file changes with StatReloader
+INFO 2023-06-02 17:28:35,468 MainThread 59060 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 41372 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-02 17:28:36,858 MainThread 19368 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 24232 Watching for file changes with StatReloader
+INFO 2023-06-02 17:28:38,655 MainThread 19368 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 24232 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-02 17:28:40,043 MainThread 47004 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 45280 Watching for file changes with StatReloader
+INFO 2023-06-02 17:28:42,229 MainThread 47004 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 45280 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-02 17:28:43,628 MainThread 59180 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 54488 Watching for file changes with StatReloader
+INFO 2023-06-02 17:28:53,918 Thread-2 18560 basehttp basehttp.py 187 django.server log_message 54488 "GET /admin/ HTTP/1.1" 302 0
+INFO 2023-06-02 17:28:53,941 Thread-1 12736 basehttp basehttp.py 187 django.server log_message 54488 "GET / HTTP/1.1" 200 2142
+INFO 2023-06-02 17:28:54,057 Thread-1 12736 basehttp basehttp.py 187 django.server log_message 54488 "GET /static/static/css/style.css HTTP/1.1" 304 0
+INFO 2023-06-02 17:28:54,061 Thread-4 51768 basehttp basehttp.py 187 django.server log_message 54488 "GET /static/js/search.js HTTP/1.1" 304 0
+INFO 2023-06-02 17:28:54,115 Thread-2 18560 basehttp basehttp.py 187 django.server log_message 54488 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2370
+INFO 2023-06-02 17:28:54,649 Thread-3 2480 basehttp basehttp.py 187 django.server log_message 54488 "GET /static/CACHE/css/bootstrap.9819a5072959.css HTTP/1.1" 200 369990
+WARNING 2023-06-02 17:28:54,696 Thread-3 2480 basehttp basehttp.py 187 django.server log_message 54488 "GET /favicon.ico HTTP/1.1" 404 2438
+INFO 2023-06-02 17:29:02,555 Thread-3 2480 basehttp basehttp.py 187 django.server log_message 54488 "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2023-06-02 17:29:02,641 Thread-3 2480 basehttp basehttp.py 187 django.server log_message 54488 "GET /admin/ HTTP/1.1" 200 9578
+INFO 2023-06-02 17:29:05,219 Thread-3 2480 basehttp basehttp.py 187 django.server log_message 54488 "GET /admin/player_scraping/playerstat/ HTTP/1.1" 200 16991
+INFO 2023-06-02 17:29:05,330 Thread-3 2480 basehttp basehttp.py 187 django.server log_message 54488 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2023-06-02 17:29:17,732 Thread-3 2480 basehttp basehttp.py 187 django.server log_message 54488 "POST /admin/player_scraping/playerstat/ HTTP/1.1" 200 13575
+INFO 2023-06-02 17:29:20,571 Thread-3 2480 basehttp basehttp.py 187 django.server log_message 54488 "POST /admin/player_scraping/playerstat/ HTTP/1.1" 302 0
+INFO 2023-06-02 17:29:20,622 Thread-3 2480 basehttp basehttp.py 187 django.server log_message 54488 "GET /admin/player_scraping/playerstat/ HTTP/1.1" 200 7540
+INFO 2023-06-02 17:29:20,711 Thread-3 2480 basehttp basehttp.py 187 django.server log_message 54488 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2023-06-02 17:29:29,819 Thread-3 2480 basehttp basehttp.py 187 django.server log_message 54488 "GET /accounts/login/ HTTP/1.1" 200 2886
+INFO 2023-06-02 17:29:29,914 Thread-3 2480 basehttp basehttp.py 187 django.server log_message 54488 "GET /static/CACHE/css/bootstrap.9819a5072959.css HTTP/1.1" 200 369990
+INFO 2023-06-02 17:29:34,829 Thread-3 2480 basehttp basehttp.py 187 django.server log_message 54488 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2023-06-02 17:29:34,843 Thread-3 2480 basehttp basehttp.py 187 django.server log_message 54488 "GET /home HTTP/1.1" 301 0
+ERROR 2023-06-02 17:29:35,030 Thread-3 2480 basehttp basehttp.py 187 django.server log_message 54488 "GET /home/ HTTP/1.1" 500 95494
+INFO 2023-06-02 17:29:58,741 MainThread 59180 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 54488 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-02 17:30:00,305 MainThread 58076 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 45548 Watching for file changes with StatReloader
+INFO 2023-06-02 17:30:02,439 MainThread 58076 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 45548 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-02 17:30:03,814 MainThread 54004 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 18168 Watching for file changes with StatReloader
+ERROR 2023-06-02 17:30:04,740 Thread-1 46096 basehttp basehttp.py 187 django.server log_message 18168 "GET /home/ HTTP/1.1" 500 95764
+WARNING 2023-06-02 17:30:04,968 Thread-1 46096 basehttp basehttp.py 187 django.server log_message 18168 "GET /favicon.ico HTTP/1.1" 404 2438
+INFO 2023-06-02 17:30:14,919 MainThread 54004 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 18168 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-02 17:30:16,448 MainThread 7876 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 58372 Watching for file changes with StatReloader
+INFO 2023-06-02 17:30:18,636 MainThread 7876 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 58372 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-02 17:30:20,020 MainThread 52908 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 42276 Watching for file changes with StatReloader
+INFO 2023-06-02 17:30:21,793 MainThread 52908 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 42276 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-02 17:30:23,168 MainThread 34064 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 35600 Watching for file changes with StatReloader
+INFO 2023-06-02 17:30:36,354 MainThread 34064 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 35600 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-02 17:30:37,807 MainThread 55604 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 26768 Watching for file changes with StatReloader
+INFO 2023-06-02 17:30:40,024 MainThread 55604 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 26768 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-02 17:30:41,551 MainThread 18164 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 26112 Watching for file changes with StatReloader
+ERROR 2023-06-02 17:30:42,537 Thread-1 1968 basehttp basehttp.py 187 django.server log_message 26112 "GET /home/ HTTP/1.1" 500 95800
+WARNING 2023-06-02 17:30:42,760 Thread-1 1968 basehttp basehttp.py 187 django.server log_message 26112 "GET /favicon.ico HTTP/1.1" 404 2438
+INFO 2023-06-02 17:40:22,575 MainThread 5628 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 50000 Watching for file changes with StatReloader
+INFO 2023-06-02 17:40:38,011 Thread-1 42012 basehttp basehttp.py 187 django.server log_message 50000 "GET / HTTP/1.1" 200 2142
+INFO 2023-06-02 17:40:38,054 Thread-1 42012 basehttp basehttp.py 187 django.server log_message 50000 "GET /static/static/css/style.css HTTP/1.1" 304 0
+INFO 2023-06-02 17:40:38,066 Thread-1 42012 basehttp basehttp.py 187 django.server log_message 50000 "GET /static/js/search.js HTTP/1.1" 304 0
+INFO 2023-06-02 17:40:38,310 Thread-2 50576 basehttp basehttp.py 187 django.server log_message 50000 "GET /static/CACHE/css/bootstrap.9819a5072959.css HTTP/1.1" 200 369990
+WARNING 2023-06-02 17:40:38,539 Thread-2 50576 basehttp basehttp.py 187 django.server log_message 50000 "GET /favicon.ico HTTP/1.1" 404 2438
+INFO 2023-06-02 17:40:49,835 Thread-3 24112 basehttp basehttp.py 187 django.server log_message 50000 "GET / HTTP/1.1" 200 2142
+INFO 2023-06-02 17:40:49,869 Thread-3 24112 basehttp basehttp.py 187 django.server log_message 50000 "GET /static/static/css/style.css HTTP/1.1" 200 1833
+INFO 2023-06-02 17:40:49,871 Thread-4 32144 basehttp basehttp.py 187 django.server log_message 50000 "GET /static/css/search.css HTTP/1.1" 200 794
+INFO 2023-06-02 17:40:49,871 Thread-7 6504 basehttp basehttp.py 187 django.server log_message 50000 "GET /static/js/search.js HTTP/1.1" 200 2816
+INFO 2023-06-02 17:40:49,884 Thread-5 54596 basehttp basehttp.py 187 django.server log_message 50000 "GET /static/CACHE/css/bootstrap.9819a5072959.css HTTP/1.1" 200 369990
+INFO 2023-06-02 17:40:49,901 Thread-6 58560 basehttp basehttp.py 187 django.server log_message 50000 "GET /static/bootstrap/js/bootstrap.min.js HTTP/1.1" 200 60404
+WARNING 2023-06-02 17:40:50,113 Thread-6 58560 basehttp basehttp.py 187 django.server log_message 50000 "GET /favicon.ico HTTP/1.1" 404 2438
+INFO 2023-06-02 17:40:55,889 Thread-6 58560 basehttp basehttp.py 187 django.server log_message 50000 "GET /accounts/login/ HTTP/1.1" 200 2886
+INFO 2023-06-02 17:40:55,924 Thread-6 58560 basehttp basehttp.py 187 django.server log_message 50000 "GET /static/CACHE/css/bootstrap.9819a5072959.css HTTP/1.1" 200 369990
+INFO 2023-06-02 17:41:08,385 Thread-6 58560 basehttp basehttp.py 187 django.server log_message 50000 "POST /accounts/login/ HTTP/1.1" 200 3309
+INFO 2023-06-02 17:41:08,416 Thread-6 58560 basehttp basehttp.py 187 django.server log_message 50000 "GET /static/CACHE/css/bootstrap.9819a5072959.css HTTP/1.1" 200 369990
+INFO 2023-06-02 17:41:18,085 Thread-6 58560 basehttp basehttp.py 187 django.server log_message 50000 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2023-06-02 17:41:18,099 Thread-6 58560 basehttp basehttp.py 187 django.server log_message 50000 "GET /home HTTP/1.1" 301 0
+ERROR 2023-06-02 17:41:18,343 Thread-6 58560 basehttp basehttp.py 187 django.server log_message 50000 "GET /home/ HTTP/1.1" 500 94903
+INFO 2023-06-02 17:41:51,838 MainThread 5628 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 50000 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-02 17:41:53,360 MainThread 48320 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 55880 Watching for file changes with StatReloader
+INFO 2023-06-02 17:41:56,684 MainThread 48320 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 55880 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-02 17:41:58,194 MainThread 57408 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 46192 Watching for file changes with StatReloader
+ERROR 2023-06-02 17:42:05,810 Thread-1 41940 basehttp basehttp.py 187 django.server log_message 46192 "GET /home/ HTTP/1.1" 500 94947
+INFO 2023-06-02 17:42:37,121 MainThread 57408 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 46192 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-02 17:42:38,689 MainThread 40672 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 27312 Watching for file changes with StatReloader
+INFO 2023-06-02 17:42:40,783 MainThread 40672 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 27312 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-02 17:42:42,162 MainThread 42600 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 53312 Watching for file changes with StatReloader
+INFO 2023-06-02 17:42:44,344 MainThread 42600 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 53312 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-02 17:42:45,614 MainThread 19048 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 31264 Watching for file changes with StatReloader
+INFO 2023-06-02 17:42:47,623 MainThread 19048 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 31264 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-02 17:42:48,860 MainThread 588 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 49324 Watching for file changes with StatReloader
+INFO 2023-06-02 17:42:50,631 MainThread 588 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 49324 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-02 17:42:52,335 MainThread 12368 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 27588 Watching for file changes with StatReloader
+ERROR 2023-06-02 17:42:54,364 Thread-1 41616 basehttp basehttp.py 187 django.server log_message 27588 "GET /home/ HTTP/1.1" 500 94966
+INFO 2023-06-02 17:45:02,622 MainThread 12368 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 27588 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-02 17:45:03,997 MainThread 33708 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 42676 Watching for file changes with StatReloader
+INFO 2023-06-02 17:45:07,306 MainThread 33708 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 42676 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-02 17:45:08,754 MainThread 16184 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 52440 Watching for file changes with StatReloader
+INFO 2023-06-02 17:45:10,529 MainThread 16184 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 52440 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-02 17:45:11,805 MainThread 27404 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 18196 Watching for file changes with StatReloader
+INFO 2023-06-02 17:45:14,583 MainThread 27404 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 18196 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-02 17:45:15,895 MainThread 48156 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 34208 Watching for file changes with StatReloader
+INFO 2023-06-02 17:45:18,044 MainThread 48156 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 34208 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-02 17:45:19,293 MainThread 10564 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 18164 Watching for file changes with StatReloader
+INFO 2023-06-02 17:45:21,190 MainThread 10564 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 18164 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-02 17:45:22,550 MainThread 35660 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 12368 Watching for file changes with StatReloader
+INFO 2023-06-02 17:45:24,317 MainThread 35660 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 12368 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-02 17:45:25,674 MainThread 34496 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 55984 Watching for file changes with StatReloader
+INFO 2023-06-02 17:45:27,935 MainThread 34496 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 55984 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-02 17:45:29,384 MainThread 41916 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 39824 Watching for file changes with StatReloader
+INFO 2023-06-02 17:45:31,663 MainThread 41916 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 39824 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-02 17:45:33,070 MainThread 14420 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 45528 Watching for file changes with StatReloader
+ERROR 2023-06-02 17:45:43,537 Thread-1 58808 basehttp basehttp.py 187 django.server log_message 45528 "GET /home/ HTTP/1.1" 500 95259
+INFO 2023-06-02 17:45:54,953 MainThread 14420 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 45528 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-02 17:45:56,377 MainThread 37920 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 52044 Watching for file changes with StatReloader
+ERROR 2023-06-02 17:45:57,414 Thread-1 55200 basehttp basehttp.py 187 django.server log_message 52044 "GET /home/ HTTP/1.1" 500 95433
+INFO 2023-06-02 17:46:11,461 MainThread 37920 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 52044 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-02 17:46:13,117 MainThread 9572 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 27672 Watching for file changes with StatReloader
+INFO 2023-06-02 17:46:15,307 MainThread 9572 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 27672 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-02 17:46:16,511 MainThread 27664 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 45144 Watching for file changes with StatReloader
+INFO 2023-06-02 17:46:24,091 MainThread 27664 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 45144 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-02 17:46:25,822 MainThread 18408 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 57756 Watching for file changes with StatReloader
+INFO 2023-06-02 17:46:27,883 MainThread 18408 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 57756 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-02 17:46:29,564 MainThread 55408 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 58732 Watching for file changes with StatReloader
+INFO 2023-06-02 17:46:31,674 MainThread 55408 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 58732 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-02 17:46:32,972 MainThread 52532 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 48696 Watching for file changes with StatReloader
+INFO 2023-06-02 17:46:35,771 MainThread 52532 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 48696 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-02 17:46:37,395 MainThread 45528 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 10060 Watching for file changes with StatReloader
+INFO 2023-06-02 17:46:39,181 MainThread 45528 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 10060 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-02 17:46:40,530 MainThread 41916 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 40008 Watching for file changes with StatReloader
+INFO 2023-06-02 17:46:54,096 MainThread 41916 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 40008 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-02 17:46:55,629 MainThread 26888 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 48568 Watching for file changes with StatReloader
+ERROR 2023-06-02 17:46:58,087 Thread-1 52020 basehttp basehttp.py 187 django.server log_message 48568 "GET /home/ HTTP/1.1" 500 95430
+INFO 2023-06-02 17:47:11,239 MainThread 26888 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 48568 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-02 17:47:12,904 MainThread 45424 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 56464 Watching for file changes with StatReloader
+ERROR 2023-06-02 17:47:16,067 Thread-1 55876 basehttp basehttp.py 187 django.server log_message 56464 "GET /home/ HTTP/1.1" 500 95434
+ERROR 2023-06-02 17:47:28,132 Thread-1 55876 basehttp basehttp.py 187 django.server log_message 56464 "GET /home/ HTTP/1.1" 500 95434
+INFO 2023-06-02 17:47:37,299 MainThread 45424 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 56464 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-02 17:47:38,837 MainThread 48032 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 30212 Watching for file changes with StatReloader
+INFO 2023-06-02 17:47:40,960 MainThread 48032 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 30212 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-02 17:47:42,503 MainThread 21896 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 3524 Watching for file changes with StatReloader
+INFO 2023-06-02 17:47:44,561 MainThread 21896 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 3524 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-02 17:47:46,083 MainThread 47824 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 58656 Watching for file changes with StatReloader
+INFO 2023-06-03 08:18:32,508 MainThread 48660 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 19256 Watching for file changes with StatReloader
+INFO 2023-06-03 08:19:12,628 Thread-1 58348 basehttp basehttp.py 187 django.server log_message 19256 "GET / HTTP/1.1" 200 2142
+INFO 2023-06-03 08:19:12,723 Thread-1 58348 basehttp basehttp.py 187 django.server log_message 19256 "GET /static/static/css/style.css HTTP/1.1" 304 0
+INFO 2023-06-03 08:19:12,741 Thread-2 53172 basehttp basehttp.py 187 django.server log_message 19256 "GET /static/js/search.js HTTP/1.1" 304 0
+INFO 2023-06-03 08:19:13,339 Thread-1 58348 basehttp basehttp.py 187 django.server log_message 19256 "GET /static/CACHE/css/bootstrap.9819a5072959.css HTTP/1.1" 200 369990
+WARNING 2023-06-03 08:19:13,807 Thread-1 58348 basehttp basehttp.py 187 django.server log_message 19256 "GET /favicon.ico HTTP/1.1" 404 2438
+INFO 2023-06-03 08:19:27,074 Thread-1 58348 basehttp basehttp.py 187 django.server log_message 19256 "GET /accounts/login/ HTTP/1.1" 200 2886
+INFO 2023-06-03 08:19:27,160 Thread-1 58348 basehttp basehttp.py 187 django.server log_message 19256 "GET /static/CACHE/css/bootstrap.9819a5072959.css HTTP/1.1" 200 369990
+INFO 2023-06-03 08:19:31,273 Thread-1 58348 basehttp basehttp.py 187 django.server log_message 19256 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2023-06-03 08:19:31,286 Thread-1 58348 basehttp basehttp.py 187 django.server log_message 19256 "GET /home HTTP/1.1" 301 0
+ERROR 2023-06-03 08:19:31,405 Thread-1 58348 basehttp basehttp.py 187 django.server log_message 19256 "GET /home/ HTTP/1.1" 500 96203
+INFO 2023-06-03 08:19:50,314 MainThread 48660 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 19256 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-03 08:19:51,913 MainThread 39372 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 8960 Watching for file changes with StatReloader
+INFO 2023-06-03 08:19:54,084 MainThread 39372 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 8960 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-03 08:19:55,403 MainThread 2884 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 45672 Watching for file changes with StatReloader
+INFO 2023-06-03 08:19:57,304 MainThread 2884 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 45672 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-03 08:19:58,650 MainThread 43488 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 38352 Watching for file changes with StatReloader
+INFO 2023-06-03 08:20:00,806 MainThread 43488 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 38352 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-03 08:20:02,294 MainThread 30308 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 34768 Watching for file changes with StatReloader
+INFO 2023-06-03 08:20:05,533 MainThread 30308 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 34768 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-03 08:20:07,066 MainThread 34564 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 61008 Watching for file changes with StatReloader
+INFO 2023-06-03 08:20:11,357 MainThread 34564 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 61008 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-03 08:20:12,753 MainThread 31208 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 24060 Watching for file changes with StatReloader
+ERROR 2023-06-03 08:20:13,785 Thread-1 11464 basehttp basehttp.py 187 django.server log_message 24060 "GET /home/ HTTP/1.1" 500 96204
+INFO 2023-06-03 08:20:22,754 MainThread 31208 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 24060 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-03 08:20:24,077 MainThread 59648 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 41376 Watching for file changes with StatReloader
+INFO 2023-06-03 08:20:26,213 MainThread 59648 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 41376 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-03 08:20:27,674 MainThread 57220 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 54528 Watching for file changes with StatReloader
+ERROR 2023-06-03 08:20:28,538 Thread-1 52136 basehttp basehttp.py 187 django.server log_message 54528 "GET /home/ HTTP/1.1" 500 96200
+INFO 2023-06-03 08:20:40,926 MainThread 57220 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 54528 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-03 08:20:42,345 MainThread 37928 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 52084 Watching for file changes with StatReloader
+INFO 2023-06-03 08:20:47,802 MainThread 37928 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 52084 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-03 08:20:49,236 MainThread 53252 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 60920 Watching for file changes with StatReloader
+INFO 2023-06-03 08:20:51,398 MainThread 53252 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 60920 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-03 08:20:52,833 MainThread 60436 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 56036 Watching for file changes with StatReloader
+INFO 2023-06-03 08:20:59,535 MainThread 60436 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 56036 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-03 08:21:00,875 MainThread 8336 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 54388 Watching for file changes with StatReloader
+ERROR 2023-06-03 08:21:01,910 Thread-1 14520 basehttp basehttp.py 187 django.server log_message 54388 "GET /home/ HTTP/1.1" 500 96204
+INFO 2023-06-03 08:21:08,721 MainThread 8336 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 54388 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-03 08:21:10,126 MainThread 44700 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 46980 Watching for file changes with StatReloader
+ERROR 2023-06-03 08:21:12,964 Thread-1 43012 basehttp basehttp.py 187 django.server log_message 46980 "GET /home/ HTTP/1.1" 500 96194
+INFO 2023-06-03 08:21:32,155 MainThread 44700 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 46980 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-03 08:21:33,580 MainThread 50408 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 61112 Watching for file changes with StatReloader
+INFO 2023-06-03 08:21:35,342 MainThread 50408 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 61112 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-03 08:21:36,710 MainThread 36316 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 46336 Watching for file changes with StatReloader
+INFO 2023-06-03 08:21:39,990 MainThread 36316 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 46336 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-03 08:21:41,432 MainThread 35224 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 18652 Watching for file changes with StatReloader
+INFO 2023-06-03 08:21:43,581 MainThread 35224 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 18652 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-03 08:21:44,997 MainThread 52084 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 37928 Watching for file changes with StatReloader
+INFO 2023-06-03 08:21:57,094 MainThread 52084 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 37928 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-03 08:21:58,529 MainThread 57616 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 50708 Watching for file changes with StatReloader
+INFO 2023-06-03 08:22:07,193 MainThread 57616 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 50708 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-03 08:22:08,594 MainThread 47052 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 54364 Watching for file changes with StatReloader
+INFO 2023-06-03 08:22:10,438 MainThread 47052 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 54364 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-03 08:22:11,781 MainThread 25240 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 30980 Watching for file changes with StatReloader
+INFO 2023-06-03 08:22:13,570 MainThread 25240 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 30980 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-03 08:22:14,858 MainThread 46528 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 12180 Watching for file changes with StatReloader
+INFO 2023-06-03 08:22:16,923 MainThread 46528 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 12180 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-03 08:22:18,284 MainThread 3928 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 6156 Watching for file changes with StatReloader
+INFO 2023-06-03 08:22:22,628 MainThread 3928 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 6156 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-03 08:22:24,074 MainThread 56096 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 24040 Watching for file changes with StatReloader
+INFO 2023-06-03 08:22:30,639 MainThread 56096 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 24040 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-03 08:22:32,056 MainThread 44276 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 46336 Watching for file changes with StatReloader
+INFO 2023-06-03 08:22:35,339 MainThread 44276 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 46336 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-03 08:22:36,744 MainThread 34260 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 59624 Watching for file changes with StatReloader
+INFO 2023-06-03 08:22:39,033 MainThread 34260 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 59624 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-03 08:22:40,388 MainThread 59456 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 25996 Watching for file changes with StatReloader
+INFO 2023-06-03 08:22:45,835 MainThread 59456 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 25996 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-03 08:22:47,108 MainThread 31676 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 56044 Watching for file changes with StatReloader
+INFO 2023-06-03 08:22:49,283 MainThread 31676 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 56044 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-03 08:22:50,758 MainThread 59088 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 45800 Watching for file changes with StatReloader
+ERROR 2023-06-03 08:22:52,941 Thread-1 45832 basehttp basehttp.py 187 django.server log_message 45800 "GET /home/ HTTP/1.1" 500 92032
+INFO 2023-06-03 08:23:04,199 MainThread 59088 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 45800 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-03 08:23:05,537 MainThread 58376 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 7888 Watching for file changes with StatReloader
+INFO 2023-06-03 08:23:07,649 MainThread 58376 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 7888 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-03 08:23:08,934 MainThread 55588 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 34836 Watching for file changes with StatReloader
+ERROR 2023-06-03 08:23:09,807 Thread-1 18644 basehttp basehttp.py 187 django.server log_message 34836 "GET /home/ HTTP/1.1" 500 96209
+INFO 2023-06-03 08:23:36,220 MainThread 55588 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 34836 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-03 08:23:37,655 MainThread 59260 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 44208 Watching for file changes with StatReloader
+ERROR 2023-06-03 08:23:38,456 Thread-1 54872 basehttp basehttp.py 187 django.server log_message 44208 "GET /home/ HTTP/1.1" 500 96209
+ERROR 2023-06-03 08:23:47,796 Thread-1 54872 basehttp basehttp.py 187 django.server log_message 44208 "GET /home/ HTTP/1.1" 500 95906
+INFO 2023-06-03 08:23:50,957 Thread-1 54872 basehttp basehttp.py 187 django.server log_message 44208 "GET /admin/ HTTP/1.1" 302 0
+INFO 2023-06-03 08:23:51,028 Thread-1 54872 basehttp basehttp.py 187 django.server log_message 44208 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2370
+INFO 2023-06-03 08:23:53,797 Thread-1 54872 basehttp basehttp.py 187 django.server log_message 44208 "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2023-06-03 08:23:53,848 Thread-1 54872 basehttp basehttp.py 187 django.server log_message 44208 "GET /admin/ HTTP/1.1" 200 9698
+INFO 2023-06-03 08:23:56,739 Thread-1 54872 basehttp basehttp.py 187 django.server log_message 44208 "GET /admin/player_scraping/playerstat/ HTTP/1.1" 200 10268
+INFO 2023-06-03 08:23:56,832 Thread-1 54872 basehttp basehttp.py 187 django.server log_message 44208 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2023-06-03 08:24:05,365 Thread-1 54872 basehttp basehttp.py 187 django.server log_message 44208 "POST /admin/player_scraping/playerstat/ HTTP/1.1" 200 8702
+INFO 2023-06-03 08:24:06,612 Thread-1 54872 basehttp basehttp.py 187 django.server log_message 44208 "POST /admin/player_scraping/playerstat/ HTTP/1.1" 302 0
+INFO 2023-06-03 08:24:06,654 Thread-1 54872 basehttp basehttp.py 187 django.server log_message 44208 "GET /admin/player_scraping/playerstat/ HTTP/1.1" 200 7539
+INFO 2023-06-03 08:24:06,734 Thread-1 54872 basehttp basehttp.py 187 django.server log_message 44208 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2023-06-03 08:24:09,816 MainThread 59260 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 44208 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-03 08:24:11,112 MainThread 45800 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 59088 Watching for file changes with StatReloader
+INFO 2023-06-03 08:24:24,063 MainThread 45800 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 59088 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-03 08:24:25,565 MainThread 9004 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 39480 Watching for file changes with StatReloader
+INFO 2023-06-03 08:24:27,388 MainThread 9004 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 39480 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-03 08:24:28,727 MainThread 13292 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 53364 Watching for file changes with StatReloader
+INFO 2023-06-03 08:24:30,486 MainThread 13292 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 53364 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-03 08:24:31,757 MainThread 40588 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 56536 Watching for file changes with StatReloader
+INFO 2023-06-03 08:24:33,853 MainThread 40588 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 56536 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-03 08:24:35,168 MainThread 51164 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 36316 Watching for file changes with StatReloader
+INFO 2023-06-03 08:24:37,280 MainThread 51164 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 36316 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-03 08:24:38,635 MainThread 56644 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 40936 Watching for file changes with StatReloader
+INFO 2023-06-03 08:24:40,470 MainThread 56644 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 40936 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-03 08:24:41,755 MainThread 56412 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 61348 Watching for file changes with StatReloader
+INFO 2023-06-03 08:24:49,471 MainThread 56412 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 61348 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-03 08:24:50,666 MainThread 44564 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 48380 Watching for file changes with StatReloader
+INFO 2023-06-03 08:24:52,935 MainThread 44564 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 48380 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-03 08:24:54,212 MainThread 37724 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 57792 Watching for file changes with StatReloader
+INFO 2023-06-03 08:24:56,384 MainThread 37724 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 57792 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-03 08:24:57,654 MainThread 56396 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 39224 Watching for file changes with StatReloader
+INFO 2023-06-03 08:25:01,973 MainThread 56396 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 39224 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-03 08:25:03,321 MainThread 3524 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 40812 Watching for file changes with StatReloader
+INFO 2023-06-03 08:25:05,514 MainThread 3524 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 40812 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-03 08:25:06,957 MainThread 13940 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 33180 Watching for file changes with StatReloader
+INFO 2023-06-03 08:25:09,088 MainThread 13940 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 33180 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-03 08:25:10,377 MainThread 46748 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 60204 Watching for file changes with StatReloader
+INFO 2023-06-03 08:25:36,497 Thread-1 26508 basehttp basehttp.py 187 django.server log_message 60204 "GET /home/ HTTP/1.1" 200 4421
+INFO 2023-06-03 08:25:37,093 Thread-1 26508 basehttp basehttp.py 187 django.server log_message 60204 "GET /static/CACHE/css/bootstrap.9819a5072959.css HTTP/1.1" 200 369990
+ERROR 2023-06-03 08:25:43,434 Thread-1 26508 basehttp basehttp.py 187 django.server log_message 60204 "GET /home/ HTTP/1.1" 500 95595
+INFO 2023-06-03 08:26:23,741 MainThread 46748 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 60204 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-03 08:26:25,119 MainThread 34868 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 20520 Watching for file changes with StatReloader
+ERROR 2023-06-03 08:26:28,002 Thread-1 18540 basehttp basehttp.py 187 django.server log_message 20520 "GET /home/ HTTP/1.1" 500 95644
+INFO 2023-06-03 08:26:47,243 MainThread 34868 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 20520 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-03 08:26:48,760 MainThread 60872 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 10516 Watching for file changes with StatReloader
+ERROR 2023-06-03 08:26:49,515 Thread-1 50720 basehttp basehttp.py 187 django.server log_message 10516 "GET /home/ HTTP/1.1" 500 95648
+INFO 2023-06-03 08:27:04,193 MainThread 60872 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 10516 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-03 08:27:05,490 MainThread 35744 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 56312 Watching for file changes with StatReloader
+INFO 2023-06-03 08:27:07,642 MainThread 35744 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 56312 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-03 08:27:08,894 MainThread 34892 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 46728 Watching for file changes with StatReloader
+INFO 2023-06-03 08:27:11,172 MainThread 34892 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 46728 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-03 08:27:12,650 MainThread 38424 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 50472 Watching for file changes with StatReloader
+INFO 2023-06-03 08:27:14,911 MainThread 38424 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 50472 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-03 08:27:16,122 MainThread 59552 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 29536 Watching for file changes with StatReloader
+INFO 2023-06-03 08:27:22,724 MainThread 59552 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 29536 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-03 08:27:24,322 MainThread 32076 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 61012 Watching for file changes with StatReloader
+INFO 2023-06-03 08:27:26,504 MainThread 32076 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 61012 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-03 08:27:27,695 MainThread 3524 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 30224 Watching for file changes with StatReloader
+INFO 2023-06-03 08:27:29,771 MainThread 3524 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 30224 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-03 08:27:31,104 MainThread 10032 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 61380 Watching for file changes with StatReloader
+INFO 2023-06-03 08:27:33,971 MainThread 10032 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 61380 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-03 08:27:35,227 MainThread 20976 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 31172 Watching for file changes with StatReloader
+INFO 2023-06-03 08:27:36,944 MainThread 20976 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 31172 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-03 08:27:38,201 MainThread 448 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 20272 Watching for file changes with StatReloader
+INFO 2023-06-03 08:27:40,006 MainThread 448 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 20272 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-03 08:27:41,333 MainThread 1168 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 24092 Watching for file changes with StatReloader
+INFO 2023-06-03 08:27:43,115 MainThread 1168 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 24092 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-03 08:27:44,485 MainThread 57876 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 61200 Watching for file changes with StatReloader
+INFO 2023-06-03 08:27:47,246 MainThread 57876 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 61200 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-03 08:27:48,626 MainThread 47008 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 61384 Watching for file changes with StatReloader
+INFO 2023-06-03 08:27:54,695 MainThread 47008 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 61384 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-03 08:27:56,063 MainThread 48660 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 52084 Watching for file changes with StatReloader
+ERROR 2023-06-03 08:27:59,194 Thread-1 46780 basehttp basehttp.py 187 django.server log_message 52084 "GET /home/ HTTP/1.1" 500 95789
+WARNING 2023-06-03 08:27:59,473 Thread-1 46780 basehttp basehttp.py 187 django.server log_message 52084 "GET /favicon.ico HTTP/1.1" 404 2438
+INFO 2023-06-03 08:28:11,729 MainThread 48660 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 52084 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-03 08:28:13,362 MainThread 52044 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 39720 Watching for file changes with StatReloader
+ERROR 2023-06-03 08:28:17,353 Thread-1 55076 basehttp basehttp.py 187 django.server log_message 39720 "GET /home/ HTTP/1.1" 500 95661
+INFO 2023-06-03 08:28:36,726 MainThread 52044 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 39720 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-03 08:28:38,174 MainThread 1168 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 50252 Watching for file changes with StatReloader
+INFO 2023-06-03 08:28:39,916 MainThread 1168 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 50252 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-03 08:28:41,284 MainThread 23348 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 35872 Watching for file changes with StatReloader
+INFO 2023-06-03 08:28:43,376 MainThread 23348 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 35872 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-03 08:28:44,798 MainThread 14320 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 12344 Watching for file changes with StatReloader
+INFO 2023-06-03 08:28:52,829 Thread-1 57928 basehttp basehttp.py 187 django.server log_message 12344 "GET /home/ HTTP/1.1" 200 4421
+INFO 2023-06-03 08:28:53,503 Thread-1 57928 basehttp basehttp.py 187 django.server log_message 12344 "GET /static/CACHE/css/bootstrap.9819a5072959.css HTTP/1.1" 200 369990
+INFO 2023-06-03 08:29:21,118 MainThread 14320 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 12344 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\views.py changed, reloading.
+INFO 2023-06-03 08:29:22,463 MainThread 61180 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 35104 Watching for file changes with StatReloader
+INFO 2023-06-03 08:29:27,843 MainThread 61180 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 35104 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\views.py changed, reloading.
+INFO 2023-06-03 08:29:29,259 MainThread 35716 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 31644 Watching for file changes with StatReloader
+INFO 2023-06-03 08:29:31,345 MainThread 35716 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 31644 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\views.py changed, reloading.
+INFO 2023-06-03 08:29:32,543 MainThread 472 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 40288 Watching for file changes with StatReloader
+INFO 2023-06-03 08:29:34,715 MainThread 472 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 40288 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\views.py changed, reloading.
+INFO 2023-06-03 08:29:35,939 MainThread 60640 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 37612 Watching for file changes with StatReloader
+INFO 2023-06-03 08:29:44,094 Thread-1 10516 basehttp basehttp.py 187 django.server log_message 37612 "GET /home/ HTTP/1.1" 200 4421
+INFO 2023-06-03 08:29:44,703 Thread-1 10516 basehttp basehttp.py 187 django.server log_message 37612 "GET /static/CACHE/css/bootstrap.9819a5072959.css HTTP/1.1" 200 369990
+INFO 2023-06-03 08:30:00,255 MainThread 60640 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 37612 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-03 08:30:01,636 MainThread 27356 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 3368 Watching for file changes with StatReloader
+INFO 2023-06-03 08:30:03,749 MainThread 27356 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 3368 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-03 08:30:04,912 MainThread 39420 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 20316 Watching for file changes with StatReloader
+INFO 2023-06-03 08:30:07,110 MainThread 39420 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 20316 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-03 08:30:08,423 MainThread 26652 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 35072 Watching for file changes with StatReloader
+INFO 2023-06-03 08:30:24,586 Thread-1 58728 basehttp basehttp.py 187 django.server log_message 35072 "GET /home/ HTTP/1.1" 200 4421
+INFO 2023-06-03 08:30:25,178 Thread-1 58728 basehttp basehttp.py 187 django.server log_message 35072 "GET /static/CACHE/css/bootstrap.9819a5072959.css HTTP/1.1" 200 369990
+INFO 2023-06-03 08:30:40,619 MainThread 26652 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 35072 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-03 08:30:42,102 MainThread 35744 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 45412 Watching for file changes with StatReloader
+INFO 2023-06-03 08:30:44,998 Thread-1 59776 basehttp basehttp.py 187 django.server log_message 45412 "GET /admin/player_scraping/team/ HTTP/1.1" 200 9199
+INFO 2023-06-03 08:30:45,116 Thread-1 59776 basehttp basehttp.py 187 django.server log_message 45412 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2023-06-03 08:30:46,876 Thread-1 59776 basehttp basehttp.py 187 django.server log_message 45412 "GET /admin/player_scraping/team/129/change/ HTTP/1.1" 200 53595
+INFO 2023-06-03 08:30:46,961 Thread-1 59776 basehttp basehttp.py 187 django.server log_message 45412 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2023-06-03 08:31:02,312 MainThread 35744 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 45412 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-03 08:31:03,923 MainThread 41044 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 42612 Watching for file changes with StatReloader
+INFO 2023-06-03 08:31:06,046 MainThread 41044 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 42612 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-03 08:31:07,384 MainThread 15888 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 57860 Watching for file changes with StatReloader
+INFO 2023-06-03 08:31:09,549 MainThread 15888 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 57860 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-03 08:31:10,726 MainThread 15568 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 52792 Watching for file changes with StatReloader
+ERROR 2023-06-03 08:31:11,844 Thread-1 25028 basehttp basehttp.py 187 django.server log_message 52792 "GET /home/ HTTP/1.1" 500 87369
+INFO 2023-06-03 08:31:25,915 MainThread 15568 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 52792 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-03 08:31:27,337 MainThread 3368 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 27356 Watching for file changes with StatReloader
+INFO 2023-06-03 08:31:29,351 MainThread 3368 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 27356 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-03 08:31:30,711 MainThread 42236 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 52196 Watching for file changes with StatReloader
+INFO 2023-06-03 08:31:32,773 MainThread 42236 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 52196 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-03 08:31:34,050 MainThread 41384 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 50408 Watching for file changes with StatReloader
+INFO 2023-06-03 08:31:36,169 MainThread 41384 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 50408 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-03 08:31:37,424 MainThread 56508 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 58808 Watching for file changes with StatReloader
+INFO 2023-06-03 08:31:39,517 MainThread 56508 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 58808 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-03 08:31:40,787 MainThread 45040 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 58436 Watching for file changes with StatReloader
+INFO 2023-06-03 08:31:50,080 Thread-1 46720 basehttp basehttp.py 187 django.server log_message 58436 "GET /home/ HTTP/1.1" 200 4421
+INFO 2023-06-03 08:31:50,695 Thread-1 46720 basehttp basehttp.py 187 django.server log_message 58436 "GET /static/CACHE/css/bootstrap.9819a5072959.css HTTP/1.1" 200 369990
+INFO 2023-06-03 08:31:55,287 MainThread 45040 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 58436 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-03 08:31:56,672 MainThread 59148 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 50448 Watching for file changes with StatReloader
+INFO 2023-06-03 08:32:03,687 Thread-1 61068 basehttp basehttp.py 187 django.server log_message 50448 "GET /admin/player_scraping/team/ HTTP/1.1" 200 9199
+INFO 2023-06-03 08:32:03,780 Thread-1 61068 basehttp basehttp.py 187 django.server log_message 50448 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2023-06-03 08:32:05,227 Thread-1 61068 basehttp basehttp.py 187 django.server log_message 50448 "GET /admin/player_scraping/team/129/change/ HTTP/1.1" 200 53595
+INFO 2023-06-03 08:32:05,299 Thread-1 61068 basehttp basehttp.py 187 django.server log_message 50448 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2023-06-03 08:32:12,586 Thread-1 61068 basehttp basehttp.py 187 django.server log_message 50448 "GET /admin/player_scraping/team/ HTTP/1.1" 200 9199
+INFO 2023-06-03 08:32:14,088 Thread-1 61068 basehttp basehttp.py 187 django.server log_message 50448 "GET /admin/player_scraping/team/128/change/ HTTP/1.1" 200 53595
+INFO 2023-06-03 08:32:14,180 Thread-1 61068 basehttp basehttp.py 187 django.server log_message 50448 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2023-06-03 08:32:15,909 Thread-1 61068 basehttp basehttp.py 187 django.server log_message 50448 "GET /admin/player_scraping/team/ HTTP/1.1" 200 9199
+INFO 2023-06-03 08:32:17,210 Thread-1 61068 basehttp basehttp.py 187 django.server log_message 50448 "GET /admin/player_scraping/team/127/change/ HTTP/1.1" 200 53595
+INFO 2023-06-03 08:32:17,304 Thread-1 61068 basehttp basehttp.py 187 django.server log_message 50448 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2023-06-03 08:32:36,507 MainThread 59148 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 50448 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-03 08:32:37,818 MainThread 56396 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 59864 Watching for file changes with StatReloader
+INFO 2023-06-03 08:32:39,904 MainThread 56396 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 59864 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-03 08:32:41,294 MainThread 55192 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 40064 Watching for file changes with StatReloader
+INFO 2023-06-03 08:32:43,436 MainThread 55192 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 40064 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-03 08:32:44,682 MainThread 58124 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 25028 Watching for file changes with StatReloader
+INFO 2023-06-03 08:32:46,844 MainThread 58124 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 25028 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-03 08:32:48,135 MainThread 56504 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 54036 Watching for file changes with StatReloader
+INFO 2023-06-03 08:32:55,759 Thread-1 33440 basehttp basehttp.py 187 django.server log_message 54036 "GET /home/ HTTP/1.1" 200 4421
+INFO 2023-06-03 08:32:56,340 Thread-1 33440 basehttp basehttp.py 187 django.server log_message 54036 "GET /static/CACHE/css/bootstrap.9819a5072959.css HTTP/1.1" 200 369990
+INFO 2023-06-03 08:33:09,655 MainThread 56504 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 54036 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-03 08:33:11,056 MainThread 3028 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 53272 Watching for file changes with StatReloader
+INFO 2023-06-03 08:33:13,205 MainThread 3028 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 53272 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-03 08:33:14,499 MainThread 60640 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 60516 Watching for file changes with StatReloader
+INFO 2023-06-03 08:33:16,223 MainThread 60640 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 60516 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-03 08:33:17,623 MainThread 45360 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 50416 Watching for file changes with StatReloader
+INFO 2023-06-03 08:33:19,388 MainThread 45360 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 50416 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-03 08:33:20,628 MainThread 44580 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 45184 Watching for file changes with StatReloader
+INFO 2023-06-03 08:33:22,379 MainThread 44580 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 45184 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-03 08:33:23,637 MainThread 40408 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 38664 Watching for file changes with StatReloader
+INFO 2023-06-03 08:33:26,894 MainThread 40408 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 38664 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-03 08:33:28,236 MainThread 21196 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 52024 Watching for file changes with StatReloader
+INFO 2023-06-03 08:33:30,423 MainThread 21196 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 52024 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-03 08:33:31,797 MainThread 42484 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 42268 Watching for file changes with StatReloader
+INFO 2023-06-03 08:33:33,841 MainThread 42484 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 42268 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-03 08:33:35,090 MainThread 12004 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 54220 Watching for file changes with StatReloader
+INFO 2023-06-03 08:33:37,243 MainThread 12004 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 54220 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-03 08:33:38,435 MainThread 43164 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 1648 Watching for file changes with StatReloader
+INFO 2023-06-03 08:33:40,525 MainThread 43164 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 1648 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-03 08:33:41,942 MainThread 61428 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 41116 Watching for file changes with StatReloader
+INFO 2023-06-03 08:33:44,103 MainThread 61428 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 41116 C:\Miscellaneous\Coding Projects\Football-Stats-Web-Scraping\player_scraping\db_service.py changed, reloading.
+INFO 2023-06-03 08:33:45,485 MainThread 54308 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 57220 Watching for file changes with StatReloader
+INFO 2023-06-03 08:33:58,535 Thread-1 30440 basehttp basehttp.py 187 django.server log_message 57220 "GET /home/ HTTP/1.1" 200 5235
+INFO 2023-06-03 08:33:59,100 Thread-1 30440 basehttp basehttp.py 187 django.server log_message 57220 "GET /static/CACHE/css/bootstrap.9819a5072959.css HTTP/1.1" 200 369990
+INFO 2023-06-03 08:35:10,324 Thread-1 30440 basehttp basehttp.py 187 django.server log_message 57220 "GET /admin/player_scraping/player/ HTTP/1.1" 200 33221
+INFO 2023-06-03 08:35:10,404 Thread-1 30440 basehttp basehttp.py 187 django.server log_message 57220 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2023-06-03 08:35:20,094 Thread-1 30440 basehttp basehttp.py 187 django.server log_message 57220 "GET /admin/player_scraping/player/?p=2 HTTP/1.1" 200 35856
+INFO 2023-06-03 08:35:20,170 Thread-1 30440 basehttp basehttp.py 187 django.server log_message 57220 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2023-06-03 08:41:40,830 Thread-2 48292 basehttp basehttp.py 187 django.server log_message 57220 "GET /home/ HTTP/1.1" 200 5235
+INFO 2023-06-03 08:41:40,936 Thread-2 48292 basehttp basehttp.py 187 django.server log_message 57220 "GET /static/CACHE/css/bootstrap.9819a5072959.css HTTP/1.1" 200 369990
+INFO 2023-06-03 08:42:14,770 Thread-2 48292 basehttp basehttp.py 187 django.server log_message 57220 "GET /home/ HTTP/1.1" 200 5235
+INFO 2023-06-03 08:42:14,848 Thread-2 48292 basehttp basehttp.py 187 django.server log_message 57220 "GET /static/CACHE/css/bootstrap.9819a5072959.css HTTP/1.1" 200 369990
+INFO 2023-06-03 08:42:24,775 Thread-2 48292 basehttp basehttp.py 187 django.server log_message 57220 "GET /admin/player_scraping/player/?p=2 HTTP/1.1" 200 35856
+INFO 2023-06-03 08:42:24,874 Thread-2 48292 basehttp basehttp.py 187 django.server log_message 57220 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2023-06-03 08:42:31,636 Thread-2 48292 basehttp basehttp.py 187 django.server log_message 57220 "GET /admin/player_scraping/player/ HTTP/1.1" 200 33221
+INFO 2023-06-03 08:42:31,708 Thread-2 48292 basehttp basehttp.py 187 django.server log_message 57220 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2023-06-03 08:42:34,310 Thread-2 48292 basehttp basehttp.py 187 django.server log_message 57220 "GET /admin/player_scraping/playerstat/ HTTP/1.1" 200 7397
+INFO 2023-06-03 08:42:34,388 Thread-2 48292 basehttp basehttp.py 187 django.server log_message 57220 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2023-06-03 08:42:36,424 Thread-2 48292 basehttp basehttp.py 187 django.server log_message 57220 "GET /admin/player_scraping/team/ HTTP/1.1" 200 9199
+INFO 2023-06-03 08:42:36,500 Thread-2 48292 basehttp basehttp.py 187 django.server log_message 57220 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2023-06-03 08:42:42,982 Thread-2 48292 basehttp basehttp.py 187 django.server log_message 57220 "GET /admin/player_scraping/teamroster/ HTTP/1.1" 200 7397
+INFO 2023-06-03 08:42:43,086 Thread-2 48292 basehttp basehttp.py 187 django.server log_message 57220 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2023-06-03 08:42:44,776 Thread-2 48292 basehttp basehttp.py 187 django.server log_message 57220 "GET /admin/player_scraping/team/ HTTP/1.1" 200 9199
+INFO 2023-06-03 08:42:44,856 Thread-2 48292 basehttp basehttp.py 187 django.server log_message 57220 "GET /admin/jsi18n/ HTTP/1.1" 200 3343

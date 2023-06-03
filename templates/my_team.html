@@ -21,7 +21,7 @@
         <td>{{ player.team }}</td>
         <td>{{ points }}</td>
         <td>
-          <button type="button" class="btn btn-danger" onclick="dropPlayer({{ player.id }})">Drop</button>
+          <button type="button" class="btn btn-danger" onclick="playerToDrop={{player.id}}">Drop</button>
         </td>
       </tr>
       {% endfor %}
@@ -33,7 +33,7 @@
 <!-- Trade players -->
 <div class="trade-players my-4">
   <h2>Player Transaction</h2>
-  <form method="post" action="{% url 'trade_player' %}">
+  <form method="post">
     {% csrf_token %}
     <div class="form-group">
       <label for="my_player">Search a player to add:</label>
