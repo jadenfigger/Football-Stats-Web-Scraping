@@ -114,19 +114,23 @@ class Command(BaseCommand):
             ],
         }
 
-        logger.warning(Player.objects.filter(position="QB"))
+        for player in Player.objects.all():
+            logger.warning(f"Player: {player.id}")
 
         # Fetch players by their IDs
         self.players = {}
         for pos, ids in player_pos_ids.items():
-            players = Player.objects.filter(id__in=ids)
+            logger.warning(ids)
+            players = Player.objects.filter(id=ids)
             if not players.exists():
                 logger.warning(f"No players found for the provided IDs in position {pos}")
                 continue  # Skip this iteration if no players found
             self.players[pos] = list(players)
 
+        logger.warning(self.players)
         for i, team in enumerate(self.teams):
             for pos, players in self.players.items():
+                logger.warning(len(self.players))
                 if len(players) < 2:
                     logger.warning(f"Not enough players in position {pos} for team {i}")
                     continue  # Skip this iteration if not enough players

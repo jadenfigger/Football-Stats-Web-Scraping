@@ -4,6 +4,7 @@ from .models import Player
 from concurrent.futures import ThreadPoolExecutor
 from .exception_handler import APIException, DBException
 from .stats_calculator import StatCalculator
+from math import ceil
 
 logger = logging.getLogger(__name__)
 
@@ -72,8 +73,10 @@ class APIService:
             logger.warning(f"Something went wrong: {err}")
 
     @staticmethod
-    def fetch_data_limit(limit, page, update_existing=False):
+    def fetch_data_limit(limit, page, update_existing):
         url = f"https://sports.core.api.espn.com/v3/sports/football/nfl/athletes?limit={limit}&page={page}"
+        logger.warning(url)
+        logger.warning(page)
         response = requests.get(url)
         json_data = response.json()
 
@@ -90,7 +93,7 @@ class APIService:
             new_player_details = list(
                 executor.map(APIService.fetch_player_details, to_update)
             )
-
+    
         players_to_create = []
         for player_detail in new_player_details:
             if player_detail is not None:
@@ -123,7 +126,7 @@ class APIService:
         return json_data["count"]
 
     @staticmethod
-    def fetch_data_all(limit, only_update_existing=True):
+    def fetch_data_all(limit, only_update_existing):
         count = APIService.fetch_data_limit(limit, 1, only_update_existing)
 
         total_pages = ceil(count / limit)
